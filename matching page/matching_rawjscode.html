@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TRYTRY8</title>
+        <style>
+            textarea{
+                /*max-height: 200px;
+                max-width: 200px;*/
+                width: 200px;
+                height: 200px;
+                resize: none;
+            }
+            #result{
+                width: 100%;
+                height: 100px;
+                font-size: 12pt;
+                font-weight: bold;
+                color: rebeccapurple;
+            }
+            table{
+                border-collapse: collapse;
+                width: 50%;
+            }
+            table, tr, th, td{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <textarea id="text1" spellcheck="true">Mark P. McGowan
+    144 Cheshire Road, Norwalk, CT 06854
+    203-434-6339
+    mark.mccowan@example.com
+
+    OBJECTIVE
+    A Graphics Designer with 5+ years of professional experience seeking for a compelling job where my creative skills are challenged. Seeking a job position in the creative team where I can apply my knowledge of diverse design skills set and graphics art.
+
+    SKILLS & PROFICIENCIES
+    Experience in designing logos, corporate identity, advertisements, sales collaterals, catalogs, client presentations, newsletters, etc.
+    Ability to bring fresh perspective to the brand without losing original intent
+    Excellent communication skills and ability to interact with clients and understand their requirements
+    Proven presentation skills with expertise in demonstrating the designs to the clients and getting their approval
+    Brainstorming and developing new concepts and ideas to boast the brand
+    Excellent team player and ability to work in groups to complete a desired task
+
+    SOFTWARE SKILLS
+    Adobe Photoshop
+    Adobe Illustrator
+    Adobe Permiere
+    Quack Express
+    Front Page
+    Corel Draw
+    Adobe Flash
+    Adobe PageMaker
+    Adobe AfterEffects
+    HTML/CSS
+    Adobe Dreamweaver
+    MAYA
+
+    PROFESSIONAL EXPERIENCE
+    Graphics Designer
+    Fresh Media Solutions, Norwalk, CT
+    2010 – Present
+    Responsibilities:
+    Attend client meetings and understand their brand and promotion requirements
+    Come up with innovative concepts and get approval from the clients
+    Carry out detailed research and create design briefs for approval
+    Estimate the time required to complete the designs and send quotes accordingly
+    Complete the designs by coordinating with photographers and copy writers
+    Send out the completed designs to the clients for feedback
+    Carry out brain storming sessions to come up with new concepts and innovative ideas
+    Graphics Designer (Intern)
+    Smart Media Works, Norwalk, CT
+    2009 – 2010
+    Responsibilities:
+    Attend briefing sessions from account managers and understand the client requirements
+    Come up with innovative concepts and ideas to match client branding
+    Develop design briefs and submit them to Sr. Graphics Designer to get feedbacks
+    Generate design presentations for clients
+    Design logos, collaterals, newsletters and advertisements for the clients
+
+    EDUCATIONAL QUALIFICATION
+    Bachelor in Fine Arts, Norwalk University – 2010
+    Design Communication Arts Certificate, Norwalk Design Institute – 2010
+    </textarea>
+    <textarea id="text2" spellcheck="true">Qualifications:
+    Diploma in Graphic Design or relevant experience
+    Minimum 4 years of related experience
+    Strong knowledge of typography and layout Fluent in The Adobe Creative Suite programs (InDesign, Illustrator, Photoshop, Dreamweaver, Lightroom) and other industry standard toolsets
+    Experience in prepress and digital output Working knowledge of Web Design including HTML/CSS, MailChimp, and Shopify
+    Comfortable learning new computer applications
+    Duties include:
+    Design and layout of seasonal marketing materials such as catalogues, posters, look books press releases and various other documents and sales tools
+    Design and layout a wide array of print and web projects
+    Design and execute email newsletters
+    Update and maintain website
+    Coordinate with outside suppliers (photographers, printers, programmers)
+    Ability to develop creative solutions to problems at times working collaboratively with other departments
+        </textarea>
+        
+        <button id="matchBtn">Match</button>
+        <!--<button id="createTable" onclick="createTable()">Create Table</button>-->
+        <br/>
+        <table id="mTable">
+          <tr>
+            <th>Keywords</th>
+            <th>Resume</th>
+            <th>Job Description</th>
+          </tr>
+        </table>
+        
+        <div id="result"></div>
+        <script>
+            var text1 = document.getElementById('text1');
+            var text2 = document.getElementById('text2'),
+                checkBtn = document.getElementById('checkBtn'),
+                mresult = document.getElementById('result');
+            
+          //calling multiple function in one onclick  /*https://stackoverflow.com/questions/40396924/calling-multiple-functions-onclick-event-reactjs-react-datepicker*/
+            var arrSlist =['collaborate', 'teamwork', 'develop','execute','update','maintain','related','experience'];
+            var arrHlist =['graphic', 'design', 'adobe', 'creative', 'indesign', 'illustrator', 'photoshop', 'dreamweaver', 'lightroom', 'html', 'css', 'mailchimp', 'shopify','web','digital', 'typography','newsletter', 'website'];
+            
+            var firstarr = [],
+                secarr = [],
+                myobj = {},
+                missingarr = [];
+
+            function matchJob(type){
+                var secstr = text2.value.toLowerCase();
+                var counter2;
+                var arr = [],
+                    narr = [];
+                
+                if(type == 1){
+                    arr = arrSlist;
+                    narr = firstarr;
+                } else if(type == 2){
+                    arr = arrHlist;
+                    narr = secarr;
+                }
+                
+                for(var i=0; i< arr.length; i++){
+                    var re = new RegExp(arr[i], 'g');
+                    var matchWord = secstr.match(re);
+                    
+                    if(matchWord != null){
+                        
+                        narr.push(matchWord[0]);
+                        
+                        var obj = {
+                        keyword:arr[i],
+                        jobtimes:0,
+                        restimes:0
+                        };
+                        myobj[arr[i]] = obj;
+                        
+                        counter2 = matchWord.length;
+                        
+                        myobj[arr[i]].jobtimes = counter2;
+                        
+                        /*console.log(matchWord);*/
+                        
+                        
+                    } else {
+                        var ndiv = document.createElement('div');
+                        ndiv.innerHTML = "I'm sorry. Not single word is matched."
+                    }
+                    
+                }
+                console.log(narr, myobj);
+            }
+            
+            function matchResume(newtype,obj){
+                var parastr = text1.value.toLowerCase();    
+                var counter;
+                var narr = [];
+               
+                if(newtype == 1){
+                    narr = firstarr;
+                } else if (newtype == 2){
+                    narr = secarr;
+                }
+                
+                for (var j=0; j< narr.length; j++){
+                    var innerRe = new RegExp(narr[j], 'g');
+                    var innerMatch = parastr.match(innerRe);
+                    
+                    if(innerMatch != null){
+
+                        counter = innerMatch.length;
+                        
+                        myobj[narr[j]].restimes = counter;
+                        /*console.log(innerMatch);*/
+
+                    } else{
+                        counter = 0;
+                        myobj[narr[j]].restimes = counter;
+                        missingarr.push(narr[j]);
+                    }
+
+                }
+            }
+            
+            function createTable(){
+
+                for(var key in myobj){
+                    var mTrow = document.createElement('TR');
+                    var mTdata1 = document.createElement('TD');
+                    var mTtext1 = document.createTextNode(myobj[key].keyword);
+                    var mTdata2 = document.createElement('TD');
+                    var mTtext2 = document.createTextNode(myobj[key].restimes);
+                    var mTdata3 = document.createElement('TD');
+                    var mTtext3 = document.createTextNode(myobj[key].jobtimes);
+                    
+                    mTdata1.appendChild(mTtext1);
+                    mTdata2.appendChild(mTtext2);
+                    mTdata3.appendChild(mTtext3);
+                    mTrow.appendChild(mTdata1);
+                    mTrow.appendChild(mTdata2);
+                    mTrow.appendChild(mTdata3);
+                    mTable.appendChild(mTrow);
+                    
+                    
+                }    
+                
+            }
+            
+            matchBtn.addEventListener('click', function(){
+                matchJob(1);
+                matchResume(1);
+                matchJob(2);
+                matchResume(2);
+                console.log(myobj);
+                
+                createTable();
+                mresult.innerHTML = "Missing skills are "+ missingarr;
+               
+            });
+        </script>
+    </body>
+</html>
