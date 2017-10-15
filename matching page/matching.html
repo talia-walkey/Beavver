@@ -3,6 +3,8 @@
     <head>
         <title>matching page</title>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat:700" rel="stylesheet">
         
@@ -50,18 +52,63 @@
                </ul>
               <label class="mlabel">Job Title</label>
               <input class="rinput">
-               
-              <label class="mlabel">Qualitification</label>
-              <input class="rinput">
-              
-              <label class="mlabel">Skills</label>
-              <input class="rinput">
-              
-              <label class="mlabel">Edeucation</label>
-              <input class="rinput">
-              
-              <label class="mlabel">Work Experience</label>
-              <input class="rinput">
+              <textarea class="jinput" placeholder="Paste your resume here" id="text1" spellcheck="true">
+                       Mark P. McGowan
+            144 Cheshire Road, Norwalk, CT 06854
+            203-434-6339
+            mark.mccowan@example.com
+
+            OBJECTIVE
+            A Graphics Designer with 5+ years of professional experience seeking for a compelling job where my creative skills are challenged. Seeking a job position in the creative team where I can apply my knowledge of diverse design skills set and graphics art.
+
+            SKILLS & PROFICIENCIES
+            Experience in designing logos, corporate identity, advertisements, sales collaterals, catalogs, client presentations, newsletters, etc.
+            Ability to bring fresh perspective to the brand without losing original intent
+            Excellent communication skills and ability to interact with clients and understand their requirements
+            Proven presentation skills with expertise in demonstrating the designs to the clients and getting their approval
+            Brainstorming and developing new concepts and ideas to boast the brand
+            Excellent team player and ability to work in groups to complete a desired task
+
+            SOFTWARE SKILLS
+            Adobe Photoshop
+            Adobe Illustrator
+            Adobe Permiere
+            Quack Express
+            Front Page
+            Corel Draw
+            Adobe Flash
+            Adobe PageMaker
+            Adobe AfterEffects
+            HTML/CSS
+            Adobe Dreamweaver
+            MAYA
+
+            PROFESSIONAL EXPERIENCE
+            Graphics Designer
+            Fresh Media Solutions, Norwalk, CT
+            2010 – Present
+            Responsibilities:
+            Attend client meetings and understand their brand and promotion requirements
+            Come up with innovative concepts and get approval from the clients
+            Carry out detailed research and create design briefs for approval
+            Estimate the time required to complete the designs and send quotes accordingly
+            Complete the designs by coordinating with photographers and copy writers
+            Send out the completed designs to the clients for feedback
+            Carry out brain storming sessions to come up with new concepts and innovative ideas
+            Graphics Designer (Intern)
+            Smart Media Works, Norwalk, CT
+            2009 – 2010
+            Responsibilities:
+            Attend briefing sessions from account managers and understand the client requirements
+            Come up with innovative concepts and ideas to match client branding
+            Develop design briefs and submit them to Sr. Graphics Designer to get feedbacks
+            Generate design presentations for clients
+            Design logos, collaterals, newsletters and advertisements for the clients
+
+            EDUCATIONAL QUALIFICATION
+            Bachelor in Fine Arts, Norwalk University – 2010
+            Design Communication Arts Certificate, Norwalk Design Institute – 2010
+            </textarea>
               
               <br/>
               
@@ -73,14 +120,64 @@
                    <li class="step">PASTE YOUR JOB DESCRIPTION</li>
                </ul>
               <label class="mlabel">&nbsp;</label>
-              <textarea class="jinput" placeholder="Paste the job title with the full job description text-excluding the &quot About Company &quot section"></textarea>
+              <textarea class="jinput" placeholder="Paste the job title with the full job description text-excluding the &quot About Company &quot section" id="text2" spellcheck="true">
+               Qualifications:
+                Diploma in Graphic Design or relevant experience
+                Minimum 4 years of related experience
+                Strong knowledge of typography and layout Fluent in The Adobe Creative Suite programs (InDesign, Illustrator, Photoshop, Dreamweaver, Lightroom) and other industry standard toolsets
+                Experience in prepress and digital output Working knowledge of Web Design including HTML/CSS, MailChimp, and Shopify
+                Comfortable learning new computer applications
+                Duties include:
+                Design and layout of seasonal marketing materials such as catalogues, posters, look books press releases and various other documents and sales tools
+                Design and layout a wide array of print and web projects
+                Design and execute email newsletters
+                Update and maintain website
+                Coordinate with outside suppliers (photographers, printers, programmers)
+                Ability to develop creative solutions to problems at times working collaboratively with other departments
+               </textarea>
               
               <br/>
               
               <button class="clear">Clear resume</button>
           </div>
           </div>
-            <button id="match">MAKE A MATCH</button>
+            <button class="msubmit" id="matchBtn">MAKE A MATCH</button>
+            <br/>
+
+        </div>
+
+        </br></br></br>
+
+        <div class="container">
+            <div id="result">
+                <div class="progress" id="progress"></div>
+            </div>
+            </br></br>
+            <div class="row">
+            <div class="col">
+              <div class="resultbox">
+                  <p class="rtitle">Comparison</p>
+                  <table id="mTable">
+                      <tr>
+                        <th>Keywords</th>
+                        <th>Resume</th>
+                        <th>Job Description</th>
+                      </tr>
+                  </table>
+              </div>
+            </div>
+            <div class="col">
+              <div class="resultbox">
+                  <p class="rtitle">Suggestion</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="resultbox">
+                  <p class="rtitle">Course Recommandation</p>
+                  <div id="courseRec"></div>
+              </div>
+            </div>
+          </div>
         </div>
         
 
@@ -90,5 +187,9 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+        <script src="progressbar/progressbar.js"></script>
+        <script src="progressbar/main.js"></script>
+        <script src="matchingraw.js"></script>
     </body>
 </html>
