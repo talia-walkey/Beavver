@@ -212,9 +212,29 @@
     position: absolute;
     margin: auto;
     top: 0;
-    bottom: 0;
+    bottom: 10;
     left: 0;
     right: 0;
+}
+
+#newsletter-button {
+    background-color: #ffb13b;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    position: absolute;
+    top: 3%;
+    right: 18%;
+    z-index: 2;
+}
+
+#envelope-icon {
+    color: #FFF;
+    position: absolute;
+    top: 35%;
+    right: 30%;
+    font-size: 12pt;
 }
 
 hr {
@@ -224,6 +244,19 @@ hr {
 #footer nav {
     background-color: #333;
     border: none;
+}
+
+.footer-nav>li>a {
+    color: white !important;
+}
+
+.footer-nav>li>a:hover {
+    color: #66cccc;
+}
+
+.copyright-msg {
+    font-family: 'Roboto', sans-serif;
+    color: #ccc;
 }
 
 
