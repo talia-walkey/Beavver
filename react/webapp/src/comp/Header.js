@@ -2,7 +2,7 @@ import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import { Button, Media, Form, FormGroup, Label, Input, FormText, Fade } from 'reactstrap';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import {FaSearch} from 'react-icons/lib/fa';
+import { FaSearch } from 'react-icons/lib/fa';
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -63,13 +63,15 @@ export default class Example extends React.Component {
         
             <Nav className="ml-auto" navbar>
             {/* SEARCH */}
-                <FaSearch />
-                
+                <Button color="warning">
+                    <FaSearch />
+                </Button>
+        
             {/* LOGIN */}
 
               <NavItem>
-                  <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.BtnDropdownToggle}>
-                    <DropdownToggle caret color="warning">
+                  <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.BtnDropdownToggle} className="secondaryBtn" >
+                    <DropdownToggle caret>
                       LOGIN
                     </DropdownToggle>
         
@@ -104,6 +106,7 @@ export default class Example extends React.Component {
                       <DropdownItem href="/components/">Sign Out</DropdownItem>
                     </DropdownMenu>
                     */}
+        
                   </ButtonDropdown>
               </NavItem>
               <NavItem>

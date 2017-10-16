@@ -6,6 +6,7 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 
 
 class Footer extends Component {
+    
     render() {
         return (
             <div>
