@@ -108,21 +108,26 @@ require_once('connect.php');
 
 
 
- <div id="topspace" class="container">
+ <div id="topspace" class="containerRegForm">
               <div id="regibox">
                   <p id="imgcenter"><img id="beavver" alt='beavverLogo' src="img/Asset%201@4x.png"/></p>
                   
-                      <form>
+                  <!-- IMPORTANT TO HAVE THIS ON EVERY FORM TO SEND TO DATABASE -->
+                      <form id="registerForm" action='connect.php' method='POST'>
                       <div class="form-group">
                           <p class="regititle">New to us? <br/>Sign up now</p>
                       </div>
                 
                       <div class="form-group">
-                          <input class="regiinput form-control" type="text"  placeholder="First Name" id='username' name='username'>
+                          <input class="regiinput form-control" type="text"  placeholder="First Name" id='first_name' name='first_name'>
                           <hr class="dashline">
                       </div>
+                      
+    <!--HIDDEN INPUT TO DECLARE LOGIN OR SIGNUP -->
+                      <input type="hidden" value="reg" name="type" />
+                      
                       <div class="form-group">
-                          <input type="text" class="regiinput form-control" placeholder="Last Name">
+                          <input type="text" class="regiinput form-control" placeholder="Last Name" id='last_name' name='last_name'>
                           <hr class="dashline">
                       </div>
                       
@@ -135,29 +140,19 @@ require_once('connect.php');
                         <hr class="dashline">
                       </div>
                       <div class="form-group">
-                        <input  type="password" class="regiinput form-control" placeholder="Confirm Password">
+                        <input  type="password" class="regiinput form-control" placeholder="Confirm Password" name="confirm_password">
                         <hr class="dashline">
                       </div>
-<!--
-                      <div class="form-check">
-                        <label id="rmbme" class="form-check-label">
-                          <input type="checkbox" class="form-check-input">
-                          Remember Me
-                        </label>
-                      </div>
-                      
--->
+
                       <button type="submit" class="msubmit2 btn btn-primary">
                           <img id="linkedinbtn" alt='linkedInLogo' src="img/linkedin-logo.svg">
                           &nbsp;Login with LinkedIn
                       </button>
                      
-                      
                       <br/>
                       <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' >Submit</button>
                       
                       <!--formaction="registeredProfile.php"-->
-                       
                        
                   </form>
               </div>
@@ -167,8 +162,6 @@ require_once('connect.php');
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-
     
     <!-- SEARCH BAR -->  
     <div id="search-box" class="form-row align-items-center">
@@ -235,5 +228,30 @@ require_once('connect.php');
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/header-footer.js"></script>
+    
+    
+    <script>
+        $(document).ready(function(){
+            document.getElementById("registerForm").addEventListener("submit", function(ev){
+                //stops form from reloading
+                ev.preventDefault();
+                
+                //load the page via javascript instead of going to the page itself
+                $.post("connect.php",
+                    $("#registerForm").serialize(), 
+                    function(resp){
+                    var obj = JSON.parse(resp);
+                    console.log(obj);
+                    if(obj.status == 1){
+                    //go to the next page
+                    alert("Go to the next page after successful registration");
+                    window.location.href="registeredProfile.php";
+                        }
+                    }
+                )
+            });
+        });
+        
+    </script>
   </body>
 </html>

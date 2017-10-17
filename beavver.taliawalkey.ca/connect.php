@@ -14,26 +14,43 @@
 
         $sql = "SELECT * FROM login";
         
-        $username = $_POST['username'];
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $loginBut = $_POST['loginBut'];
-        $submitBut = $_POST['submitBut'];
+        $confirm_password= $_POST['confirm_password'];
+        
+        
+        $type = $_POST['type'];
     
-    
-            //declare whether you want to login or signup
-               if (isset($submitBut))
-            	{
-            	     echo 'register button is clicked';
-            		$sql = "INSERT INTO login (username, email, password) VALUES ('$username', '$email', '$password')";
-                    $conn->exec($sql);
-                    
-                    
-            	}else if (isset($loginBut))
-            	{
-            	     //$sql = "SELECT `id`, `username`, `email`, `password` FROM `login` WHERE `username` = '$username'";
-                     //$conn->exec($sql);
-             }
+        if($type == "reg"){ 
+             $sql = "INSERT INTO login (first_name, last_name, email, password, confirm_password) VALUES ('$first_name', '$last_name', '$email', '$password', '$confirm_password')";
+             $conn->exec($sql);
+                //echo 'register button is clicked';
+        }else if($type == "log"){
+            $sql = "SELECT (first_name, last_name, email, password, confirm_password) FROM login WHERE $first_name";
+            $conn->exec($sql);
+            
+        }
+        
+        
+        //declare whether you want to login or signup
+     
+       
+        
+        if($sql){
+            $arr = array(
+                "status"=>1,
+                "msg"=>"inserted properly"
+            );
+            echo json_encode($arr);
+        } else {
+            $arr = array(
+                "status"=>0,
+                "msg"=>"something went wrong"
+            );
+            echo json_encode($arr);
+        }
              
     } catch(PDOException $e) {
         $error = $e->getMessage();

@@ -14,11 +14,16 @@ require_once('connect.php');
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
-        $username = $_POST['username'];
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $confirm_password= $_POST['confirm_password'];
        
-      // $sql = "SELECT `username`, `email`, `password` FROM `login` WHERE `username` = '$username'";
+        //$sql = "SELECT * FROM login WHERE ('$first_name')";
+        //$sql = "SELECT `id`, `first_name`, `last_name`, `email`, `password`, `confirm_password` FROM `login` WHERE `first_name` = 'Talia'";
+            //$conn->exec($sql);
+            
        
         $sql = "SELECT * FROM login";
         
@@ -36,12 +41,22 @@ require_once('connect.php');
                   </tr>";  
                   
             echo "<tr>
-                    <td>" . $row['username'] . "</td>
+                    <td>" . $row['first_name'] . "</td>
+                    <td>" . $row['last_name'] . "</td>
                     <td>" . $row['email'] . "</td>
                     <td>" . $row['password'] . "</td>
+                    <td>" . $row['confirm_password'] . "</td>
                   </tr";
         }
         echo "</table>";
+        
+        
+        /*
+        session_start();
+        
+        $_SESSION['username'] = $rows[0]['username'];
+        echo json_encode($rows);*/
+        
         
     
     } catch(PDOException $e) {
