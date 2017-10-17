@@ -91,7 +91,7 @@
              <script>
                  var butClick = document.getElementById('signup-button');
                      butClick.addEventListener("click", function(){
-                         window.location.href = "new.php";
+                         window.location.href = "register.php";
                      });
                  
                  //SEARCH BAR ANIMATION

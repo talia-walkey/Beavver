@@ -16,6 +16,12 @@ h1 {
     width: 300px;
 }
 
+#registrationForm{
+ margin-top: 20px;
+ height: 250px;
+ width: 100%;
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -399,6 +405,10 @@ body {
 #content {
     margin-bottom: 50px;
 }
+.content {
+    margin-bottom: 50px;
+}
+
 
 #footer {
     background-color: #333;
