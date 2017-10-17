@@ -93,7 +93,12 @@
                      butClick.addEventListener("click", function(){
                          window.location.href = "new.php";
                      });
+                     
                  
+             </script>
+             
+             
+                 <script>
                  //SEARCH BAR ANIMATION
                 $(document).ready(function(){
                     $("#nav-search").click(function(){
