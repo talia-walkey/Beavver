@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       
-    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />   
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -93,12 +93,7 @@
                      butClick.addEventListener("click", function(){
                          window.location.href = "new.php";
                      });
-                     
                  
-             </script>
-             
-             
-                 <script>
                  //SEARCH BAR ANIMATION
                 $(document).ready(function(){
                     $("#nav-search").click(function(){

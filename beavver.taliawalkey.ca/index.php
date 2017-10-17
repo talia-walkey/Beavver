@@ -10,10 +10,12 @@
     <!-- Bootstrap -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-grid.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat:700" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />   
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,12 +25,24 @@
     <![endif]-->
   </head>
   <body>
-   
-   
-   <?php include 'header.php';?>
-   
-   <?php include 'footer.php';?>
-   
+    <div>
+        <?php include 'header.php';?>
+    </div>
+
+    <div id="content">
+        <div id="landing-content" class="container-fluid">
+            <h1>RESUME AND CAREER BOOSTER</h1>
+            <p>Beavver is a tool intended to help job seekers thrive on an automated and high competitive market</p>
+            <img src="img/logo.png" alt="Beavver" class="logo-mascot">
+            <br/><br/>
+            <button type="submit" class="btn ctaBtn" id="cta-button">GET STARTED FOR FREE</button>
+        </div>
+    </div>  
+      
+
+    <div>
+        <?php include 'footer.php';?>
+    </div>  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

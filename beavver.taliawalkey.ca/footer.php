@@ -34,10 +34,10 @@
         <!-- NEWLETTER -->
         <div class="container">
           <div class="row newsletter-row">
-            <div class="col-lg-6">
+            <div class="col-6 col-sm-6">
               <p>SUBSCRIBE TO NEWSLETTER</p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-6 col-sm-6">
                 <div id="email-box" class="form-row align-items-center">
                     <a href="#"><button id="newsletter-button"><span class="glyphicon glyphicon-envelope" id="envelope-icon"></span></button></a>
                     <input type="text" class="form-control" placeholder="E-mail" id="email-footer-input">  

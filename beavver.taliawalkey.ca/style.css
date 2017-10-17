@@ -354,7 +354,6 @@ body {
   transition: 0.3s;
   font-size: 10pt;
   font-family: 'Montserrat', sans-serif;
-    
 }
 
 .secondaryBtn {
@@ -365,6 +364,17 @@ body {
   border-style: solid;
   border-width: 3px;
   border-color: #ffb13b;
+  transition: 0.3s;
+  font-size: 10pt;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ctaBtn { 
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #66cccc;
+  border: none;
   transition: 0.3s;
   font-size: 10pt;
   font-family: 'Montserrat', sans-serif;
@@ -387,7 +397,7 @@ body {
 /* FOOTER */
 
 #content {
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 #footer {
