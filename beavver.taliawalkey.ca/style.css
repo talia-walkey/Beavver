@@ -284,10 +284,6 @@ body {
     display: block;
 }
 
-#after-login, #after-login-span {
-    display: none;
-}
-
 .primaryBtn signin {
     display: inline-block;
 }

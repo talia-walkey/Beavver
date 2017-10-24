@@ -28,7 +28,7 @@
     <a name="top"></a>   
 
     <div>
-        <?php include 'header.php';?>
+        <?php include 'header-logout.php';?>
     </div>
     
     <!-- BREADCRUMBS -->

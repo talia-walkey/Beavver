@@ -44,10 +44,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#">FEATURES</a></li>
+            <li><a href="#">SCAN</a></li>
+            <li><a href="#">RESOURCES</a></li>
             <li><a href="#">PRICING</a></li>
             <li><a href="#">SUPPORT</a></li>
-            <li><a href="#">HOW IT WORKS</a></li>
           </ul>
 
         <!-- SEARCH -->    
@@ -58,50 +58,13 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <button class="secondaryBtn">
-                      <span id="before-login-span">LOGIN</span>
                       <span id="after-login-span">Hi, <span id="firstname">MyName</span>!</span>
                       <span class="caret"></span>
                 </button>
             
                 </a>
-                        <ul class="dropdown-menu">
-                <!-- BEFORE LOGIN -->      
-                <div id="before-login" class="form-group">
-                        <li><input type="text" class="form-control" placeholder="Your Email" id="email-input"></li>
-                        <li><input type="text" class="form-control" placeholder="Password" id="password-input"></li>
-                <form class="form-inline">
-                        <div class="form-check">
-                        <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input"> Remember Me
-                        </label>
-                </div>
-                      <button type="submit" class="btn primaryBtn" id="signin-button">Sign In</button>
-                      
-                      <!--Google SignIn -->
-                    <button type="submit" class="btn primaryBtn" id="signin-button">
-                    <div id="my-signin2"></div>
-                        <script>
-                        function onSuccess(googleUser) {
-                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                        }
-                        function onFailure(error) {
-                            console.log(error);
-                        }
-                        function renderButton() {
-                            gapi.signin2.render('my-signin2', {
-                            'width': '100px',
-                            'height': '25px',
-                            'onsuccess': onSuccess,
-                            'onfailure': onFailure
-                        });
-                        
-                        }
-                  </script>
-                  </button>
-                <!-- end Google SignIn -->
-                      
-                    </form>
-                </div>
+                <ul class="dropdown-menu">
+
                 <!-- AFTER LOGIN -->  
                 <div id="after-login">
                     <li><a href="#">My Career</a></li>
@@ -110,9 +73,9 @@
                     <li role="separator" class="divider"></li>
                     <li><a href="#" id="signOut">Sign Out</a></li>
                 </div>
+                    
               </ul>
             </li>
-            <li><button class="primaryBtn" id="signup-button" type="submit" formaction="register.php">SIGN UP</button></li>
              
              <script>
                  var butClick = document.getElementById('signup-button');
@@ -125,42 +88,6 @@
                     $("#nav-search").click(function(){
                         $("#search-box").slideToggle();
                     });
-                });
-
-                //LOGIN NAVBAR
-
-                var beforeLogin = document.getElementById("before-login"),
-                    afterLogin = document.getElementById("after-login"),
-                    signinBtn = document.getElementById("signin-button"),
-                    beforeLoginName = document.getElementById("before-login-span"),
-                    afterLoginName = document.getElementById("after-login-span"),
-                    signOut = document.getElementById("signOut"),
-                    signupBtn = document.getElementById("signup-button");
-
-                signinBtn.addEventListener("click", function(){    
-                    // changing the dropdown components
-                    beforeLogin.style.display = "none";
-                    afterLogin.style.display = "block";
-
-                    // changing the name in the login button
-                    beforeLoginName.style.display = "none";
-                    afterLoginName.style.display = "inline-block";
-
-                    signupBtn.style.display = "none";
-                });
-
-                signOut.addEventListener("click", function(){
-                    loginBool = false;
-
-                    // changing the dropdown components
-                    beforeLogin.style.display = "block";
-                    afterLogin.style.display = "none";
-
-                    // changing the name in the login button
-                    beforeLoginName.style.display = "inline-block";
-                    afterLoginName.style.display = "none";
-
-                    signupBtn.style.display = "block";
                 });
                  
              </script>
