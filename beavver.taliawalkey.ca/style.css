@@ -1,3 +1,19 @@
+/* BREADCRUMBS */
+.breadcrumb {
+    background-color: white;
+}
+
+li.breadcrumb-item>a {
+    color: black;
+}
+
+li.breadcrumb-item>a:hover {
+    color: #66cccc;
+    text-decoration: none;
+}
+
+/* HOME PAGE */
+
 h1 {
     font-size: 36pt;
     color: #333;
@@ -407,6 +423,7 @@ body {
 }
 .content {
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 
