@@ -42,10 +42,22 @@
     
     <div class="content"> 
         
-        INSERT MY CONTENT HERE
+    <!-- PAGE HEADER -->    
+    <div class="container-fluid templates-content">
+        <div class="row">
+            <div class="col-md-1"></div>
+    		<div class="col-md-10">
+                <div class="orange-line"></div>
+                <img src="img/gray-circle.png" class="gray-circle"/>
+                <h1 class="page-title">PAGE TITLE</h1>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
         
     </div> <!-- END OF CONTENT -->
-      
+    
+    <br/>
+        
     <div>
         <?php include 'footer.php';?>
     </div>  

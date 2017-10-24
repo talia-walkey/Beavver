@@ -94,26 +94,3 @@ figure>a:hover {
     color: #66cccc !important;
     text-decoration: none;
 }
-
-.orange-line {
-    background-color: #FFA734;
-    width: 25vw;
-    height: 5px;
-    z-index: -2;
-    position: absolute;
-    margin-top: 50px;
-}
-
-.gray-circle {
-    position: absolute;
-    z-index: -1;
-    margin-left: 20vw;
-}
-
-.page-title {
-    margin-left: 25vw;
-}
-
-h2, p {
-    font-family: 'Roboto', sans-serif;
-}
