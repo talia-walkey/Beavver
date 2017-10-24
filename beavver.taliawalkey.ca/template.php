@@ -28,6 +28,7 @@
     <a name="top"></a>   
 
     <div>
+        <!-- Make sure to change this to 'header-login.php' for pages that user is logged in -->
         <?php include 'header-logout.php';?>
     </div>
     
@@ -61,6 +62,8 @@
     <div>
         <?php include 'footer.php';?>
     </div>  
+    
+    </div>
       
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
