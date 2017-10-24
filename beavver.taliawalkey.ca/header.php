@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+     <meta name="google-signin-client_id" content="865984037107-0laeq4id47er4dn2s10kf547j5ebp5f1.apps.googleusercontent.com">
+     
     <title>Beavver</title>
 
     <!-- Bootstrap -->  
@@ -61,19 +62,44 @@
                       <span id="after-login-span">Hi, <span id="firstname">MyName</span>!</span>
                       <span class="caret"></span>
                 </button>
+            
                 </a>
-              <ul class="dropdown-menu">
+                        <ul class="dropdown-menu">
                 <!-- BEFORE LOGIN -->      
                 <div id="before-login" class="form-group">
-                    <li><input type="text" class="form-control" placeholder="Your Email" id="email-input"></li>
-                    <li><input type="text" class="form-control" placeholder="Password" id="password-input"></li>
-                    <form class="form-inline">
-                      <div class="form-check">
+                        <li><input type="text" class="form-control" placeholder="Your Email" id="email-input"></li>
+                        <li><input type="text" class="form-control" placeholder="Password" id="password-input"></li>
+                <form class="form-inline">
+                        <div class="form-check">
                         <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input"> Remember Me
+                        <input type="checkbox" class="form-check-input"> Remember Me
                         </label>
-                      </div>
+                </div>
                       <button type="submit" class="btn primaryBtn" id="signin-button">Sign In</button>
+                      
+                      <!--Google SignIn -->
+                    <button type="submit" class="btn primaryBtn" id="signin-button">
+                    <div id="my-signin2"></div>
+                        <script>
+                        function onSuccess(googleUser) {
+                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                        }
+                        function onFailure(error) {
+                            console.log(error);
+                        }
+                        function renderButton() {
+                            gapi.signin2.render('my-signin2', {
+                            'width': '100px',
+                            'height': '25px',
+                            'onsuccess': onSuccess,
+                            'onfailure': onFailure
+                        });
+                        
+                        }
+                  </script>
+                  </button>
+                <!-- end Google SignIn -->
+                      
                     </form>
                 </div>
                 <!-- AFTER LOGIN -->  
@@ -157,3 +183,8 @@
       
     </body>
 </html>
+
+
+<!-- Google SignIn SCRIPT -->
+      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+

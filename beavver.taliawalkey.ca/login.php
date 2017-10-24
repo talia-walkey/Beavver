@@ -1,4 +1,9 @@
+<?php include 'header.php';?>
+<?php include 'quickstart.js';?>
+
+
 <?php
+require_once('connect.php');
 
     $servername = "beavver.taliawalkey.ca";
     $dblogin = "talia185_Beavver";
@@ -21,7 +26,10 @@
         $confirm_password= $_POST['confirm_password'];
         
         
-        $type = $_POST['type'];
+        print_r($rows);
+        
+        
+       /* $type = $_POST['type'];
     
         if($type == "reg"){ 
              $sql = "INSERT INTO login (first_name, last_name, email, password, confirm_password) VALUES ('$first_name', '$last_name', '$email', '$password', '$confirm_password')";
@@ -47,7 +55,7 @@
                 "msg"=>"something went wrong"
             );
             echo json_encode($arr);
-        }
+        }*/
              
     } catch(PDOException $e) {
         $error = $e->getMessage();
@@ -55,6 +63,8 @@
     }
 ?>
 
+
+<div><?php include 'footer.php';?></div>
 
 
 

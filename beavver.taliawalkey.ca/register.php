@@ -2,12 +2,14 @@
 require_once('connect.php');
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="google-signin-client_id" content="865984037107-0laeq4id47er4dn2s10kf547j5ebp5f1.apps.googleusercontent.com">
+  
     <title>Beavver</title>
 
     <!-- Bootstrap -->  
@@ -38,47 +40,70 @@ require_once('connect.php');
                   <p id="imgcenter"><img id="beavver" alt='beavverLogo' src="img/Asset%201@4x.png"/></p>
                   
                   <!-- IMPORTANT TO HAVE THIS ON EVERY FORM TO SEND TO DATABASE -->
-                      <form id="registerForm" action='connect.php' method='POST'>
-                      <div class="form-group">
-                          <p class="regititle">New to us? <br/>Sign up now</p>
-                      </div>
-                
-                      <div class="form-group">
-                          <input class="regiinput form-control" type="text"  placeholder="First Name" id='first_name' name='first_name'>
-                          <hr class="dashline">
-                      </div>
-                      
-    <!--HIDDEN INPUT TO DECLARE LOGIN OR SIGNUP -->
-                      <input type="hidden" value="reg" name="type" />
-                      
-                      <div class="form-group">
-                          <input type="text" class="regiinput form-control" placeholder="Last Name" id='last_name' name='last_name'>
-                          <hr class="dashline">
-                      </div>
-                      
-                      <div class="form-group">
-                        <input  type="email" class="regiinput form-control" id="exampleInputEmail1" placeholder="Enter email" name='email'>
-                        <hr class="dashline">
-                      </div>
-                      <div class="form-group">
-                        <input type="password" class="regiinput form-control" placeholder="Password" name="password">
-                        <hr class="dashline">
-                      </div>
-                      <div class="form-group">
-                        <input  type="password" class="regiinput form-control" placeholder="Confirm Password" name="confirm_password">
-                        <hr class="dashline">
-                      </div>
-
-                      <button type="submit" class="msubmit2 btn btn-primary">
-                          <img id="linkedinbtn" alt='linkedInLogo' src="img/linkedin-logo.svg">
+            <form id="registerForm" action='connect.php' method='POST'>
+                  <div class="form-group">
+                      <p class="regititle">New to us? <br/>Sign up now</p>
+            </div>
+                    
+            <div class="form-group">
+                  <input class="regiinput form-control" type="text"  placeholder="First Name" id='first_name' name='first_name'>
+                  <hr class="dashline">
+            </div>
+                          
+        <!--HIDDEN INPUT TO DECLARE LOGIN OR SIGNUP -->
+                  <input type="hidden" value="reg" name="type" />
+                          
+            <div class="form-group">
+                  <input type="text" class="regiinput form-control" placeholder="Last Name" id='last_name' name='last_name'>
+                              <hr class="dashline">
+            </div>
+                          
+            <div class="form-group">
+                  <input  type="email" class="regiinput form-control" id="exampleInputEmail1" placeholder="Enter email" name='email'>
+                  <hr class="dashline">
+            </div>
+           <div class="form-group">
+                  <input type="password" class="regiinput form-control" placeholder="Password" name="password">
+                  <hr class="dashline">
+           </div>
+           <div class="form-group">
+                  <input  type="password" class="regiinput form-control" placeholder="Confirm Password" name="confirm_password">
+                  <hr class="dashline">
+           </div>
+                          
+                      <!--<button type="submit" class="msubmit2 btn btn-primary">
+                          <img id="linkedinbtn" alt='linkedInLogo' src="img/linkedin-logo.svg" >
                           &nbsp;Login with LinkedIn
-                      </button>
-                     
+                      </button>-->
+                      
+                    
+                      <!--Google SignIn -->
+            <div id="registerFormGmail" action='connect.php' method='POST' class="msubmit2 btn btn-primary">
+            <div id="my-signin2"></div>
+                  <script>
+                        function onSuccess(googleUser) {
+                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                       
+                            window.location.href="registeredProfile.php";
+                        }
+                        function onFailure(error) {
+                            console.log(error);
+                        }
+                        function renderButton() {
+                            gapi.signin2.render('my-signin2', {
+                            'width': '200px',
+                            'onsuccess': onSuccess,
+                            'onfailure': onFailure
+                        });
+                        }
+                  </script>
+                  </div>
+                <!-- end Google SignIn -->
+                
                       <br/>
                       <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' >Submit</button>
                       
                       <!--formaction="registeredProfile.php"-->
-                       
                   </form>
               </div>
             </div>
@@ -119,6 +144,11 @@ require_once('connect.php');
             });
         });
         
+        
     </script>
+    
+    <!-- Google SignIn SCRIPT -->
+      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+      
   </body>
 </html>
