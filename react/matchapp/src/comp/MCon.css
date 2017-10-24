@@ -1,0 +1,15 @@
+textarea{
+        width: 200px;
+        height: 200px;
+        margin: 2px;
+        resize: none;
+    }
+
+table{
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 5px;
+}
+table, tr, th, td{
+    border: 1px solid black;
+}
