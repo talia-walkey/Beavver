@@ -63,7 +63,7 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem.</p>
             </div>	
             <div class="col-md-5">
-                <img src="http://via.placeholder.com/500x200" class="templates-img" alt="graphic">			
+                <img src="img/beavver-print.svg" class="templates-img" alt="graphic">			
             </div>
             <div class="col-md-1">
             </div>
@@ -112,8 +112,8 @@
             <div class="col-md-1"></div>
             <div class="col-md-3 templates-gallery">
                 <figure class="figure">
-                    <a href="download.php?download_file=test.docx">
-                      <img src="http://via.placeholder.com/350x500" class="figure-img img-fluid rounded" alt="Template One">
+                    <a href="download.php?download_file=template-01.docx">
+                      <img src="templates/template-01.jpg" class="figure-img img-fluid rounded" alt="Template One">
                       <figcaption class="figure-caption text-center">Template One</figcaption>
                     </a>
                 </figure>

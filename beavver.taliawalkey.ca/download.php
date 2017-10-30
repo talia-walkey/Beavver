@@ -1,7 +1,7 @@
 <?php
  
 // place this code inside a php file and call it f.e. "download.php"
-$path = $_SERVER['DOCUMENT_ROOT']."/beavver.taliawalkey.ca/templates/"; // change the path to fit your websites document structure
+$path = $_SERVER['DOCUMENT_ROOT']."/Beavver/beavver.taliawalkey.ca/templates/"; // change the path to fit your websites document structure
 $fullPath = $path.$_GET['download_file'];
  
 if ($fd = fopen ($fullPath, "r")) {
@@ -9,7 +9,7 @@ if ($fd = fopen ($fullPath, "r")) {
     $path_parts = pathinfo($fullPath);
     $ext = strtolower($path_parts["extension"]);
     switch ($ext) {
-        case "pdf":
+        case "docx":
         header("Content-type: application/msword"); 
         header("Content-Disposition: attachment; filename=\"".$path_parts["basename"]."\""); // use 'attachment' to force a download
         break;
