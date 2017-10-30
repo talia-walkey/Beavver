@@ -1,3 +1,12 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 /* PAGE TITLE */
 
 .orange-line {
@@ -37,24 +46,9 @@ li.breadcrumb-item>a:hover {
     text-decoration: none;
 }
 
-/* HOME PAGE */
-
 h1 {
     font-size: 36pt;
     color: #333;
-}
-
-#landing-content p {
-    color: #868686;
-}
-
-#landing-content {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.logo-mascot {
-    width: 300px;
 }
 
 #registrationForm{
@@ -421,12 +415,18 @@ body {
   transition: 0.3s;
   font-size: 10pt;
   font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
-.primaryBtn:hover{
+.primaryBtn:hover, .ctaBtn:hover {
   color: white;
     cursor: pointer;
   opacity: 0.5;
+}
+
+.secondaryBtn:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 .login:hover{

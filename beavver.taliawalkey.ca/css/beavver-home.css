@@ -1,0 +1,267 @@
+/* Clouds Animation */
+
+/* Pricing */
+.pricing-table {
+    margin: 50px;
+}
+
+.checkmark {
+    background-color: #66cccc;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin:auto;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    font-size: 9pt;
+    display: inline-block;
+    text-align: center;
+}
+
+.features-text {
+    display: inline-block;
+    margin-left: 10px;
+    color: #8f8f8f;
+}
+
+.free-info, .standard-info {
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 10px;
+}
+
+.pricing-features {
+    text-align: left;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+}
+
+.longerBtn {
+    width: 250px !important;
+    height: 60px !important;
+    font-size: 12pt !important;
+    border-radius: 40px !important;
+    padding: 15px;
+    margin: 20px;
+}
+
+.pricing-free {
+    margin: 20px;
+    font-size: 50pt;
+    color: #000 !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.pricing-standard {
+    margin: 20px;
+    font-size: 50pt;
+    color: #66cccc !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.gray-pricing {
+    font-size: 20pt;
+    color: #ccc;
+}
+
+.dollar-sign {
+    vertical-align: super;
+}
+
+.blue-pricing {
+    color: #66cccc;
+    font-size: 20pt;
+}
+
+/* How It Works */
+.how-it-works {
+    background-color: #66cccc;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.how-it-works-text {
+    color: white !important;
+    padding-top: 5px;
+}
+
+.circle-container {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin:auto;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+}
+
+h4 {
+    padding-top: 20px;
+}
+
+.img-steps {
+    width: 110px;
+    height: auto;
+    margin: auto;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    padding-top: 65px;
+}
+
+.steps-text {
+    color: white !important;
+}
+
+.howto-images {
+    position: relative;
+}
+
+.howto-video {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.how-to-steps {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.circle-steps {
+    color: white;
+    background-color: #ffc80a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    font-size: 14pt;
+    padding-top: 5px;
+    border: 3px solid white;
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    right: 25%;
+}
+
+.step-3 {
+    padding-top: -10px;
+}
+
+/* CTA Sections */
+h2 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+p {
+    color: #8f8f8f !important;
+}
+
+.job-keywords {
+    background-color: #f5f5f5;
+    margin-top: -55px;
+    padding-bottom: 40px;
+}
+
+.matching-rate {
+    background-color: #fff;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.career-path {
+    background-color: #f5f5f5;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.beavver-images {
+    margin: 70px;
+}
+
+.circle-num {
+    color: white;
+    background-color: #ffc80a;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 80px;
+    text-align: center;
+    display: inline-block;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #8f8f8f;
+    display: inline-block;
+    margin-left: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.section-text {
+    margin-left: 30px;
+}
+
+/* Landing Content */ 
+
+#landing-content p {
+    color: #868686;
+}
+#landing-content, .pricing-info {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.landing-text, .landing-buttons {
+    margin-bottom: 40px;
+}
+
+.playBtn {
+    width: 45px;
+    height: 45px;
+    margin-left: 30px;
+}
+.how-it-works-span {
+    color: #000;
+    font-size: 12pt;
+    margin-left: 10px;
+}
+
+.zen-beavver {
+    width: 50vw;
+    height: auto;
+}
+
+.myCircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.mouse-icon {
+    width: 40px;
+    height: auto;
+    padding-top: 15px;
+}
