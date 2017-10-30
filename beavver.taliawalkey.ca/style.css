@@ -1,13 +1,15 @@
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
 /* PAGE TITLE */
+
+#gmailLoginButHead{
+    
+}
+
+.framework{
+    background-color: blue;
+    margin: 20px;
+    position: absolute;
+    
+}
 
 .orange-line {
     background-color: #FFA734;
@@ -46,15 +48,31 @@ li.breadcrumb-item>a:hover {
     text-decoration: none;
 }
 
+/* HOME PAGE */
+
 h1 {
     font-size: 36pt;
     color: #333;
+}
+
+#landing-content p {
+    color: #868686;
+}
+
+#landing-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo-mascot {
+    width: 300px;
 }
 
 #registrationForm{
  margin-top: 20px;
  height: 250px;
  width: 100%;
+ padding-bottom: 300px;
 }
 
 html {
@@ -148,6 +166,7 @@ body {
     width: 500px;
     border-radius: 5px;
     padding: 20px;
+    padding-bottom: 50px;
     border-style: dashed;
     border-color: #9fa3a7;
 }
@@ -382,6 +401,16 @@ body {
 
 /* BUTTONS */
 
+.gmailButSize{
+    width:50px;
+    height:50px;
+}
+
+.abcRioButtonContentWrapper{
+    width:50px;
+    height:50px;
+}
+
 .primaryBtn {
   width: 120px;
   height: 37px;
@@ -415,18 +444,12 @@ body {
   transition: 0.3s;
   font-size: 10pt;
   font-family: 'Montserrat', sans-serif;
-  color: white;
 }
 
-.primaryBtn:hover, .ctaBtn:hover {
+.primaryBtn:hover{
   color: white;
     cursor: pointer;
   opacity: 0.5;
-}
-
-.secondaryBtn:hover {
-    cursor: pointer;
-    opacity: 0.5;
 }
 
 .login:hover{

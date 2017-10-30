@@ -5,14 +5,14 @@ require_once('connect.php');
     $dblogin = "talia185_Beavver";
     $password = "D3Beavver!";
     $dbname = "talia185_cc";
-    
-   //var_dump($_POST);
-
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dblogin, $password);
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        
+        $sql = "SELECT * FROM login";
         
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
@@ -20,44 +20,55 @@ require_once('connect.php');
         $password = $_POST['password'];
         $confirm_password= $_POST['confirm_password'];
        
-        //$sql = "SELECT * FROM login WHERE ('$first_name')";
-        //$sql = "SELECT `id`, `first_name`, `last_name`, `email`, `password`, `confirm_password` FROM `login` WHERE `first_name` = 'Talia'";
-            //$conn->exec($sql);
-            
-       
-        $sql = "SELECT * FROM login";
+        $sql = "SELECT * FROM login WHERE email= 'taliawalkey@gmail.com'";
         
         $statement = $conn->prepare($sql);
         $statement->execute();
        
         $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
-      
- echo "<table>";
-        foreach ($rows as $row) {
-            echo "<tr>
-                     <th> </th>
-                     <th> </th>
-                     <th> </th>
-                  </tr>";  
+        
+             /*       
+                    session_start();
+                    
+                   
+                    $_SESSION['id'] = $rows[0]['id'];
+                    $_SESSION['first_name'] = $rows[0]['$first_name'];
+                    $_SESSION['last_name'] = $rows[0]['last_name'];
+                    $_SESSION['email'] = $rows[0]['email'];
+                    $_SESSION['password'] = $rows[0]['password'];
+                    $_SESSION['confirm_password'] = $rows[0]['confirm_password'];
+                
+                    echo json_encode($rows);
+                    
+                  */  
+                    
                   
-            echo "<tr>
-                    <td>" . $row['first_name'] . "</td>
-                    <td>" . $row['last_name'] . "</td>
-                    <td>" . $row['email'] . "</td>
-                    <td>" . $row['password'] . "</td>
-                    <td>" . $row['confirm_password'] . "</td>
-                  </tr";
-        }
-        echo "</table>";
-        
-        
-        /*
-        session_start();
-        
-        $_SESSION['username'] = $rows[0]['username'];
-        echo json_encode($rows);*/
-        
-        
+             /*echo "<table>";
+                    foreach ($rows as $row) {
+                        echo "<tr>
+                                 <th> </th>
+                                 <th> </th>
+                                 <th> </th>
+                              </tr>";  
+                              
+                        echo "<tr>
+                                <td>" . $row['first_name'] . "</td>
+                                <td>" . $row['last_name'] . "</td>
+                                <td>" . $row['email'] . "</td>
+                                <td>" . $row['password'] . "</td>
+                                <td>" . $row['confirm_password'] . "</td>
+                              </tr";
+                    }
+                    echo "</table>";*/
+                    
+                    
+                    /*
+                    session_start();
+                    
+                    $_SESSION['username'] = $rows[0]['username'];
+                    echo json_encode($rows);*/
+                    
+                    
     
     } catch(PDOException $e) {
        // echo "<p style='color: red;'>From the SQL code: $sql</p>";
@@ -82,29 +93,52 @@ require_once('connect.php');
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body>
     
-    <?php include 'header.php';?>
+    <div>
+        <?php include 'header-login.php';?>
+    </div>
+    <?php 
     
-    <?php include 'footer.php';?>
+        echo "<table>";
+        foreach ($rows as $row) {
+            echo "<tr>
+                     <th> </th>
+                     <th> </th>
+                     <th> </th>
+                  </tr>";  
+                  
+            echo "<tr>
+                    <td>" . $row[$first_name] . "</td>
+                    <td>" . $row[$last_name] . "</td>
+                    <td>" . $row[$email] . "</td>
+                  </tr";
+        }
+        echo "</table>";
     
-    
-    
+    ?>
+
+    <div>
+        <?php include 'footer.php';?>
+    </div>  
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/header-footer.js"></script>
-  </body>
+    </body>
 </html>
+
+    <script>
+        $(document).ready(function(){
+            document.getElementById("profileForm").addEventListener("submit", function(ev){
+                //stops form from reloading
+                ev.preventDefault();
+                  
+            });
+        });
+    </script>
 
