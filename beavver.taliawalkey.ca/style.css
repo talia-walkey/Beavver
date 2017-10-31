@@ -284,10 +284,6 @@ body {
     display: block;
 }
 
-#after-login, #after-login-span {
-    display: none;
-}
-
 .primaryBtn signin {
     display: inline-block;
 }
@@ -541,6 +537,14 @@ hr {
     color: #ccc;
 }
 
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
 
 /* OTHER */
 

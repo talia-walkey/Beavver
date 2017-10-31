@@ -26,7 +26,7 @@
   </head>
   <body>
     <div>
-        <?php include 'header.php';?>
+        <?php include 'header-logout.php';?>
     </div>
 
     <div id="content">

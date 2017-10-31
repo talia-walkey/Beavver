@@ -32,7 +32,7 @@ require_once('connect.php');
   </head>
   <body>
    
-<?php include 'header.php';?>
+<?php include 'header-logout.php';?>
 
 <div class="content">
  <div id="topspace" class="containerRegForm">
