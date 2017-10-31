@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<?php
+require('connect.php');
+
+?>
+
+
+>>>>>>> 154de9a845e682f342cbab735ea81136141d94fc
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,10 +53,17 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
+<<<<<<< HEAD
             <li><a href="#">SCAN</a></li>
             <li><a href="#">RESOURCES</a></li>
             <li><a href="#">PRICING</a></li>
             <li><a href="#">SUPPORT</a></li>
+=======
+            <li><a href="landingLogin.php#scan">SCAN</a></li>
+            <li><a href="resume_templates.php">RESOURCES</a></li>
+            <li><a href="landingLogin.php#pricing">PRICING</a></li>
+            <li><a href="#support">SUPPORT</a></li>
+>>>>>>> 154de9a845e682f342cbab735ea81136141d94fc
           </ul>
 
         <!-- SEARCH -->    
@@ -58,7 +74,11 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <button class="secondaryBtn">
+<<<<<<< HEAD
                       <span id="after-login-span">Hi, <span id="firstname">MyName</span>!</span>
+=======
+                      <span id="after-login-span">Hello <span id="firstname"></span>!</span>
+>>>>>>> 154de9a845e682f342cbab735ea81136141d94fc
                       <span class="caret"></span>
                 </button>
             
@@ -68,7 +88,11 @@
                 <!-- AFTER LOGIN -->  
                 <div id="after-login">
                     <li><a href="#">My Career</a></li>
+<<<<<<< HEAD
                     <li><a href="#">My Profile</a></li>
+=======
+                    <li><a href="#" id="myProfile">My Profile</a></li>
+>>>>>>> 154de9a845e682f342cbab735ea81136141d94fc
                     <li><a href="#">My Plan</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="#" id="signOut">Sign Out</a></li>
@@ -77,6 +101,7 @@
               </ul>
             </li>
              
+<<<<<<< HEAD
              <script>
                  var butClick = document.getElementById('signup-button');
                      butClick.addEventListener("click", function(){
@@ -92,6 +117,8 @@
                  
              </script>
              
+=======
+>>>>>>> 154de9a845e682f342cbab735ea81136141d94fc
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -111,7 +138,40 @@
     </body>
 </html>
 
+<<<<<<< HEAD
 
 <!-- Google SignIn SCRIPT -->
       <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+=======
+<!-- Google SignIn SCRIPT -->
+      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+      
+      
+      <script>
+                /* var butClick = document.getElementById('signup-button');
+                     butClick.addEventListener("click", function(){
+                         window.location.href = "register.php";
+                     });
+                     */
+                var signOut = document.getElementById('signOut');
+                     signOut.addEventListener("click", function(){
+                         console.log("clicked");
+                         window.location.href = "index.php";
+                     });
+                     
+                var myProfile = document.getElementById('myProfile');
+                     myProfile.addEventListener("click", function(){
+                         console.log("clicked");
+                         window.location.href = "registeredProfile.php";
+                     });
+                 
+                 //SEARCH BAR ANIMATION
+                $(document).ready(function(){
+                    $("#nav-search").click(function(){
+                        $("#search-box").slideToggle();
+                    });
+                });
+                 
+             </script>
+>>>>>>> 154de9a845e682f342cbab735ea81136141d94fc
 

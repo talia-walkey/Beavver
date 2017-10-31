@@ -1,6 +1,7 @@
 <?php
 require_once('connect.php');
 ?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -46,7 +47,7 @@ require_once('connect.php');
             </div>
                     
             <div class="form-group">
-                  <input class="regiinput form-control" type="text"  placeholder="First Name" id='first_name' name='first_name'>
+                  <input class="regiinput form-control" type="text"  placeholder="First Name" id='first_name' name='first_name' required>
                   <hr class="dashline">
             </div>
                           
@@ -54,21 +55,21 @@ require_once('connect.php');
                   <input type="hidden" value="reg" name="type" />
                           
             <div class="form-group">
-                  <input type="text" class="regiinput form-control" placeholder="Last Name" id='last_name' name='last_name'>
+                  <input type="text" class="regiinput form-control" placeholder="Last Name" id='last_name' name='last_name' required>
                               <hr class="dashline">
             </div>
                           
             <div class="form-group">
-                  <input  type="email" class="regiinput form-control" id="exampleInputEmail1" placeholder="Enter email" name='email'>
+                  <input  type="email" class="regiinput form-control" id="exampleInputEmail1" placeholder="Enter email" name='email' required>
                   <hr class="dashline">
             </div>
            <div class="form-group">
                   <input type="password" class="regiinput form-control" placeholder="Password" name="password">
-                  <hr class="dashline">
+                  <hr class="dashline" required>
            </div>
            <div class="form-group">
                   <input  type="password" class="regiinput form-control" placeholder="Confirm Password" name="confirm_password">
-                  <hr class="dashline">
+                  <hr class="dashline" required>
            </div>
                           
                       <!--<button type="submit" class="msubmit2 btn btn-primary">
@@ -78,7 +79,8 @@ require_once('connect.php');
                       
                     
                       <!--Google SignIn -->
-            <div id="registerFormGmail" action='connect.php' method='POST' class="msubmit2 btn btn-primary">
+            <button id="registerFormGmail" action='connect.php' method='POST' class="msubmit2 btn btn-primary" type="submit">
+                
             <div id="my-signin2"></div>
                   <script>
                         function onSuccess(googleUser) {
@@ -97,7 +99,7 @@ require_once('connect.php');
                         });
                         }
                   </script>
-                  </div>
+                  </button>
                 <!-- end Google SignIn -->
                 
                       <br/>
@@ -113,15 +115,15 @@ require_once('connect.php');
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     
-<div><?php include 'footer.php';?></div>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/header-footer.js"></script>
-    
-</div>    
+</div>  
+
+<div><?php include 'footer.php';?></div>
     <script>
         $(document).ready(function(){
             document.getElementById("registerForm").addEventListener("submit", function(ev){

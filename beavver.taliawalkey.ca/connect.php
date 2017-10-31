@@ -1,5 +1,5 @@
 <?php
-
+    header("Access-Control-Allow-Origin: *");
     $servername = "beavver.taliawalkey.ca";
     $dblogin = "talia185_Beavver";
     $password = "D3Beavver!";
@@ -32,7 +32,7 @@
             $conn->exec($sql);
             
         }
-        
+    
         
         //declare whether you want to login or signup
      

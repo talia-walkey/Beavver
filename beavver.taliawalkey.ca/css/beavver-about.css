@@ -1,0 +1,66 @@
+/* About the Team */
+.contact-icons {
+    font-size: 20pt;
+    color: #8f8f8f;
+    margin-right: 10px;
+}
+
+.team-member {
+    margin: 15px;
+}
+
+/* About Beavver */
+.about-beavver-section {
+    background-color: #f5f5f5;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.about-beavver-section h1 {
+    margin-top: 30px;
+}
+
+.our-mission, .our-story {
+    margin: 50px;
+}
+
+
+/* About Landing */
+.beavver-logo {
+    width: 50px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.glyphicon-user {
+    font-size: 40pt;
+    color: #000;
+    margin-top: 15px;
+}
+
+.about-beavver, .about-team {
+    width: 100px;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid black;
+    margin: 20px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.contact-landing {
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px;
+}
+
+.about-beavver>a, .about-team>a {
+    color: #000;
+}
+
+.about-beavver>a:hover, .about-team>a {
+    opacity: 0.5;
+}

@@ -1,6 +1,6 @@
 <?php
 require_once('connect.php');
-
+    
     $servername = "beavver.taliawalkey.ca";
     $dblogin = "talia185_Beavver";
     $password = "D3Beavver!";
@@ -18,7 +18,7 @@ require_once('connect.php');
         $confirm_password= $_POST['confirm_password'];
        
 //THIS IS HOW YOU PRINT THE ROWS INTO AN ARRAY!!!       
-        $sql = "SELECT * FROM login";
+        $sql = "SELECT * FROM gd2";
         
         $statement = $conn->prepare($sql);
         $statement->execute();

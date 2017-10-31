@@ -29,7 +29,7 @@ require_once('connect.php');
   </head>
   <body>
     <div>
-        <?php include 'header-logout.php';?>
+        <?php include 'header-login.php';?>
     </div>
 
     <div id="content">
@@ -257,7 +257,7 @@ require_once('connect.php');
                     
                      startBut.addEventListener("click", function(){
                          console.log("clicked");
-                         window.location.href = "register.php";
+                         window.location.href = "scan.php";
                      });
     
     

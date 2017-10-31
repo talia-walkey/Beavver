@@ -44,10 +44,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#">FEATURES</a></li>
-            <li><a href="#">PRICING</a></li>
-            <li><a href="#">HOW IT WORKS</a></li>
-            <li><a href="#">SUPPORT</a></li>
+            <li><a href="index.php#features">FEATURES</a></li>
+            <li><a href="index.php#pricing">PRICING</a></li>
+            <li><a href="index.php#how-it-works">HOW IT WORKS</a></li>
+            <li><a href="index.php#support">SUPPORT</a></li>
           </ul>
 
         <!-- SEARCH -->    
@@ -64,42 +64,61 @@
             
                 </a>
                         <ul class="dropdown-menu">
+                            
+                            
                 <!-- BEFORE LOGIN -->      
+                
                 <div id="before-login" class="form-group">
-                        <li><input type="text" class="form-control" placeholder="Your Email" id="email-input"></li>
-                        <li><input type="text" class="form-control" placeholder="Password" id="password-input"></li>
-                <form class="form-inline">
-                        <div class="form-check">
-                        <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input"> Remember Me
-                        </label>
-                </div>
-                      <button type="submit" class="btn primaryBtn" id="signin-button">Sign In</button>
-                      
+                        
+            <div class="form-group">
+                  <input  type="email" class="regiinput form-control" id="exampleInputEmail1" placeholder="Enter email" name='email' required>
+                  <hr class="dashline">
+            </div>
+           <div class="form-group">
+                  <input type="password" class="regiinput form-control" placeholder="Password" name="password">
+                  <hr class="dashline" required>
+           </div>
+          
                       <!--Google SignIn -->
-                    <button type="submit" class="btn primaryBtn" id="signin-button">
-                    <div id="my-signin2"></div>
-                        <script>
+            <button id="registerFormGmail" action='connect.php' method='POST' class="msubmit2 btn btn-primary" type="submit">
+                
+            <div id="my-signin2"></div>
+                  <script>
                         function onSuccess(googleUser) {
                             console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                       
+                            window.location.href="registeredProfile.php";
                         }
                         function onFailure(error) {
                             console.log(error);
                         }
                         function renderButton() {
                             gapi.signin2.render('my-signin2', {
-                            'width': '100px',
-                            'height': '25px',
+                            'width': '200px',
                             'onsuccess': onSuccess,
                             'onfailure': onFailure
                         });
-                        
                         }
                   </script>
                   </button>
                 <!-- end Google SignIn -->
+                
+                      <br/>
+                      <button type="submit" class="msubmit btn btn-primary" id='submitBut' id="signin-button" name='submitBut'>Login</button>
                       
+                      <!--formaction="registeredProfile.php"-->
+                  </form>
+                       
+                       
+              <script type="text/javascript">
+                 document.getElementById("submitBut").onclick = function () {
+                 location.href = "landingLogin.php";
+                };
+              </script>       
+                       
+                       
                     </form>
+                   
                 </div>
                 </ul>
               </li>
@@ -108,7 +127,7 @@
              <script>
                  var butClick = document.getElementById('signup-button');
                      butClick.addEventListener("click", function(){
-                         window.location.href = "register.php";
+                        window.location.href = "register.php";
                      });
                  
                  //SEARCH BAR ANIMATION
@@ -138,6 +157,7 @@
                     afterLoginName.style.display = "inline-block";
 
                     signupBtn.style.display = "none";
+                    
                 });
 
                 signOut.addEventListener("click", function(){

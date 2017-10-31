@@ -46,8 +46,8 @@
           <ul class="nav navbar-nav">
             <li><a href="#">FEATURES</a></li>
             <li><a href="#">PRICING</a></li>
-            <li><a href="#">SUPPORT</a></li>
             <li><a href="#">HOW IT WORKS</a></li>
+            <li><a href="#">SUPPORT</a></li>
           </ul>
 
         <!-- SEARCH -->    
@@ -59,7 +59,6 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <button class="secondaryBtn">
                       <span id="before-login-span">LOGIN</span>
-                      <span id="after-login-span">Hi, <span id="firstname">MyName</span>!</span>
                       <span class="caret"></span>
                 </button>
             
@@ -102,17 +101,9 @@
                       
                     </form>
                 </div>
-                <!-- AFTER LOGIN -->  
-                <div id="after-login">
-                    <li><a href="#">My Career</a></li>
-                    <li><a href="#">My Profile</a></li>
-                    <li><a href="#">My Plan</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#" id="signOut">Sign Out</a></li>
-                </div>
-              </ul>
-            </li>
-            <li><button class="primaryBtn" id="signup-button" type="submit" formaction="register.php">SIGN UP</button></li>
+                </ul>
+              </li>
+              <li><button class="primaryBtn" id="signup-button" type="submit" formaction="register.php">SIGN UP</button></li>
              
              <script>
                  var butClick = document.getElementById('signup-button');
