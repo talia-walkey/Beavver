@@ -47,7 +47,7 @@
             <li><a href="index.php#features">FEATURES</a></li>
             <li><a href="index.php#pricing">PRICING</a></li>
             <li><a href="index.php#how-it-works">HOW IT WORKS</a></li>
-            <li><a href="index.php#support">SUPPORT</a></li>
+            <li><a href=faqs.php>SUPPORT</a></li>
           </ul>
 
         <!-- SEARCH -->    
@@ -87,7 +87,7 @@
                         function onSuccess(googleUser) {
                             console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
                        
-                            window.location.href="registeredProfile.php";
+                            window.location.href="myprofile.php";
                         }
                         function onFailure(error) {
                             console.log(error);
@@ -100,14 +100,14 @@
                         });
                         }
                   </script>
-            </button>
+                  </button>
                 <!-- end Google SignIn -->
                 
                       <br/>
                       <button type="submit" class="msubmit btn btn-primary" id='submitBut' id="signin-button" name='submitBut'>Login</button>
                       
                       <!--formaction="registeredProfile.php"-->
-                  
+                  </form>
                        
                        
               <script type="text/javascript">
@@ -117,7 +117,7 @@
               </script>       
                        
                        
-                   
+                    </form>
                    
                 </div>
                 </ul>

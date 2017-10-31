@@ -59,9 +59,9 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav footer-nav">
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="#">SUPPORT</a></li>
+                    <li><a href="about.php">ABOUT US</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                    <li><a href="faqs.php">SUPPORT</a></li>
                     <li><a href="#">TO BE DEFINED</a></li>
                   </ul> 
                 </div>

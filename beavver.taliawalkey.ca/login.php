@@ -1,5 +1,9 @@
-<?php include 'header.php';?>
-<?php include 'quickstart.js';?>
+<?php 
+include 'header.php';
+include 'quickstart.js';
+include 'register-db.php'
+ ?>
+
 
 
 <?php

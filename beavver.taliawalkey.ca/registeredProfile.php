@@ -1,5 +1,6 @@
 <?php
 require_once('connect.php');
+require ('register-db.php');
 
     $servername = "beavver.taliawalkey.ca";
     $dblogin = "talia185_Beavver";
