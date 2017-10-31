@@ -36,9 +36,7 @@
         
         //declare whether you want to login or signup
      
-       
-        
-     /*   if($sql){
+       if($sql){
             $arr = array(
                 "status"=>1,
                 "msg"=>"inserted properly"
@@ -50,7 +48,7 @@
                 "msg"=>"something went wrong"
             );
             echo json_encode($arr);
-        }*/
+        }
              
     } catch(PDOException $e) {
         $error = $e->getMessage();

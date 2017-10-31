@@ -26,9 +26,10 @@ require_once('register-db.php');
 
   </head>
   <body>
-<div> 
-<?php include 'header-logout.php';?>
-</div>
+
+ <div>
+        <?php include 'header-logout.php';?>
+    </div>
 
 <div class="content">
  <div id="topspace" class="containerRegForm">
@@ -120,7 +121,9 @@ require_once('register-db.php');
             </div>  
 
             <div><?php include 'footer.php';?></div>
+        
         <script>
+        var obj;
         $(document).ready(function(){
             document.getElementById("registerForm").addEventListener("submit", function(ev){
                 //stops form from reloading
@@ -134,7 +137,7 @@ require_once('register-db.php');
                     console.log(obj);
                     if(obj.status == 1){
                     //go to the next page
-                    alert("You have successfully registered! Welcome to Beavver:)");
+                    alert("You have successfully registered! Welcome to Beavver");
                     window.location.href="myprofile.php";
                         }
                     }

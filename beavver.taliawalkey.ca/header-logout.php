@@ -130,13 +130,13 @@
                         window.location.href = "register.php";
                      });
                  
-                 //SEARCH BAR ANIMATION
+            /*     //SEARCH BAR ANIMATION
                 $(document).ready(function(){
                     $("#nav-search").click(function(){
                         $("#search-box").slideToggle();
                     });
-                });
-
+                });*/
+                
                 //LOGIN NAVBAR
 
                 var beforeLogin = document.getElementById("before-login"),
@@ -146,7 +146,8 @@
                     afterLoginName = document.getElementById("after-login-span"),
                     signOut = document.getElementById("signOut"),
                     signupBtn = document.getElementById("signup-button");
-
+                    
+                if(signinBtn){
                 signinBtn.addEventListener("click", function(){    
                     // changing the dropdown components
                     beforeLogin.style.display = "none";
@@ -159,20 +160,24 @@
                     signupBtn.style.display = "none";
                     
                 });
+                }
 
-                signOut.addEventListener("click", function(){
-                    loginBool = false;
-
-                    // changing the dropdown components
-                    beforeLogin.style.display = "block";
-                    afterLogin.style.display = "none";
-
-                    // changing the name in the login button
-                    beforeLoginName.style.display = "inline-block";
-                    afterLoginName.style.display = "none";
-
-                    signupBtn.style.display = "block";
-                });
+                if(signOut){
+                    signOut.addEventListener("click", function(){
+                        loginBool = false;
+    
+                        // changing the dropdown components
+                        beforeLogin.style.display = "block";
+                        afterLogin.style.display = "none";
+    
+                        // changing the name in the login button
+                        beforeLoginName.style.display = "inline-block";
+                        afterLoginName.style.display = "none";
+    
+                        signupBtn.style.display = "block";
+                    });
+                }
+                
                  
              </script>
              
