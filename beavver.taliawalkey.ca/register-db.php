@@ -12,7 +12,7 @@
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        /* $sql = "SELECT * FROM login";
+         $sql = "SELECT * FROM login";
         
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
@@ -38,7 +38,7 @@
      
        
         
-        if($sql){
+     /*   if($sql){
             $arr = array(
                 "status"=>1,
                 "msg"=>"inserted properly"

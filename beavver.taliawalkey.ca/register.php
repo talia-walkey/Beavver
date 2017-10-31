@@ -1,47 +1,42 @@
 <?php
 require_once('connect.php');
+require_once('register-db.php');
 ?>
 
 <!DOCTYPE html>
 
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-signin-client_id" content="865984037107-0laeq4id47er4dn2s10kf547j5ebp5f1.apps.googleusercontent.com">
-  
+     <meta name="google-signin-client_id" content="865984037107-0laeq4id47er4dn2s10kf547j5ebp5f1.apps.googleusercontent.com">
+     
     <title>Beavver</title>
 
-    <!-- Bootstrap -->  
+<!-- Bootstrap -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-grid.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat:700" rel="stylesheet">
+      
+    <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />   
     
-        <link href="style.css" rel="stylesheet" />
 
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body>
-   
+<div> 
 <?php include 'header-logout.php';?>
+</div>
 
 <div class="content">
  <div id="topspace" class="containerRegForm">
               <div id="regibox">
                   <p id="imgcenter"><img id="beavver" alt='beavverLogo' src="img/Asset%201@4x.png"/></p>
                   
-                  <!-- IMPORTANT TO HAVE THIS ON EVERY FORM TO SEND TO DATABASE -->
-            <form id="registerForm" action='connect.php' method='POST'>
+<!-- IMPORTANT TO HAVE THIS ON EVERY FORM TO SEND TO DATABASE -->
+            <form id="registerForm" action='register-db.php' method='POST'>
                   <div class="form-group">
                       <p class="regititle">New to us? <br/>Sign up now</p>
             </div>
@@ -51,7 +46,7 @@ require_once('connect.php');
                   <hr class="dashline">
             </div>
                           
-        <!--HIDDEN INPUT TO DECLARE LOGIN OR SIGNUP -->
+<!--HIDDEN INPUT TO DECLARE LOGIN OR SIGNUP -->
                   <input type="hidden" value="reg" name="type" />
                           
             <div class="form-group">
@@ -78,15 +73,16 @@ require_once('connect.php');
                       </button>-->
                       
                     
-                      <!--Google SignIn -->
-            <button id="registerFormGmail" action='connect.php' method='POST' class="msubmit2 btn btn-primary" type="submit">
+<!--Google SignIn -->
+      <!--      <button id="registerFormGmail" action='register-db.php' method='POST' class="msubmit2 btn btn-primary" type="submit">
                 
             <div id="my-signin2"></div>
+
                   <script>
                         function onSuccess(googleUser) {
                             console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
                        
-                            window.location.href="registeredProfile.php";
+                            window.location.href="myprofile.php";
                         }
                         function onFailure(error) {
                             console.log(error);
@@ -99,13 +95,14 @@ require_once('connect.php');
                         });
                         }
                   </script>
-                  </button>
-                <!-- end Google SignIn -->
+                  
+                  </button>-->
+<!-- end Google SignIn -->
                 
                       <br/>
                       <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' >Submit</button>
                       
-                      <!--formaction="registeredProfile.php"-->
+<!--formaction="registeredProfile.php"-->
                   </form>
               </div>
             </div>
@@ -116,30 +113,29 @@ require_once('connect.php');
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+            </div>  
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-</div>  
-
-<div><?php include 'footer.php';?></div>
-    <script>
+            <div><?php include 'footer.php';?></div>
+        <script>
         $(document).ready(function(){
             document.getElementById("registerForm").addEventListener("submit", function(ev){
                 //stops form from reloading
                 ev.preventDefault();
                 
                 //load the page via javascript instead of going to the page itself
-                $.post("connect.php",
+                $.post("register-db.php",
                     $("#registerForm").serialize(), 
                     function(resp){
                     var obj = JSON.parse(resp);
                     console.log(obj);
                     if(obj.status == 1){
                     //go to the next page
-                    alert("Go to the next page after successful registration");
-                    window.location.href="registeredProfile.php";
+                    alert("You have successfully registered! Welcome to Beavver:)");
+                    window.location.href="myprofile.php";
                         }
                     }
                 )
@@ -149,7 +145,7 @@ require_once('connect.php');
         
     </script>
     
-    <!-- Google SignIn SCRIPT -->
+<!-- Google SignIn SCRIPT -->
       <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
       
   </body>

@@ -158,7 +158,12 @@
           });
     </script>
 
+<<<<<<< HEAD
     <link href="/proj/build/static/css/main.5ec4dc93.css" rel="stylesheet">
 <script type="text/javascript" src="/proj/build/static/js/main.00d6b116.js"></script>
+=======
+    <link href="/build/static/css/main.5ec4dc93.css" rel="stylesheet">
+<script type="text/javascript" src="/build/static/js/main.9946222a.js"></script>
+>>>>>>> 6292a5290dcef8b6d72c03c18f825c7cb9b6f35b
   </body>
 </html>
