@@ -100,14 +100,14 @@
                         });
                         }
                   </script>
-                  </button>
+            </button>
                 <!-- end Google SignIn -->
                 
                       <br/>
                       <button type="submit" class="msubmit btn btn-primary" id='submitBut' id="signin-button" name='submitBut'>Login</button>
                       
                       <!--formaction="registeredProfile.php"-->
-                  </form>
+                  
                        
                        
               <script type="text/javascript">
@@ -117,7 +117,7 @@
               </script>       
                        
                        
-                    </form>
+                   
                    
                 </div>
                 </ul>
