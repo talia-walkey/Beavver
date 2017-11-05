@@ -52,7 +52,7 @@
 
         <!-- SEARCH -->    
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-search" id="nav-search"></span></a></li>
+            <li><span class="glyphicon glyphicon-search" id="nav-search"></span></li>
               
             <!-- LOGIN -->  
             <li class="dropdown">
@@ -78,6 +78,9 @@
                   <input type="password" class="regiinput form-control" placeholder="Password" name="password">
                   <hr class="dashline" required>
            </div>
+                    
+            <button type="submit" class="msubmit btn btn-primary" id='submitBut' id="signin-button" name='submitBut'>Login</button>   
+            <br/>
           
                       <!--Google SignIn -->
             <button id="registerFormGmail" action='connect.php' method='POST' class="msubmit2 btn btn-primary" type="submit">
@@ -100,14 +103,11 @@
                         });
                         }
                   </script>
-                  </button>
+            </button>
                 <!-- end Google SignIn -->
-                
-                      <br/>
-                      <button type="submit" class="msubmit btn btn-primary" id='submitBut' id="signin-button" name='submitBut'>Login</button>
                       
                       <!--formaction="registeredProfile.php"-->
-                  </form>
+<!--                  </form>-->
                        
                        
               <script type="text/javascript">
@@ -117,7 +117,7 @@
               </script>       
                        
                        
-                    </form>
+<!--                    </form>-->
                    
                 </div>
                 </ul>
@@ -196,11 +196,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+        
+    <script>
+    //SEARCH BAR ANIMATION
+    $(document).ready(function(){
+        $("#nav-search").click(function(){
+            $("#search-box").slideToggle();
+        });
+    });
+                         
       
+    </script>
+      
+      
+<!-- Google SignIn SCRIPT -->
+      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
     </body>
 </html>
 
-
-<!-- Google SignIn SCRIPT -->
-      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 

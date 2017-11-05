@@ -58,7 +58,7 @@ require('connect.php');
 
         <!-- SEARCH -->    
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-search" id="nav-search"></span></a></li>
+            <li><span class="glyphicon glyphicon-search" id="nav-search"></span></li>
               
             <!-- LOGIN -->  
             <li class="dropdown">
