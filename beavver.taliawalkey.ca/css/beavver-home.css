@@ -1,4 +1,33 @@
 /* Clouds Animation */
+        @keyframes cloudsAnim {
+            0% { transform: translateY(0px); }
+            30% { transform: translateY(-100px); }
+            90% { transform: translateY (-100px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        #FarLeft {
+            animation: cloudsAnim 4s ease-in-out;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+
+/* Up Button */
+#btn-up {
+    border-radius: 30px;
+    background-color: #ffb13b;
+    color: white;
+    transition: opacity 0.3s ease-in-out;  
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1;
+}
+
+.btn-up:hover {
+    opacity: 0.5;
+    color: white;
+}
 
 /* Pricing */
 .pricing-table {
@@ -227,7 +256,7 @@ p {
 }
 
 .landing-text, .landing-buttons {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .playBtn {
@@ -242,7 +271,7 @@ p {
 }
 
 .zen-beavver {
-    width: 50vw;
+    width: 30vw;
     height: auto;
 }
 

@@ -49,10 +49,9 @@ require_once('connect.php');
                     <span class="how-it-works-span">HOW IT WORKS</span>
                 </a>
             </div>    
-            
-            <br/><br/>
+
             <img src="img/b-home.svg" alt="Beavver" class="zen-beavver">
-            <br/><br/><br/><br/>
+            <br/><br/>
             <div class="myCircle">
                 <img src="img/mouse-icon.svg" class="mouse-icon" alt="mouse">
             </div>    
@@ -227,6 +226,11 @@ require_once('connect.php');
             </div>
         </div> <!-- End of Pricing -->
         
+            <!-- UP ARROW BUTTON -->    
+        <a href="#top" class="btn btn-lg btn-up" id="btn-up">
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        
     </div>  <!-- End of Content -->
     
       
@@ -242,6 +246,25 @@ require_once('connect.php');
     <div>
         <?php include 'footer.php';?>
     </div>  
+      
+    <script>
+    $(document).ready(function() {
+        
+        // show the up button when templates-list is passed
+        $("#btn-up").hide(); //hide button initially
+        var topOfOthDiv = $(".job-keywords").offset().top;
+        $(window).scroll(function() {
+            if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
+                $("#btn-up").show(200); //reached the desired point -- show div
+            }
+        });
+        
+        // hide the up button when clicked
+        $("#btn-up").click(function(){
+            $("#btn-up").hide();
+        });  
+    });    
+    </script>  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
