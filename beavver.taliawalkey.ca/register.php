@@ -32,6 +32,15 @@ require_once('register-db.php');
     </div>
 
 <div class="content">
+    
+    <!-- BREADCRUMBS -->
+    <nav aria-label="breadcrumb" role="navigation">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Register</li>
+      </ol>
+    </nav>
+    
  <div id="topspace" class="containerRegForm">
               <div id="regibox">
                   <p id="imgcenter"><img id="beavver" alt='beavverLogo' src="img/Asset%201@4x.png"/></p>

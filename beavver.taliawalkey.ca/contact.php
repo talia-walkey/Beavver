@@ -32,17 +32,17 @@
         <?php include 'header-logout.php';?>
     </div>
     
+    <div class="content"> 
+    
+    <br/><br/>
     <!-- BREADCRUMBS -->
     <nav aria-label="breadcrumb" role="navigation">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Contact</li>
       </ol>
     </nav>        
-        
-    
-    <div class="content"> 
-        
+                
     <!-- PAGE HEADER -->    
     <div class="container-fluid templates-content">
         <div class="row">
