@@ -47,7 +47,7 @@
             <li><a href="index.php#features">FEATURES</a></li>
             <li><a href="index.php#pricing">PRICING</a></li>
             <li><a href="index.php#how-it-works">HOW IT WORKS</a></li>
-            <li><a href=faqs.php>SUPPORT</a></li>
+            <li><a href=faqs.php>FAQ</a></li>
           </ul>
 
         <!-- SEARCH -->    
