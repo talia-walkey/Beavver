@@ -85,6 +85,8 @@
             </div>	
             <div class="col-md-1">
             </div>
+            <a name="most-popular"></a> <!-- this is here so it doesnt get cut off with the smooth scroll feature --> 
+
         </div>
     </div>
             
@@ -95,7 +97,6 @@
         </div> 
         
     <!-- MOST POPULAR -->
-    <a name="most-popular"></a>
     <div class="container-fluid templates-content">
         <div class="row templates-info">
             <div class="col-md-1">
