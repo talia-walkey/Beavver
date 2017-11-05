@@ -10,7 +10,7 @@
     <!-- Bootstrap -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-grid.css" rel="stylesheet">
-    <link href="css/beavver-matching.css" rel="stylesheet">
+    <link href="css/matching.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -59,10 +59,10 @@
     </div> <!-- END OF CONTENT -->
     
     <div id="root"></div>
-    <section>
+    <!--<section>
         <div class="container">
                     <p id="title">Let's Get Started</p>
-                    <p id="desc">Increase your chance in landing an interview in two steps. Just paste your resume on the </br>left sections and the job description on the right box. Then, we can make a match!</p>
+                    <p id="desc">Increase your chance in landing an interview in two steps. Just paste your resume on the <br>left sections and the job description on the right box. Then, we can make a match!</p>
                     <div id="mrow" class="row">
                     <div class="col">
                        <ul>
@@ -97,13 +97,14 @@
 
                 </div>
     </section>
+
     <section class="rsection">
-         </br></br></br>
+         <br><br><br>
         <div id="mhidden" class="container">
             <div id="percentage">
                 <div class="progress" id="progress"></div>
             </div>
-            </br></br>
+            <br><br>
             <div class="resultcontainer">
               <div class="resultbox">
                   <p class="rtitle">Comparison</p>
@@ -128,7 +129,7 @@
 
           </div>
         </div>
-    </section>
+    </section>-->
     <br/>
     
     <div>
@@ -136,6 +137,7 @@
     </div>  
     
     </div>
+
       
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -158,12 +160,9 @@
           });
     </script>
 
-<<<<<<< HEAD
-    <link href="/proj/build/static/css/main.5ec4dc93.css" rel="stylesheet">
-<script type="text/javascript" src="/proj/build/static/js/main.00d6b116.js"></script>
-=======
+
     <link href="/build/static/css/main.5ec4dc93.css" rel="stylesheet">
-<script type="text/javascript" src="/build/static/js/main.9946222a.js"></script>
->>>>>>> 6292a5290dcef8b6d72c03c18f825c7cb9b6f35b
+<script type="text/javascript" src="/build/static/js/main.00d6b116.js"></script>
+
   </body>
 </html>
