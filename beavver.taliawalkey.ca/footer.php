@@ -52,7 +52,7 @@
         <nav class="navbar navbar-default">
           <div class="container-fluid">
                 <div class="navbar-header">
-                  <a class="navbar-brand" href="#">
+                  <a class="navbar-brand" href="index.php">
                     <img src="img/logo-text-white.png" id="logo" alt="logo">
                   </a>
                 </div>
