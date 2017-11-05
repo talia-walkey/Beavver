@@ -1,3 +1,6 @@
+a {
+    text-decoration: none !important;
+}
 /* PAGE TITLE */
 
 #gmailLoginButHead{
@@ -61,7 +64,7 @@ h1 {
 
 #landing-content {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .logo-mascot {
@@ -395,6 +398,7 @@ body {
 
 #signup-button {
     margin-top: 4px;
+    margin-right: 5vw;
 }
 
 .dropdown {
@@ -453,10 +457,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.primaryBtn:hover{
+.primaryBtn:hover, .ctaBtn:hover{
   color: white;
     cursor: pointer;
   opacity: 0.5;
+}
+
+.secondaryBtn:hover {
+    cursor:pointer;
+    opacity:0.5;
 }
 
 .login:hover{

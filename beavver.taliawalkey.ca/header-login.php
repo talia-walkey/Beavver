@@ -75,7 +75,6 @@ require('connect.php');
                 <div id="after-login">
                     <li><a href="myCareer.php">My Career</a></li>
                     <li><a href="myprofile.php" id="myProfile">My Profile</a></li>
-                    <li><a href="#">My Plan</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="#" id="signOut">Sign Out</a></li>
                 </div>

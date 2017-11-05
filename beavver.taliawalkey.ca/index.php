@@ -28,6 +28,7 @@ require_once('connect.php');
    
   </head>
   <body>
+    <a name="top"></a>  
     <div>
         <?php include 'header-logout.php';?>
     </div>
@@ -44,21 +45,22 @@ require_once('connect.php');
                     <button class="btn ctaBtn" type="submit">START NOW!</button>
                 </a> 
 
-                <a href="#how-it-works">
+                <a href="#how-it-works" id="how-it-works-link">
                     <img src="img/play-button.svg" class="playBtn">
                     <span class="how-it-works-span">HOW IT WORKS</span>
                 </a>
             </div>    
-
+            
             <img src="img/b-home.svg" alt="Beavver" class="zen-beavver">
-            <br/><br/>
+            <br/><br/>        
             <div class="myCircle">
                 <img src="img/mouse-icon.svg" class="mouse-icon" alt="mouse">
+                <a name="features"></a> <!-- this is here because smooth scrolling enabled makes the first feature cut off when clicked -->
             </div>    
+            
         </div> <!-- End of Landing Content -->
         
         <!-- CTA Sections -->
-        <a name="features"></a>
         <div class="row job-keywords">
             <div class="col-md-6">
                 <img src="img/beavver-computer.svg" class="img-responsive beavver-images">
@@ -227,7 +229,7 @@ require_once('connect.php');
         </div> <!-- End of Pricing -->
         
             <!-- UP ARROW BUTTON -->    
-        <a href="#top" class="btn btn-lg btn-up" id="btn-up">
+        <a href="index.php#top" class="btn btn-lg btn-up" id="btn-up">
           <span class="glyphicon glyphicon-chevron-up"></span>
         </a>
         
@@ -262,7 +264,46 @@ require_once('connect.php');
         // hide the up button when clicked
         $("#btn-up").click(function(){
             $("#btn-up").hide();
-        });  
+        }); 
+        
+        //Smooth Scrolling
+        // Select all links with hashes
+        $('a[href*="#"]')
+          // Remove links that don't actually link to anything
+          .not('[href="#"]')
+          .not('[href="#0"]')
+          .click(function(event) {
+            // On-page links
+            if (
+              location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+              && 
+              location.hostname == this.hostname
+            ) {
+              // Figure out element to scroll to
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+              // Does a scroll target exist?
+              if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 2000, function() {
+                  // Callback after animation
+                  // Must change focus!
+                  var $target = $(target);
+                  $target.focus();
+                  if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                  } else {
+                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                  };
+                });
+              }
+            }
+          });        
+   
     });    
     </script>  
 
