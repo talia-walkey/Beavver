@@ -54,7 +54,7 @@ require_once('connect.php');
             <img src="img/b-home.svg" alt="Beavver" class="zen-beavver">
             <br/><br/>        
             <div class="myCircle">
-                <img src="img/mouse-icon.svg" class="mouse-icon" alt="mouse">
+                <a href="#features"><img src="img/mouse-icon.svg" class="mouse-icon" alt="mouse"></a>
                 <a name="features"></a> <!-- this is here because smooth scrolling enabled makes the first feature cut off when clicked -->
             </div>    
             
