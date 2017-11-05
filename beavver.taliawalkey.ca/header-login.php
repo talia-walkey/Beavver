@@ -12,6 +12,9 @@ require('connect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="google-signin-client_id" content="865984037107-0laeq4id47er4dn2s10kf547j5ebp5f1.apps.googleusercontent.com">
      
+     <meta name="google-signin-client_id" content="651246939702-uhm0eltj2jfa6ipjt9hvtpisr94pqla7.apps.googleusercontent.com">
+
+     
     <title>Beavver</title>
 
     <!-- Bootstrap -->  
@@ -22,7 +25,7 @@ require('connect.php');
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       
     <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />   
-
+     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -76,7 +79,8 @@ require('connect.php');
                     <li><a href="myCareer.php">My Career</a></li>
                     <li><a href="myprofile.php" id="myProfile">My Profile</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="#" id="signOut">Sign Out</a></li>
+                    <a href="#" onclick="document.location.href = 'https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://beavver.taliawalkey.ca';">Sign Out</a>
+                  
                 </div>
                     
               </ul>

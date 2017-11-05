@@ -8,9 +8,11 @@ require_once('register-db.php');
 <html lang="en">
   <head>
      <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="google-signin-client_id" content="865984037107-0laeq4id47er4dn2s10kf547j5ebp5f1.apps.googleusercontent.com">
+     <meta name="google-signin-client_id" content="651246939702-uhm0eltj2jfa6ipjt9hvtpisr94pqla7.apps.googleusercontent.com">
+ 
      
     <title>Beavver</title>
 
@@ -22,7 +24,7 @@ require_once('register-db.php');
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       
     <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />   
-    
+       <script src="https://apis.google.com/js/platform.js" async defer></script>
 
   </head>
   <body>
@@ -76,41 +78,16 @@ require_once('register-db.php');
                   <input  type="password" class="regiinput form-control" placeholder="Confirm Password" name="confirm_password">
                   <hr class="dashline" required>
            </div>
-                          
-                      <!--<button type="submit" class="msubmit2 btn btn-primary">
-                          <img id="linkedinbtn" alt='linkedInLogo' src="img/linkedin-logo.svg" >
-                          &nbsp;Login with LinkedIn
-                      </button>-->
-                      
                     
-<!--Google SignIn -->
-      <!--      <button id="registerFormGmail" action='register-db.php' method='POST' class="msubmit2 btn btn-primary" type="submit">
-                
-            <div id="my-signin2"></div>
 
-                  <script>
-                        function onSuccess(googleUser) {
-                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                       
-                            window.location.href="myprofile.php";
-                        }
-                        function onFailure(error) {
-                            console.log(error);
-                        }
-                        function renderButton() {
-                            gapi.signin2.render('my-signin2', {
-                            'width': '200px',
-                            'onsuccess': onSuccess,
-                            'onfailure': onFailure
-                        });
-                        }
-                  </script>
-                  
-                  </button>-->
-<!-- end Google SignIn -->
-                
+
                       <br/>
                       <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' >Submit</button>
+                      <br/>
+<!--Google SignIn -->
+                <div class="g-signin2 msubmit btn btn-primary" data-onsuccess="onSignIn" id="GoogleLogin"></div>     
+           
+<!--end Google SignIn -->
                       
 <!--formaction="registeredProfile.php"-->
                   </form>
@@ -135,18 +112,16 @@ require_once('register-db.php');
         var obj;
         $(document).ready(function(){
             document.getElementById("registerForm").addEventListener("submit", function(ev){
-                //stops form from reloading
+//stops form from reloading
                 ev.preventDefault();
-                
-                //load the page via javascript instead of going to the page itself
+//load the page via javascript instead of going to the page itself
                 $.post("register-db.php",
                     $("#registerForm").serialize(), 
                     function(resp){
                     var obj = JSON.parse(resp);
                     console.log(obj);
                     if(obj.status == 1){
-                    //go to the next page
-                    alert("You have successfully registered! Welcome to Beavver");
+//go to the next page
                     window.location.href="myprofile.php";
                         }
                     }
@@ -154,7 +129,15 @@ require_once('register-db.php');
             });
         });
         
-        
+//get Gmail Register Information        
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+             console.log('Name: ' + profile.getName());
+             console.log('Image URL: ' + profile.getImageUrl());
+             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+//get Gmail Register Information
     </script>
     
 <!-- Google SignIn SCRIPT -->
