@@ -82,7 +82,7 @@
     </div> <!-- End of Page Header -->
     
     <!-- About Beavver -->
-    <a name="about-beavver"></a>
+    <a name="aboutbeavver"></a>
     <div class="container-fluid about-beavver-section">
         <div class="row">
             <div class="col-md-1"></div>
@@ -95,11 +95,11 @@
         <div class="row our-mission">
             <div class="col-md-1"></div>
             <div class="col-md-5">
-                <img src="http://via.placeholder.com/350x150" alt="About Beavver">
+                <img src="img/beavver-happy.svg" alt="About Beavver" class="our-mission-img">
             </div>
             <div class="col-md-5">
                 <h3>Our Mission</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+                <p>Beavver is a digital product intended to help job seekers thrive on a highly competitive and automated market. Our mission is to give the right candidates a chance to stand out of the crowd and get the job they want, by giving them a tool not only to improve keywords, but also to improve their careers as a whole. </p>
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -115,10 +115,10 @@
             </div>
             <div class="col-md-1"></div>
         </div>
+    <a name="aboutteam"></a> <!-- this is here so it doesnt get cut off with smooth scrolling -->        
     </div> <!-- End of About Beavver -->
         
     <!-- About the Team -->
-    <a name="aboutteam"></a>
     <div class="container-fluid about-team-section">
         <div class="row">
             <div class="col-md-1"></div>
@@ -135,24 +135,24 @@
                 <h3>Alynna Alcira</h3>
                 <h4>Project Manager</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                <a href=""><span class="glyphicon glyphicon-envelope contact-icons"></span></a>
-                <a href=""><span class="fa fa-linkedin-square fa-2x contact-icons"></span></a>
+                <a target="_top" href="mailto:alynna.alcira@gmail.com"><span class="fa fa-envelope-o fa-2x contact-icons"></span></a>
+                <a target="_blank" href="https://www.linkedin.com/in/alynnaalcira/"><span class="fa fa-linkedin-square fa-2x contact-icons"></span></a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 team-member">
                 <img src="http://via.placeholder.com/350x400" alt="Tess" class="img-responsive">
                 <h3>Tess Huang</h3>
                 <h4>Developer</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                <a href=""><span class="glyphicon glyphicon-envelope contact-icons"></span></a>
-                <a href=""><span class="fa fa-linkedin-square fa-2x contact-icons"></span></a>
+                <a target="_top" href="malto:tess.xj.huang@gmail.com"><span class="fa fa-envelope-o fa-2x contact-icons"></span></a>
+                <a target="_blank" href="https://www.linkedin.com/in/tess-huang/"><span class="fa fa-linkedin-square fa-2x contact-icons"></span></a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 team-member">
                 <img src="http://via.placeholder.com/350x400" alt="Miria" class="img-responsive">
                 <h3>Miria Huber</h3>
                 <h4>Designer</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                <a href=""><span class="glyphicon glyphicon-envelope contact-icons"></span></a>
-                <a href=""><span class="fa fa-linkedin-square fa-2x contact-icons"></span></a>
+                <a target="_top" href="mailto:miria.huber@gmail.com"><span class="fa fa-envelope-o fa-2x contact-icons"></span></a>
+                <a target="_blank" href="https://www.linkedin.com/in/miria-melo-huber/"><span class="fa fa-linkedin-square fa-2x contact-icons"></span></a>
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -164,16 +164,16 @@
                 <h3>Yuqi Li</h3>
                 <h4>Designer</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                <a href=""><span class="glyphicon glyphicon-envelope contact-icons"></span></a>
-                <a href=""><span class="fa fa-linkedin-square fa-2x contact-icons"></span></a>
+                <a target="_top" href="mailto:0yuthie0@gmail.com"><span class="fa fa-envelope-o fa-2x contact-icons"></span></a>
+                <a target="_blank" href="https://www.linkedin.com/in/yuqi-li/"><span class="fa fa-linkedin-square fa-2x contact-icons"></span></a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 team-member">
                 <img src="http://via.placeholder.com/350x400" alt="Talia" class="img-responsive">
                 <h3>Talia Walkey</h3>
                 <h4>Developer</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                <a href=""><span class="glyphicon glyphicon-envelope contact-icons"></span></a>
-                <a href=""><span class="fa fa-linkedin-square fa-2x contact-icons"></span></a>
+                <a target="_top" href="mailto:taliawalkey@gmail.com"><span class="fa fa-envelope-o fa-2x contact-icons"></span></a>
+                <a target="_blank" href="https://www.linkedin.com/in/talia-walkey/"><span class="fa fa-linkedin-square fa-2x contact-icons"></span></a>
             </div>
             <div class="col-md-3">
             </div>
@@ -181,7 +181,11 @@
         </div>
         
     </div>    
-    <br/>
+    
+            <!-- UP ARROW BUTTON -->    
+        <a href="#top" class="btn btn-lg btn-up" id="btn-up">
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
     
     </div><!-- END OF CONTENT -->
           
@@ -189,11 +193,67 @@
         <?php include 'footer.php';?>
     </div>  
       
+    <script>
+    $(document).ready(function() {
+        
+        // show the up button when templates-list is passed
+        $("#btn-up").hide(); //hide button initially
+        var topOfOthDiv = $(".about-beavver-section").offset().top;
+        $(window).scroll(function() {
+            if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
+                $("#btn-up").show(200); //reached the desired point -- show div
+            }
+        });
+        
+        // hide the up button when clicked
+        $("#btn-up").click(function(){
+            $("#btn-up").hide();
+        }); 
+        
+        //Smooth Scrolling
+        // Select all links with hashes
+        $('a[href*="#"]')
+          // Remove links that don't actually link to anything
+          .not('[href="#"]')
+          .not('[href="#0"]')
+          .click(function(event) {
+            // On-page links
+            if (
+              location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+              && 
+              location.hostname == this.hostname
+            ) {
+              // Figure out element to scroll to
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+              // Does a scroll target exist?
+              if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 2000, function() {
+                  // Callback after animation
+                  // Must change focus!
+                  var $target = $(target);
+                  $target.focus();
+                  if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                  } else {
+                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                  };
+                });
+              }
+            }
+          });        
+   
+    });    
+    </script>     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/header-footer.js"></script>
   </body>
 </html>

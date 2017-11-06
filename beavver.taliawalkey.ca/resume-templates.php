@@ -77,10 +77,18 @@
             </div>
             <div class="col-md-10">
                 <ul class="list-inline">
-                  <li class="list-inline-item templates-links"><a href="#most-popular">MOST POPULAR</a></li>
-                  <li class="list-inline-item templates-links"><a href="#ats-optimized">ATS-OPTIMIZED</a></li>
-                  <li class="list-inline-item templates-links"><span class="coming-soon-link clean-link">CLEAN</span></li>
-                  <li class="list-inline-item templates-links"><span class="coming-soon-link creative-link">CREATIVE</span></li>
+                  <li class="list-inline-item templates-links">
+                      <a href="#most-popular">MOST POPULAR</a>
+                    </li>
+                  <li class="list-inline-item templates-links">
+                      <a href="#ats-optimized">ATS-OPTIMIZED</a>
+                    </li>
+                  <li class="list-inline-item templates-links"> 
+                      <span class="coming-soon-link clean-link">CLEAN</span>
+                    </li>
+                  <li class="list-inline-item templates-links"> 
+                      <span class="coming-soon-link creative-link">CREATIVE</span>
+                    </li>
                 </ul>    
             </div>	
             <div class="col-md-1">
@@ -280,7 +288,12 @@
                 });
               }
             }
-          });          
+          });  
+        
+        //Popovers
+        $(function () {
+          $('[data-toggle="popover"]').popover()
+        })
         
     });
     </script>  
@@ -289,7 +302,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>      
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/header-footer.js"></script>
   </body>
 </html>

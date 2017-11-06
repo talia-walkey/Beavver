@@ -1,8 +1,29 @@
+/* Up Button */
+#btn-up {
+    border-radius: 30px;
+    background-color: #ffb13b;
+    color: white;
+    transition: opacity 0.3s ease-in-out;  
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1;
+}
+
+.btn-up:hover {
+    opacity: 0.5;
+    color: white;
+}
+
 /* About the Team */
 .contact-icons {
     font-size: 20pt;
-    color: #8f8f8f;
+    color: #66cccc;
     margin-right: 10px;
+}
+
+.fa-envelope-o {
+    font-size: 23pt !important;
 }
 
 .team-member {
@@ -24,6 +45,9 @@
     margin: 50px;
 }
 
+.our-mission-img {
+    margin: 20px;
+}
 
 /* About Landing */
 .beavver-logo {
