@@ -129,8 +129,8 @@
             </div>
             <div class="col-md-3 templates-gallery"> 
                 <figure class="figure">
-                    <a href="download.php?download_file=test.docx">
-                      <img src="http://via.placeholder.com/350x500" class="figure-img img-fluid rounded" alt="Template One">
+                    <a href="download.php?download_file=template-02.docx">
+                      <img src="templates/template-02.jpg" class="figure-img img-fluid rounded" alt="Template One">
                       <figcaption class="figure-caption text-center">Template Two</figcaption>
                     </a>
                 </figure>

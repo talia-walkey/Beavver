@@ -1,3 +1,70 @@
+/* About the Team */
+.about-team-section {
+    background-color: #66cccc;
+}
+
+.about-team-section h1 {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.subheading-text {
+    color: white !important;
+    padding-top: 5px;
+    text-align: center;
+}
+
+
+.contact-icons {
+    font-size: 20pt;
+    color: #66cccc;
+    margin-right: 10px;
+}
+
+.fa-envelope-o {
+    font-size: 23pt !important;
+}
+
+.lead, .position {
+    font-family: 'Montserrat', sans-serif !important;
+    margin-bottom: 0 !important;
+}
+
+.position {
+    color: #8e8e8e;
+}
+
+.team-desc {
+    margin: 20px;
+}
+
+.team-img {
+    width: 100px;
+    height: auto;
+    border: solid 3px #ffb13b;
+    border-radius: 50px;
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+
+.btn-arrow {
+    color: #ffb13b !important;
+    background-color: #fff;
+    border: solid 2px #ffb13b !important;
+    z-index: 2;
+}
+
+/* slider */
+.MultiCarousel { float: left; overflow: hidden; padding: 40px; width: 100%; position:relative; margin-left: 20px; margin-right: 20px; margin-top: 50px;}
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#fff; color:#666; border-top: solid 3px #ffb13b; border-radius: 0px 0px 15px 15px;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; top: 0; }
+    .MultiCarousel .rightLst { right:0; top:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; opacity: 0.5; color: #666}
+
 /* Up Button */
 #btn-up {
     border-radius: 30px;
@@ -15,30 +82,15 @@
     color: white;
 }
 
-/* About the Team */
-.contact-icons {
-    font-size: 20pt;
-    color: #66cccc;
-    margin-right: 10px;
-}
-
-.fa-envelope-o {
-    font-size: 23pt !important;
-}
-
-.team-member {
-    margin: 15px;
-}
-
 /* About Beavver */
 .about-beavver-section {
     background-color: #f5f5f5;
-    margin-bottom: 40px;
     margin-top: 40px;
 }
 
 .about-beavver-section h1 {
-    margin-top: 30px;
+    text-align: center;
+    padding-top: 30px;
 }
 
 .our-mission, .our-story {
