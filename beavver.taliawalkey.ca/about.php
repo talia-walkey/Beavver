@@ -45,7 +45,7 @@
     <nav aria-label="breadcrumb" role="navigation">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        <li class="breadcrumb-item active" aria-current="page">About</li>
       </ol>
     </nav>        
                 
@@ -56,19 +56,22 @@
     		<div class="col-md-10">
                 <div class="orange-line"></div>
                 <img src="img/gray-circle.png" class="gray-circle"/>
-                <h1 class="page-title">ABOUT US</h1>
+                <h1 class="page-title">ABOUT</h1>
             </div>
             <div class="col-md-1"></div>
         </div>
         
-        <div class="row contact-landing">
-            <div class="col-md-3"></div>
+        <div class="row about-landing">
+            <div class="col-md-1"></div>
             <div class="col-md-3 about-beavver">
                 <a href="#aboutbeavver">
                     <img src="img/logo.png" alt="Beavver Logo" class="img-responsive beavver-logo">
                     <h3>About Beavver</h3>
                     <p>Read our business philosophy.</p>
                 </a>
+<!--                <button class="btn-down">                  
+                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                </button>-->
             </div>
             <div class="col-md-3 about-team">
                 <a href="#aboutteam">
@@ -76,8 +79,15 @@
                     <h3>Team</h3>
                     <p>Meet our team members.</p>
                 </a>
-            </div>
-            <div class="col-md-3"></div>
+            </div>            
+            <div class="col-md-3 about-ats">
+                <a href="#aboutats">
+                    <img src="img/ats-icon.svg" alt="Beavver Logo" class="img-responsive ats-logo">
+                    <h3>Applicant Tracking Systems</h3>
+                    <p>Read about the new system companies use in the hiring process.</p>
+                </a>
+            </div>            
+        <div class="col-md-1"></div>
         </div>
     </div> <!-- End of Page Header -->
     
@@ -108,7 +118,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-5">
                 <h3>Our Story</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+                <p>Beavver was born as a result of frustration from qualified job applicants and their inability to secure an interview. Companies are using Applicant Tracking Systems that filter resumes from certain keywords. Knowing that we would have to customize each resume for a specific job, Beavver is used to automate this process and increase the chances of getting an interview!</p>
             </div>
             <div class="col-md-5">
                 <img src="http://via.placeholder.com/350x150" alt="About Beavver">
@@ -198,9 +208,26 @@
                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </button>
             </div>
-        
+            <a name="aboutats"></a> <!-- this is here so it doesnt get cut off with smooth scrolling -->   
     </div>    
     </div> <!-- end of About Team -->
+        
+    <div class="container-fluid about-ats-section">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <h1>Applicant Tracking Systems</h1>
+            </div>
+            <div class="col-md-1"></div>        
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <p>Coming Soon!</p>
+            </div>
+            <div class="col-md-1"></div>   
+        </div>
+    </div>    
             <!-- UP ARROW BUTTON -->    
         <a href="#top" class="btn btn-lg btn-up" id="btn-up">
           <span class="glyphicon glyphicon-chevron-up"></span>

@@ -1,3 +1,13 @@
+/* About ATS */
+.about-ats-section {
+    margin-top: 40px;
+}
+
+.about-ats-section h1 {
+    text-align: center;
+    padding-top: 30px;
+}
+
 /* About the Team */
 .about-team-section {
     background-color: #66cccc;
@@ -102,8 +112,26 @@
 }
 
 /* About Landing */
+.btn-down {
+    color: #ffb13b !important;
+    background-color: #fff;
+    border: solid 2px #ffb13b !important;
+    border-radius: 50px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+}
+
+
 .beavver-logo {
     width: 50px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.ats-logo {
+    width: 80px;
     height: auto;
     margin: 0 auto;
     margin-top: 15px;
@@ -115,28 +143,29 @@
     margin-top: 15px;
 }
 
-.about-beavver, .about-team {
+.about-beavver, .about-team, .about-ats {
     width: 100px;
     height: auto;
     border-radius: 15px;
-    border: 1px solid black;
-    margin: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
+    padding: 15px;
 }
 
-.contact-landing {
+.about-landing {
     margin-top: 40px;
     text-align: center;
     padding: 15px;
 }
 
-.about-beavver>a, .about-team>a {
+.about-beavver>a, .about-team>a, .about-ats>a {
     color: #000;
 }
 
-.about-beavver>a:hover, .about-team>a {
+.about-beavver:hover, .about-team:hover, .about-ats:hover {
     opacity: 0.5;
 }
