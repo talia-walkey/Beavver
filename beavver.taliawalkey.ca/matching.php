@@ -59,52 +59,14 @@
     </div> <!-- END OF CONTENT -->
     
     <div id="root"></div>
-    <!--<section>
-        <div class="container">
-                    <p id="title">Let's Get Started</p>
-                    <p id="desc">Increase your chance in landing an interview in two steps. Just paste your resume on the <br>left sections and the job description on the right box. Then, we can make a match!</p>
-                    <div id="mrow" class="row">
-                    <div class="col">
-                       <ul>
-                           <li class="step">PASTE YOUR RESUME</li>
-                       </ul>
-                      <label class="mlabel">Job Title</label>
-                      <input class="rinput">
-                      <label class="mlabel">&nbsp;</label>
-                      <textarea class="jinput" placeholder="Paste your resume here" id="text1" spellcheck="true"></textarea>
 
-                      <br/>
-
-                      <button class="clear">Clear resume</button>
-                  </div>
-
-                   <div class="col">
-                       <ul>
-                           <li class="step">PASTE YOUR JOB DESCRIPTION</li>
-                       </ul>
-                      <label class="mlabel">Job Title</label>
-                      <input class="rinput">
-                      <label class="mlabel">&nbsp;</label>
-                      <textarea class="jinput" placeholder="Paste the job title with the full job description text-excluding the &quot About Company &quot section" id="text2" spellcheck="true"></textarea>
-
-                      <br/>
-
-                      <button class="clear">Clear job description</button>
-                  </div>
-                  </div>
-                    <button class="msubmit" id="matchBtn">MAKE A MATCH</button>
-                    <br/>
-
-                </div>
-    </section>
-
-    <section class="rsection">
-         <br><br><br>
+<!--    <section class="rsection">
+         </br></br></br>
         <div id="mhidden" class="container">
             <div id="percentage">
                 <div class="progress" id="progress"></div>
             </div>
-            <br><br>
+            </br></br>
             <div class="resultcontainer">
               <div class="resultbox">
                   <p class="rtitle">Comparison</p>
@@ -137,7 +99,6 @@
     </div>  
     
     </div>
-
       
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -160,9 +121,7 @@
           });
     </script>
 
-
-    <link href="/build/static/css/main.5ec4dc93.css" rel="stylesheet">
-<script type="text/javascript" src="/build/static/js/main.00d6b116.js"></script>
-
+    <link href="/build/static/css/main.ce5236df.css" rel="stylesheet">
+<script type="text/javascript" src="/build/static/js/main.9a9af1a3.js"></script>
   </body>
 </html>
