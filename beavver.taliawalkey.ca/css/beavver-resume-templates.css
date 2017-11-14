@@ -1,22 +1,9 @@
 /* RESUME TEMPLATES */
-
-#coming-soon-warning>span {
-    padding-right: 10px;
-}
-
-#coming-soon-warning {
-    border: 2px solid #ffb13b;
-    border-radius: 5px;
-    background-color: rgba(244,243,244,0.8);
-    width: 150px;
-    height: auto;
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
+.coming-soon-link:hover {
     color: #ffb13b;
-    position: relative;
-    left: 200px;
-    z-index: 1;
+    cursor: pointer;
 }
+
 
 #btn-up {
     border-radius: 30px;

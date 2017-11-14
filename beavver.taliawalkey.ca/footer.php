@@ -39,7 +39,9 @@
             </div>
             <div class="col-6 col-sm-6">
                 <div id="email-box" class="form-row align-items-center">
-                    <a href="#"><button id="newsletter-button"><span class="glyphicon glyphicon-envelope" id="envelope-icon"></span></button></a>
+                    <button id="newsletter-button" data-container="body" data-toggle="popover" data-placement="top" data-content="Coming Soon!">
+                        <span class="glyphicon glyphicon-envelope" id="envelope-icon"></span>
+                    </button>
                     <input type="text" class="form-control" placeholder="E-mail" id="email-footer-input">  
                 </div>  
             </div>
@@ -79,13 +81,23 @@
             </div>
           </div>
         </div>
-        
-    </div> <!-- end of footer -->    
+    </div> <!-- end of footer -->  
+      
+    <script>
+    // popover function    
+    $(document).ready(function() {
+        $(function () {
+          $('[data-toggle="popover"]').popover()
+        })  
+    });
+    </script>  
       
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
     <script src="js/bootstrap.min.js"></script>  
+    <script src="js/bootstrap.bundle.min.js"></script>  
+    <script src="js/bootstrap.bundle.js"></script>
 
   </body>
 </html>

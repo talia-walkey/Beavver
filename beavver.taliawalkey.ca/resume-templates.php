@@ -83,10 +83,10 @@
                   <li class="list-inline-item templates-links">
                       <a href="#ats-optimized">ATS-OPTIMIZED</a>
                     </li>
-                  <li class="list-inline-item templates-links"> 
+                  <li class="list-inline-item templates-links" data-container="body" data-toggle="popover" data-placement="top" data-content="Coming Soon!"> 
                       <span class="coming-soon-link clean-link">CLEAN</span>
                     </li>
-                  <li class="list-inline-item templates-links"> 
+                  <li class="list-inline-item templates-links" data-container="body" data-toggle="popover" data-placement="top" data-content="Coming Soon!"> 
                       <span class="coming-soon-link creative-link">CREATIVE</span>
                     </li>
                 </ul>    
@@ -98,12 +98,6 @@
         </div>
     </div>
             
-    <!-- COMING SOON WARNING -->
-        <div id="coming-soon-warning">
-            <span class="glyphicon glyphicon-exclamation-sign"></span>
-            <b>Coming Soon!</b>
-        </div> 
-        
     <!-- MOST POPULAR -->
     <div class="container-fluid templates-content">
         <div class="row templates-info">
@@ -221,37 +215,6 @@
             $("#btn-up").hide();
         });
         
-        // hide warning initially
-        $("#coming-soon-warning").hide(); 
-                
-        // show the coming soon warning when mouse enters
-        $(".coming-soon-link").mouseover(function(){
-            $("#coming-soon-warning").fadeIn(200);
-        });
-        
-        // show the coming soon warning when mouse exits
-        $(".coming-soon-link").mouseout(function(){
-            $("#coming-soon-warning").fadeOut(200);
-        });
-        
-        // change css hover styling
-        $(".clean-link").mouseover(function(){
-            $(".clean-link").css("color", "#ffb13b");
-        });
-        
-        $(".clean-link").mouseout(function(){
-            $("#coming-soon-warning").fadeOut(200);
-            $(".clean-link").css("color", "#333");            
-        });
-        
-        $(".creative-link").mouseover(function(){
-            $(".creative-link").css("color", "#ffb13b");
-        }); 
-        
-        $(".creative-link").mouseout(function(){
-            $(".creative-link").css("color", "#333");            
-        }); 
-        
         //Smooth Scrolling
         // Select all links with hashes
         $('a[href*="#"]')
@@ -301,8 +264,7 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/popper.min.js"></script>      
+    <!-- Include all compiled plugins (below), or include individual files as needed -->    
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
