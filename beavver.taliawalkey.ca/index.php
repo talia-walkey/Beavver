@@ -54,13 +54,135 @@ require_once('connect.php');
             <img src="img/b-home.svg" alt="Beavver" class="zen-beavver">
             <br/><br/>        
             <div class="myCircle">
-                <a href="#features"><img src="img/mouse-icon.svg" class="mouse-icon" alt="mouse"></a>
-                <a name="features"></a> <!-- this is here because smooth scrolling enabled makes the first feature cut off when clicked -->
+                <a href="#about-beavver"><img src="img/mouse-icon.svg" class="mouse-icon" alt="mouse"></a>
+                <a name="about-beavver"></a> <!-- this is here because smooth scrolling enabled makes the first feature cut off when clicked -->
             </div>    
             
-        </div> <!-- End of Landing Content -->
+        </div> <!-- End of Landing Content -->       
         
-        <!-- CTA Sections -->
+        <!-- About Beavver -->
+        <div class="about-beavver container-fluid">
+            <div class="row about-title">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h1>WHAT IS BEAVVER?</h1>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            
+            <div class="row about-info">
+                <div class="col-md-6">
+                    <img src="img/beavver-matchingpage.png" class="img-responsive img-matching-page">
+                </div>
+                <div class="col-md-5 about-text">
+                        <p>A digital tool built to make the resume customization more comfortable for job seekers who want to stand out on recruitment processes, and also plan their careers. This is the main idea behind Beavver. And it's making the job application process less painful for lots of people from various industries. 
+                        <br/><br/>
+                        You don’t have to spend long hours researching and customizing your resume — <b>Beavver does all the hard work for you!</b>
+                        </p>
+                        <a href="about.php">SEE MORE           <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+                <div class="col-md-1"></div>
+            </div> 
+            
+            <div class="row about-bottom">
+            </div>
+            
+            <a name="features"></a><!-- this is here so it doesnt get cut off during smooth scrolling -->
+
+        </div> <!-- End of About Beavver -->
+        
+        <!-- Features -->
+        <div class="container-fluid features-section">
+            <div class="row features-title">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h1>FEATURES</h1>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            
+            <div class="row how-to-steps">
+                <div class="col-md-4">
+                    <div class="howto-images">
+                        <div class="circle-container">
+                            <img src="img/resume-screening.svg" class="img-responsive img-features">
+                        </div>
+                    </div>  
+                    <div class="features-text">        
+                        <h4>RESUME SCREENING</h4>
+                        <p>Compare your resume with the desired job position and get a compatibility matching score based on job keywords.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="howto-images">
+                        <div class="circle-container">
+                            <img src="img/writing-tips.svg" class="img-responsive img-features">
+                        </div>
+                    </div>
+                    <div class="features-text">
+                        <h4>WRITING TIPS</h4>
+                        <p>No more writer’s block! Get tips with career specific terms in which all employers are looking for and more.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="howto-images">
+                        <div class="circle-container">
+                            <img src="img/courses.svg" class="img-responsive img-features img-courses">
+                        </div>
+                    </div> 
+                    <div class="features-text">
+                        <h4>COURSE RECOMMENDATIONS</h4>
+                        <p>Based on your current resume and your dream job, get a list of short-term courses that will give the skills you need.</p>
+                    </div>    
+                </div>
+            </div>
+            
+            <div class="row how-to-steps">
+                <div class="col-md-4">
+                    <div class="howto-images">
+                        <div class="circle-container">
+                            <img src="img/resume-templates.svg" class="img-responsive img-steps">
+                        </div>
+                    </div>  
+                    <div class="features-text">        
+                        <h4>RESUME TEMPLATES</h4>
+                        <p>Save time and build a screening-proof resume based on our templates.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="howto-images">
+                        <div class="circle-container">
+                            <img src="img/career-planning.svg" class="img-responsive img-steps">
+                        </div>
+                    </div>
+                    <div class="features-text">
+                        <h4>CAREER PLANNING</h4>
+                        <p>Pick your dream job position and set as a career goal. Beavver will check what’s missing on your resume and provide you a checklist and a timeline to keep you on track.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="howto-images">
+                        <div class="circle-container">
+                            <img src="img/free.svg" class="img-responsive img-features">
+                        </div>
+                    </div> 
+                    <div class="features-text">
+                        <h4>FREE FOREVER</h4>
+                        <p>Beavver is free to use, no locked features and no subscriptions. It’s our gift for all applicants.</p>
+                    </div>    
+                </div>
+            </div>            
+            
+        </div> <!-- End of Features -->
+        
+        <!-- Benefits -->
+        <div class="row benefits-section">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h1>BENEFITS</h1>
+                </div>
+                <div class="col-md-1"></div>
+        </div>
         <div class="row job-keywords">
             <div class="col-md-6">
                 <img src="img/beavver-computer.svg" class="img-responsive beavver-images">
@@ -100,7 +222,8 @@ require_once('connect.php');
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas ligula a efficitur ultrices.</p>
             </div>
             <div class="col-md-1"></div>
-        </div>
+        </div> 
+        <!-- End of Benefits -->
         
         <!-- How It Works -->
         <a name="how-it-works"></a>
@@ -155,78 +278,7 @@ require_once('connect.php');
                 <div class="col-md-1"></div>
             </div>
         </div> <!-- End of How It Works -->
-        
-        <!-- Pricing -->
-        <a name="pricing"></a>
-        <div class="container-fluid pricing-info">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <h1>PRICING</h1>
-                    <p class="pricing-text">There's so much more to love inside Beavver. <br/>
-                    Here are the benefits of being a standard user.</p>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-            
-            <div class="row pricing-table">
-                <div class="col-md-1"></div>
-                <div class="col-md-5 free-info">
-                    <h2>FREE</h2>
-                    <p class="pricing-free">                    <span class="gray-pricing dollar-sign">$</span>0<span class="gray-pricing">/mo</span>
-                    </p>
-                    <div class="pricing-features">
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">Free Forever</p>
-                        <br/>
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">5 Match Rate Calculations / month</p>
-                        <br/>
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">5 Keyword Comparisons / month</p>
-                        <br/>
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">Limited Access to Online Courses</p>
-                        <br/>
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">3 ATS Friendly Resume Templates</p>
-                        <br/>
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">Awesome Support</p>
-                        <br/>                        
-                    </div>
-                    <button class="secondaryBtn longerBtn">YOUR CURRENT PLAN</button>    
-                </div>  
-                <div class="col-md-5 standard-info">
-                <h2>STANDARD</h2>
-                    <p class="pricing-standard">                    <span class="blue-pricing dollar-sign">$</span>29.95<span class="blue-pricing">/mo</span>
-                    </p>
-                    <div class="pricing-features">
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">Unlimited Match Rate Comparisons</p>
-                        <br/>
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">Unlimited Keyword Comparisons</p>
-                        <br/>
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">Unlimited Access to Online Courses</p>
-                        <br/>
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">12 ATS Friendly Resume Templates</p>
-                        <br/>
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">Even More Awesome Support</p>
-                        <br/>
-                        <div class="checkmark"><span class="glyphicon glyphicon-ok"></span></div>
-                        <p class="features-text">..and so much more!</p>
-                        <br/>                        
-                    </div>
-                    <button class="primaryBtn longerBtn">GET STARTED</button>
-                </div>
-                <div class="col-md-1"></div>
-                
-            </div>
-        </div> <!-- End of Pricing -->
+
         
             <!-- UP ARROW BUTTON -->    
         <a href="index.php#top" class="btn btn-lg btn-up" id="btn-up">
@@ -236,7 +288,16 @@ require_once('connect.php');
     </div>  <!-- End of Content -->
     
       
-    <!-- Clouds -->  
+    <!-- Bottom CTA -->
+    <div class="row bottom-cta">
+        <div class="col-md-12">
+        <h1>GET STARTED FOR FREE</h1>
+        <p>No hidden fees and no locked features, Beavver is all yours to use. Register to get started!</p>
+        <a href="register.php">
+            <button class="btn ctaBtn" type="submit">START NOW!</button>
+        </a>    
+        </div>    
+    </div>  
     <div class="row bottom-clouds">
         <div class="col-md-12">
             <object type="image/svg+xml" data="img/bottom-clouds.svg">
@@ -252,9 +313,9 @@ require_once('connect.php');
     <script>
     $(document).ready(function() {
         
-        // show the up button when templates-list is passed
+        // show the up button when about beavver is passed
         $("#btn-up").hide(); //hide button initially
-        var topOfOthDiv = $(".job-keywords").offset().top;
+        var topOfOthDiv = $(".about-beavver").offset().top;
         $(window).scroll(function() {
             if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
                 $("#btn-up").show(200); //reached the desired point -- show div

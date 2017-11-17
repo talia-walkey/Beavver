@@ -55,7 +55,7 @@ require('connect.php');
           <ul class="nav navbar-nav">
             <li><a href="matching.php">SCAN</a></li>
             <li><a href="resume-templates.php">RESOURCES</a></li>
-            <li><a href="landingLogin.php#pricing">PRICING</a></li>
+            <li><a href="about.php">ABOUT</a></li>
             <li><a href="loginfaqs.php">FAQ</a></li>
           </ul>
 

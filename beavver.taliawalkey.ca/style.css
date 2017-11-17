@@ -95,6 +95,7 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .signup {

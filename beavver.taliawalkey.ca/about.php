@@ -62,8 +62,8 @@
         </div>
         
         <div class="row about-landing">
-            <div class="col-md-1"></div>
-            <div class="col-md-3 about-beavver">
+            <div class="col-md-2"></div>
+            <div class="col-md-4 about-beavver">
                 <a href="#aboutbeavver">
                     <img src="img/logo.png" alt="Beavver Logo" class="img-responsive beavver-logo">
                     <h3>About Beavver</h3>
@@ -73,21 +73,14 @@
                     <i class="fa fa-arrow-down" aria-hidden="true"></i>
                 </button>-->
             </div>
-            <div class="col-md-3 about-team">
+            <div class="col-md-4 about-team">
                 <a href="#aboutteam">
                     <span class="glyphicon glyphicon-user"></span>
                     <h3>Team</h3>
                     <p>Meet our team members.</p>
                 </a>
-            </div>            
-            <div class="col-md-3 about-ats">
-                <a href="#aboutats">
-                    <img src="img/ats-icon.svg" alt="Beavver Logo" class="img-responsive ats-logo">
-                    <h3>Applicant Tracking Systems</h3>
-                    <p>Read about the new system companies use in the hiring process.</p>
-                </a>
-            </div>            
-        <div class="col-md-1"></div>
+            </div>                
+        <div class="col-md-2"></div>
         </div>
     </div> <!-- End of Page Header -->
     
@@ -211,23 +204,7 @@
             <a name="aboutats"></a> <!-- this is here so it doesnt get cut off with smooth scrolling -->   
     </div>    
     </div> <!-- end of About Team -->
-        
-    <div class="container-fluid about-ats-section">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <h1>Applicant Tracking Systems</h1>
-            </div>
-            <div class="col-md-1"></div>        
-        </div>
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <p>Coming Soon!</p>
-            </div>
-            <div class="col-md-1"></div>   
-        </div>
-    </div>    
+            
             <!-- UP ARROW BUTTON -->    
         <a href="#top" class="btn btn-lg btn-up" id="btn-up">
           <span class="glyphicon glyphicon-chevron-up"></span>
