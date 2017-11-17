@@ -122,6 +122,6 @@
     </script>
 
     <link href="/build/static/css/main.ce5236df.css" rel="stylesheet">
-<script type="text/javascript" src="/build/static/js/main.9a9af1a3.js"></script>
+<script type="text/javascript" src="/build/static/js/main.56a43ecf.js"></script>
   </body>
 </html>
