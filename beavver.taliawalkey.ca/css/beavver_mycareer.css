@@ -3,7 +3,7 @@
 }
 
 .cwrap {
-    height: 700px;
+    height: 800px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -32,7 +32,7 @@
 
 .slide {
     float: right;
-    height: 700px;
+    height: 800px;
     width: 75%;
     position: absolute;
     top: 0;
@@ -67,6 +67,27 @@
 #gray-bg {
     width: 75%;
     height: 250px;
+    background-color: #f5f5f5;
+    z-index: -1;
+}
+
+#gray-bg1 {
+    width: 75%;
+    height: 320px;
+    background-color: #f5f5f5;
+    z-index: -1;
+}
+
+#gray-bg2 {
+    width: 75%;
+    height: 150px;
+    background-color: #f5f5f5;
+    z-index: -1;
+}
+
+#gray-bg3 {
+    width: 75%;
+    height: auto;
     background-color: #f5f5f5;
     z-index: -1;
 }
@@ -113,3 +134,114 @@
     transform: translateY(-35%);
 }
 
+#bggray {
+    background-color: lightgray;
+}
+
+.profile-control {
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #66cccc;
+}
+
+.btnImg {
+    width:20px;
+    height: auto;
+}
+
+#google-api {
+    height: 30px;
+    width: 200px;
+    background-color: #d34836;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+#linkedin-api {
+    height: 30px;
+    width: 200px;
+    background-color: #0077b5;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+#cleft {
+    margin-left: 0;
+}
+
+.cancel {
+      width: 235px;
+      height: 61px;
+      border-radius: 30.5px;
+      background-color: white;
+      border: none;
+      font-size: 10px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 4.75;
+      letter-spacing: 2.9px;
+      text-align: center;
+      color:firebrick;
+      display: block;
+      transition: 0.3s;
+}
+
+.cancel:hover {
+    cursor: pointer;
+}
+
+.bluebox {
+    width: 75%;
+    border-style: solid;
+    border-width: thick;
+    border-color: #66cccc;
+}
+
+#inline {
+    display: inline-block;
+}
+
+.checkit {
+    transform: translateX(-10px);
+    border: none;
+    background-color: white;
+    color: #ffb13b;
+}
+.checkit:hover {
+    cursor: pointer;
+}
+
+#plusicon {
+    width: 40px;
+    height: auto;
+}
+
+#ccenter {
+    transform: translateX(-15%);
+}
+
+#changeWidth {
+    width: 250px;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+.jbinput {
+    width: 200px;
+    height: 40px;
+    border-width: 1px;
+    border-color: lightgray;
+    border-style: solid;
+    border-radius: 10px;
+}
