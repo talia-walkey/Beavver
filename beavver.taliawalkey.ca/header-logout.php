@@ -74,11 +74,11 @@
                 <div id="before-login" class="form-group">
                         
             <div class="form-group">
-                  <input  type="email" class="regiinput form-control" id="exampleInputEmail1" placeholder="Enter email" name='email' required>
+                  <input  type="email" class="regiinput form-control" id="exampleInputEmail1" placeholder="Enter email" name='email' value='taliawalkey@gmail.com' required>
                   <hr class="dashline">
             </div>
            <div class="form-group">
-                  <input type="password" class="regiinput form-control" placeholder="Password" name="password">
+                  <input type="password" class="regiinput form-control" placeholder="Password" id="mpass" name="password">
                   <hr class="dashline" required>
            </div>
                     
@@ -92,8 +92,19 @@
  
               <script type="text/javascript">
                  document.getElementById("submitBut").onclick = function () {
-                 location.href = "landingLogin.php";
-                };
+                 //location.href = "landingLogin.php";
+                 var fd = new FormData();
+                 fd.append("email", document.getElementById("exampleInputEmail1").value);
+                 fd.append("type", "log");
+                 fd.append("password", document.getElementById("mpass").value);
+                
+                    
+                    fetch("register-db.php",{
+                        method:"POST",
+                        body:fd
+                    }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
+                    
+                 };
               </script>       
               
 <!--                    </form>-->

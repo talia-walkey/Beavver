@@ -1,5 +1,9 @@
 <?php
+session_start();
 require_once('connect.php');
+var_dump($_SESSION);
+//phpinfo();
+exit;
 ?>
 
 <!DOCTYPE html>
