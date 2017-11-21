@@ -66,16 +66,143 @@
     <div class="cwrap">
     <div class="ccontrol">
         <br/>
-        <label class="mycategory" for="slide-1-trigger">Career Goal</label><br/><br/><br/>
-        <label class="mycategory" for="slide-2-trigger">My Job Bank</label><br/><br/><br/>
-        <label class="mycategory" for="slide-3-trigger">Saved Courses</label><br/><br/><br/>
-        <label class="mycategory" for="slide-4-trigger">My Resume</label><br/><br/><br/>
-        <label class="mycategory" for="slide-5-trigger">My Profile</label>
+        <label class="mycategory" for="slide-1-trigger">MY PROFILE</label><br/><br/><br/>
+        <label class="mycategory" for="slide-2-trigger">MY RESUME</label><br/><br/><br/>
+        <label class="mycategory" for="slide-3-trigger">MY JOB BANK</label><br/><br/><br/>
+        <label class="mycategory" for="slide-4-trigger">SAVED COURSES</label><br/><br/><br/>
+        <label class="mycategory" for="slide-5-trigger">CAREER GOAL</label>
     </div>
 
     <input id="slide-1-trigger" type="radio" name="slides" checked>
     <section class="slide slide-one">
-            <div id="gray-bg">
+        <div id="gray-bg1">
+            <p class="ctitle">ACCOUNT INFORMATION</p>
+            <div class="row">
+              <div class="col">
+                  <label>Username</label><br/>
+                  <input id="bggray" type="text" class="profile-control" placeholder="Present Username" aria-label="Username" aria-describedby="basic-addon1" disabled>
+                  <br/> 
+                  <label>First name</label><br/>
+                  <input type="text" class="profile-control" placeholder="Type first name" aria-label="Username" aria-describedby="basic-addon1"> 
+                  <br/>
+                  <label>New password</label><br/>
+                  <input type="text" class="profile-control" placeholder="Type new password" aria-label="Username" aria-describedby="basic-addon1"> <br/> 
+              </div> 
+              <div class="col">
+                  <label>&nbsp;</label><br/><br/>
+                  <br/>
+                  <label>Last name</label><br/>
+                  <input type="text" class="profile-control" placeholder="Type last name" aria-label="Username" aria-describedby="basic-addon1">
+                  <br/>
+                  <label>Email</label><br/>
+                  <input type="text" class="profile-control" placeholder="Email address" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              
+            </div>
+        </div>
+        <br/>
+        <div id="gray-bg2">
+            <p class="ctitle">CONNECT</p>
+            <button id="google-api">
+                <img class="btnImg" src="img/google-logo-w.svg"/>
+                DISCONNECT GOOGLE
+            </button>
+            <button id="linkedin-api">
+                <img class="btnImg" src="img/linkedin-logo-w.svg"/>
+                Connect with LinkedIn
+            </button>
+        </div>
+        <br/>
+        <div id="imgcenter">
+            <button id="inline" id="cleft" class="msubmit">SAVE CHANGE</button>
+            <button id="inline" class="cancel">X CLOSE MY ACCOUNT</button>
+        </div><br/>
+        <div class="bluebox">
+            <p id="inline" class="ctitle">
+                <b>HAVE QUESTIONS ABOUT YOUR ACCOUNT?</b> See our FAQs.
+            </p>
+            <a class="checkit" href="faqs.php">CHECK IT></a>
+        </div>
+    </section>
+    
+    <input id="slide-2-trigger" type="radio" name="slides">
+    <section class="slide slide-two">
+        <div id="gray-bg3">
+            <br/><br/>
+            <div class="row">
+                <div class="col"><span><b>SOURCE</b></span></div>
+                <div class="col"><span><b>DATE</b></span></div>
+                <div class="col"><span><b>TITLE</b></span></div>
+            </div>
+            <p class="ctitle">You have no resumes saved. <br/>Start by clicking on "Add new" button below to choose your resume.</p>
+            <br/><br/>
+        </div><br/>
+        <div id="ccenter">
+            <div>
+                <img id="plusicon" src="img/plus.svg"/>
+                &nbsp;
+                <span id="bold">ADD NEW</span>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="changeWidth" class="secondaryBtn">FROM MY COMPUTER</button>
+                &nbsp;
+                <button id="changeWidth" class="primaryBtn">FROM LINKEDIN</button>
+            </div>
+        </div><br/>
+        <div class="bluebox">
+            <p id="inline" class="ctitle">
+                <b>NEED HELP WITH YOUR RESUME?</b> Start by downloading our resume templates.
+            </p>
+            <a class="checkit" href="resume-templates.php">CHECK IT></a>
+        </div>
+    </section>
+   
+    <input id="slide-3-trigger" type="radio" name="slides">
+    <section class="slide slide-three">
+        <div id="gray-bg3">
+            <br/><br/>
+            <div class="row">
+                <div class="col"><span><b>POSITION TITLE</b></span></div>
+                <div class="col"><span><b>DATE</b></span></div>
+                <div class="col"><span><b>COMPANY</b></span></div>
+            </div>
+            <p class="ctitle">You have no jobs saved yet</p>
+            <br/><br/>
+        </div><br/>
+        <div id="ccenter">
+            <div>
+                <img id="plusicon" src="img/plus.svg"/>
+                &nbsp;
+                <span id="bold">ADD NEW</span>
+            </div>
+                <br/>
+                <div>
+                        <input class="jbinput" type="text" placeholder="POSITION TITLE">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="jbinput" type="text" placeholder="COMPANY NAME">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="jbinput" type="text" placeholder="JOB POSITION LINK">
+
+                </div>
+            
+        </div><br/>
+        <div class="bluebox">
+            <p id="inline" class="ctitle">
+                <b>ADDING A JOB IS SIMPLE:</b> Click on "Add new" and fill up with details or click on "Save job" while matching with your resume.
+            </p>
+            <a class="checkit" href="resume-templates.php">CHECK IT></a>
+        </div>
+    </section>
+    
+    <input id="slide-4-trigger" type="radio" name="slides">
+    <section class="slide slide-four">
+        <div id="gray-bg">
+            <p class="ctitle"><b>UNDER CONSTRUCTION</b></p>
+        </div>
+    </section>
+    
+    <input id="slide-5-trigger" type="radio" name="slides">
+    <section class="slide slide-five">
+        <div id="gray-bg">
             <br/><br/>
             <p class="ctitle">Keep track of your career, choose what would you like to do and we will show you the path.</p>
             </div>
@@ -112,29 +239,13 @@
                 
             
                 
-                <button class="msubmit">START NOW</button>
+                <button id="bggray" class="msubmit" type="button" disabled>COMING SOON</button>
             </div>
             
         
             
         
         
-    </section>
-    <input id="slide-2-trigger" type="radio" name="slides">
-    <section class="slide slide-two">
-        <h1>Headline Two</h1>
-    </section>
-    <input id="slide-3-trigger" type="radio" name="slides">
-    <section class="slide slide-three">
-        <h1>Headline Three</h1>
-    </section>
-    <input id="slide-4-trigger" type="radio" name="slides">
-    <section class="slide slide-four">
-        <h1>Headline Four</h1>
-    </section>
-    <input id="slide-5-trigger" type="radio" name="slides">
-    <section class="slide slide-five">
-        <h1>Headline Five</h1>
     </section>
 
 </div>
