@@ -32,25 +32,22 @@
         <?php include 'header-login.php';?>
     </div>
     
-    <!-- BREADCRUMBS -->
-    <nav aria-label="breadcrumb" role="navigation">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Resume Templates</li>
-      </ol>
-    </nav>        
-        
-    
     <div class="content"> 
-
+        <img src="img/pattern.jpg" class="pattern">
+        <!-- BREADCRUMBS -->
+        <nav aria-label="breadcrumb" role="navigation">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Resume Templates</li>
+          </ol>
+        </nav>        
+        
     <!-- TEMPLATES INFO -->    
     <div class="container-fluid templates-content">
         <div class="row">
             <div class="col-md-1"></div>
-    		<div class="col-md-10">
-                <div class="orange-line"></div>
-                <img src="img/gray-circle.png" class="gray-circle"/>
-                <h1 class="page-title">RESUME TEMPLATES</h1>
+    		<div class="col-md-10 center-text">
+                <h1>RESUME TEMPLATES</h1>
             </div>
             <div class="col-md-1"></div>
         </div>

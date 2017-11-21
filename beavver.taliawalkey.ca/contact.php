@@ -33,7 +33,7 @@
     </div>
     
     <div class="content"> 
-    
+        <img src="img/pattern.jpg" class="pattern">
     <br/><br/>
     <!-- BREADCRUMBS -->
     <nav aria-label="breadcrumb" role="navigation">
@@ -47,10 +47,8 @@
     <div class="container-fluid templates-content">
         <div class="row">
             <div class="col-md-1"></div>
-    		<div class="col-md-10">
-                <div class="orange-line"></div>
-                <img src="img/gray-circle.png" class="gray-circle"/>
-                <h1 class="page-title">CONTACT</h1>
+    		<div class="col-md-10 center-text">
+                <h1>CONTACT</h1>
             </div>
             <div class="col-md-1"></div>
         </div>

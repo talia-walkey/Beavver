@@ -29,8 +29,25 @@ a {
     margin-left: 20vw;
 }
 
+.pattern {
+    width: 100%;
+    height: auto;
+    opacity: 0.15;
+    z-index: -5;
+    position: absolute;
+    margin-top: -50px;
+}
+
+.center-text {
+    text-align: center;
+}
+
 .page-title {
-    margin-left: 25vw;
+    text-align: center;
+}
+
+.page-header {
+    border-bottom: none !important;
 }
 
 h2, p {
@@ -40,6 +57,9 @@ h2, p {
 /* BREADCRUMBS */
 .breadcrumb {
     background-color: white;
+    border: 1px solid #aeb1b4;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 li.breadcrumb-item>a {

@@ -33,27 +33,28 @@
         <?php include 'header-logout.php';?>
     </div>
     
-    <div class="content"> 
+    <div class="content">
+        <img src="img/pattern.jpg" class="pattern">
     <br/><br/>
-    <!-- BREADCRUMBS -->
-    <nav aria-label="breadcrumb" role="navigation">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">FAQs</li>
-      </ol>
-    </nav>                
+    <div class="page-header">
+        <!-- BREADCRUMBS -->
+        <nav aria-label="breadcrumb" role="navigation">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">FAQs</li>
+          </ol>
+        </nav>                
         
     <!-- PAGE HEADER -->    
     <div class="container-fluid templates-content">
         <div class="row">
             <div class="col-md-1"></div>
-    		<div class="col-md-10">
-                <div class="orange-line"></div>
-                <img src="img/gray-circle.png" class="gray-circle"/>
-                <h1 class="page-title">FREQUENTLY ASKED QUESTIONS</h1>
+    		<div class="col-md-10 center-text">
+                <h1>FREQUENTLY ASKED QUESTIONS</h1>
             </div>
             <div class="col-md-1"></div>
         </div>
+    </div> <!-- END OF PATTERN -->    
         
     </div> <!-- END OF CONTENT -->
     

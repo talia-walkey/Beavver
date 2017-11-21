@@ -1,11 +1,5 @@
-/* About ATS */
-.about-ats-section {
-    margin-top: 40px;
-}
-
-.about-ats-section h1 {
-    text-align: center;
-    padding-top: 30px;
+.content { 
+    margin-top: 90px !important;
 }
 
 /* About the Team */
