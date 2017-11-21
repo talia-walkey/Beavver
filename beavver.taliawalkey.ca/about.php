@@ -340,7 +340,17 @@
         // hide the up button when clicked
         $("#btn-up").click(function(){
             $("#btn-up").hide();
-        }); 
+        });
+        
+        //hide the up button when at the top
+        $(window).on("scroll", function() {
+            var scrollPos = $(window).scrollTop();
+            if (scrollPos <= 80) {
+                $("#btn-up").fadeOut();
+            } else {
+                $("#btn-up").fadeIn();
+            }
+        });        
         
         //Smooth Scrolling
         // Select all links with hashes

@@ -311,6 +311,7 @@ require_once('connect.php');
     </div>  
       
     <script>
+    
     $(document).ready(function() {
         
         // show the up button when about beavver is passed
@@ -326,6 +327,16 @@ require_once('connect.php');
         $("#btn-up").click(function(){
             $("#btn-up").hide();
         }); 
+        
+        //hide the up button when at the top
+        $(window).on("scroll", function() {
+            var scrollPos = $(window).scrollTop();
+            if (scrollPos <= 80) {
+                $("#btn-up").fadeOut();
+            } else {
+                $("#btn-up").fadeIn();
+            }
+        });
         
         //Smooth Scrolling
         // Select all links with hashes
