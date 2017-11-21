@@ -6,3 +6,16 @@
 .content {
     margin-top: 20px !important;
 }
+
+.primaryBtn {
+    width: auto !important;
+    margin-top: 10px;
+}
+
+.primaryBtn > a {
+    color: black !important;
+}
+
+.primaryBtn > a:hover {
+    color: white !important;
+}

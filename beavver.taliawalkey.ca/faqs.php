@@ -35,30 +35,71 @@
     
     <div class="content">
         <img src="img/pattern.jpg" class="pattern">
-    <br/><br/>
-    <div class="page-header">
-        <!-- BREADCRUMBS -->
-        <nav aria-label="breadcrumb" role="navigation">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">FAQs</li>
-          </ol>
-        </nav>                
-        
-    <!-- PAGE HEADER -->    
-    <div class="container-fluid templates-content">
+        <br/><br/>
+        <div class="page-header">
+            <!-- BREADCRUMBS -->
+            <nav aria-label="breadcrumb" role="navigation">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">FAQs</li>
+              </ol>
+            </nav>                
+
+        <div class="container-fluid templates-content">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 center-text">
+                    <h1>FREQUENTLY ASKED QUESTIONS</h1>
+                    <br/>
+                    <p>Can't find what you're looking for?</p>
+                    <button class="btn primaryBtn"><a href="mailto:alynna.alcira@gmail.com">EMAIL US YOUR QUESTION</a></button>
+                    <br/><br/>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>   
+        </div> <!-- END OF HEADER -->
+        <br/>
         <div class="row">
             <div class="col-md-1"></div>
-    		<div class="col-md-10 center-text">
-                <h1>FREQUENTLY ASKED QUESTIONS</h1>
+            <div class="col-md-3"></div>
+            <div class="col-md-7">
+                <div id="accordion" role="tablist">
+                  <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                      <h5 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Collapsible Group Item #2
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" role="tab" id="headingThree">
+                      <h5 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Collapsible Group Item #3
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
             <div class="col-md-1"></div>
         </div>
-    </div> <!-- END OF PATTERN -->    
-        
-    </div> <!-- END OF CONTENT -->
     
-    </div>
+    </div> <!-- END OF CONTENT -->
     
     <br/>
         
@@ -70,9 +111,8 @@
       
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/header-footer.js"></script>
   </body>
 </html>
