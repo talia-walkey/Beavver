@@ -92,14 +92,14 @@
  
               <script type="text/javascript">
                  document.getElementById("submitBut").onclick = function () {
-                 //location.href = "landingLogin.php";
+                //location.href = "landingLogin.php";
                  var fd = new FormData();
                  fd.append("email", document.getElementById("exampleInputEmail1").value);
                  fd.append("type", "log");
                  fd.append("password", document.getElementById("mpass").value);
                 
-                    
                     fetch("register-db.php",{
+                        credentials: 'same-origin',
                         method:"POST",
                         body:fd
                     }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});

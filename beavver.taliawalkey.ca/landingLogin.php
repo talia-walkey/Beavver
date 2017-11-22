@@ -2,6 +2,8 @@
 session_start();
 require_once('connect.php');
 var_dump($_SESSION);
+console.log($_SESSION);
+
 //phpinfo();
 exit;
 ?>
