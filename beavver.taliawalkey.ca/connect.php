@@ -12,7 +12,7 @@
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        /* $sql = "SELECT * FROM login";
+        /* $sql = "SELECT * FROM login";*/
         
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
@@ -28,7 +28,7 @@
              $conn->exec($sql);
                 //echo 'register button is clicked';
         }else if($type == "log"){
-            $sql = "SELECT (first_name, last_name, email, password, confirm_password) FROM login WHERE $first_name";
+            $sql = "SELECT ('first_name', 'last_name', 'email', 'password', 'confirm_password') FROM login WHERE $email";
             $conn->exec($sql);
             
         }
@@ -36,7 +36,7 @@
         
         //declare whether you want to login or signup
      
-       
+       /*
         
         if($sql){
             $arr = array(

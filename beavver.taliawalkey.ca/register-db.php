@@ -1,4 +1,5 @@
 <?php
+session_start();
     header("Access-Control-Allow-Origin: *");
     $servername = "beavver.taliawalkey.ca";
     $dblogin = "talia185_Beavver";
@@ -28,8 +29,13 @@
              $conn->exec($sql);
                 //echo 'register button is clicked';
         }else if($type == "log"){
-            $sql = "SELECT (first_name, last_name, email, password, confirm_password) FROM login WHERE $first_name";
-            $conn->exec($sql);
+            $sql = "SELECT id, first_name, last_name, email FROM login WHERE email='$email' AND password='$password'";
+            $result=$conn->query($sql);
+            $user=$result->fetchAll(PDO::FETCH_ASSOC);
+            $_SESSION["user"]=$user[0];
+            var_dump($_SESSION);
+            echo json_encode($user);
+            exit;
             
         }
     
