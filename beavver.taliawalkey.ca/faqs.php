@@ -63,42 +63,209 @@
         <br/>
         <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-3"></div>
+            
+            <div class="col-md-3 faq-control">
+                <ul class="nav nav-tabs nav-stacked">
+                  <li class="active"><a data-toggle="tab" href="#general-section">General Questions</a></li>
+                  <li><a data-toggle="tab" href="#beavver-section">About Beavver</a></li>
+                  <li><a data-toggle="tab" href="#ats-section">Applicant Tracking Systems</a></li>
+                </ul>
+            </div>
+            
             <div class="col-md-7">
-                <div id="accordion" role="tablist">
-                  <div class="card">
-                    <div class="card-header" role="tab" id="headingTwo">
-                      <h5 class="mb-0">
-                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Collapsible Group Item #2
-                        </a>
-                      </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-                      <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <div class="tab-content">
+                <div id="general-section" class="tab-pane fade in active">
+                    <!-- General Questions -->
+                    <div id="accordion gq-accordion" role="tablist">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="gq-1">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#ga-1" aria-expanded="false" aria-controls="ga-1">
+                                <span class="question"> Is my resume shared with recruiters?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="ga-1" class="collapse" role="tabpanel" aria-labelledby="gq-1" data-parent="#accordion">
+                          <div class="card-body">
+                            No, only you can access your own resumes. 
+                          </div>
+                        </div>
+                      </div>                    
+
+                      <div class="card">
+                        <div class="card-header" role="tab" id="gq-2">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#ga-2" aria-expanded="false" aria-controls="ga-2">
+                                <span class="questions">Do I have to pay?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="ga-2" class="collapse" role="tabpanel" aria-labelledby="gq-2" data-parent="#accordion">
+                          <div class="card-body">
+                            No, Beavver is completely free to use.
+                          </div>
+                        </div>
                       </div>
-                    </div>
+
+                      <div class="card">
+                        <div class="card-header" role="tab" id="gq-3">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#ga-3" aria-expanded="false" aria-controls="ga-3">
+                                <span class="question">Are the resume templates free to use?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="ga-3" class="collapse" role="tabpanel" aria-labelledby="gq-3" data-parent="#accordion">
+                          <div class="card-body">
+                            Yes, the resume templates are free for you to use and customize.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-header" role="tab" id="gq-4">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#ga-4" aria-expanded="false" aria-controls="ga-4">
+                                <span class="question">How do I create an account?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="ga-4" class="collapse" role="tabpanel" aria-labelledby="gq-4" data-parent="#accordion">
+                          <div class="card-body">
+                            Click the yellow “Sign Up” button at the top right of every page. This will take you to the Register page where you will have to fill in the required fields to create an account.
+                          </div>
+                        </div>
+                      </div>                    
+                    </div> <!-- End of General Questions -->
                   </div>
-                  <div class="card">
-                    <div class="card-header" role="tab" id="headingThree">
-                      <h5 class="mb-0">
-                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Collapsible Group Item #3
-                        </a>
-                      </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                      <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  <div id="beavver-section" class="tab-pane fade">
+                    <!-- About Beavver -->
+                    <div id="accordion b-accordion" role="tablist">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="bq-1">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#ba-1" aria-expanded="false" aria-controls="ba-1">
+                                <span class="question">What is Beavver?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="ba-1" class="collapse" role="tabpanel" aria-labelledby="bq-1" data-parent="#accordion">
+                          <div class="card-body">
+                            A digital tool built to make the resume customization more comfortable for job seekers who want to stand out on recruitment processes, and also plan their careers.  
+                          </div>
+                        </div>
+                      </div>                    
+
+                      <div class="card">
+                        <div class="card-header" role="tab" id="bq-2">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#ba-2" aria-expanded="false" aria-controls="ba-2">
+                                <span class="questions">How does Beavver work?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="ba-2" class="collapse" role="tabpanel" aria-labelledby="bq-2" data-parent="#accordion">
+                          <div class="card-body">
+                            We compare your resume to a job description and give you the match rate and suggestions for improvement to pass the ATS. 
+                          </div>
+                        </div>
                       </div>
-                    </div>
+
+                      <div class="card">
+                        <div class="card-header" role="tab" id="bq-3">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#ba-3" aria-expanded="false" aria-controls="ba-3">
+                                <span class="question">Is Beavver’s algorithm based off of real Applicant Tracking Systems?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="ba-3" class="collapse" role="tabpanel" aria-labelledby="bq-3" data-parent="#accordion">
+                          <div class="card-body">
+                            Yes. 85% of companies are now using ATS to automate and simplify the selection process. We have identified the most common factors of applicants being rejected and have included this in our algorithm. The common factors among ATS are keyword searches, keyword frequency, keyword ratios, and match rate.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-header" role="tab" id="bq-4">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#ba-4" aria-expanded="false" aria-controls="ba-4">
+                                <span class="question">How do I improve my resume?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="ba-4" class="collapse" role="tabpanel" aria-labelledby="bq-4" data-parent="#accordion">
+                          <div class="card-body">
+                            Beavver provides you with a list of keywords taken from your resume and job description. It also shows you the number of times these keywords show in both places. From these results, we recommend including at least all of the keywords from the job description in your resume.
+                          </div>
+                        </div>
+                      </div>  
+
+                      <div class="card">
+                        <div class="card-header" role="tab" id="bq-5">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#ba-5" aria-expanded="false" aria-controls="ba-5">
+                                <span class="question">What happens if I have more keywords in my resume than the job description? And vice versa?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="ba-5" class="collapse" role="tabpanel" aria-labelledby="bq-5" data-parent="#accordion">
+                          <div class="card-body">
+                            We recommend having the same amount of keywords from the job description.
+                          </div>
+                        </div>
+                      </div>                      
+                    </div> <!-- End of About Beavver -->  
+                  </div>
+                  <div id="ats-section" class="tab-pane fade">
+                    <!-- ATS -->
+                    <div id="accordion ats-accordion" role="tablist">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="atsq-1">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#atsa-1" aria-expanded="false" aria-controls="atsa-1">
+                                <span class="question">What are Applicant Tracking Systems?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="atsa-1" class="collapse" role="tabpanel" aria-labelledby="atsq-1" data-parent="#accordion">
+                          <div class="card-body">
+                            Applicant Tracking Systems (ATS) collect candidates’ resumes in a database, to scan and index, giving recruiters an easy overview of candidates. The recruiters then use this tool to identify and filter out each candidate’s job title, skills, education, and other relevant keywords.
+                          </div>
+                        </div>
+                      </div>                    
+
+                      <div class="card">
+                        <div class="card-header" role="tab" id="atsq-2">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#atsa-2" aria-expanded="false" aria-controls="atsa-2">
+                                <span class="questions">Does layout matter in the ATS?</span>
+                                <span class="glyphicon glyphicon-chevron-down arrows"></span>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="atsa-2" class="collapse" role="tabpanel" aria-labelledby="atsq-2" data-parent="#accordion">
+                          <div class="card-body">
+                              Yes. To boost your chances of passing an ATS, your resume layout must be easy for an ATS to read. We have provided some free ATS-friendly resume templates that you can find <a href="resume-templates.php">here</a>.
+                          </div>
+                        </div>
+                      </div>                
+                    </div> <!-- End of ATS --> 
                   </div>
                 </div>
             </div>
+            </div> <!-- End of Column -->
             <div class="col-md-1"></div>
-        </div>
-    
     </div> <!-- END OF CONTENT -->
     
     <br/>
@@ -107,12 +274,24 @@
         <?php include 'footer.php';?>
     </div>  
     
-
+    <script>
+//    $(document).ready(function() {    
+//        $('#ga-1').on('shown.bs.collapse'), function() {
+//            $(".arrows").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
+//          }
+//
+//        $('#ga-1').on('hidden.bs.collapse'), function() {
+//            $(".arrows").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
+//          }      
+//    };
+        
+    </script>
       
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
   </body>
 </html>
