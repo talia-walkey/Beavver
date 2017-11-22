@@ -30,7 +30,13 @@ require_once('connect.php');
   <body>
     <a name="top"></a>  
     <div>
-        <?php include 'header-logout.php';?>
+        <?php 
+        if (empty($_SESSION["user"])) {
+            include 'header-logout.php';
+        } else {
+            include 'header-login.php';
+        }
+        ?>   
     </div>
 
     <div id="content">

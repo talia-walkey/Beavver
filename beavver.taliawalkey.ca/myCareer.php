@@ -30,8 +30,15 @@
     <a name="top"></a>   
 
     <div>
-        <!-- Make sure to change this to 'header-login.php' for pages that user is logged in -->
-        <?php include 'header-login.php';?>
+        <?php 
+            if (empty($_SESSION["user"])) {
+                include 'header-logout.php';
+                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
+                die();
+            } else {
+                include 'header-login.php';
+            }
+        ?>   
     </div>
     
     <!-- BREADCRUMBS -->

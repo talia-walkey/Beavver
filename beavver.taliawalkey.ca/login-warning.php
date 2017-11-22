@@ -39,21 +39,16 @@
     
     <div class="content"> 
         <img src="img/pattern.jpg" class="pattern">
-    <br/><br/>
-    <!-- BREADCRUMBS -->
-    <nav aria-label="breadcrumb" role="navigation">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Contact</li>
-      </ol>
-    </nav>        
+    <br/><br/>    
                 
     <!-- PAGE HEADER -->    
     <div class="container-fluid templates-content">
         <div class="row">
             <div class="col-md-1"></div>
     		<div class="col-md-10 center-text">
-                <h1>CONTACT</h1>
+                <br/>
+                <h2>Oops! Please login or register to see this page!</h2>
+                <div style="height:40vh;"></div>
             </div>
             <div class="col-md-1"></div>
         </div>

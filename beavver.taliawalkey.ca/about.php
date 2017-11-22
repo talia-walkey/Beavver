@@ -34,8 +34,13 @@
     <a name="top"></a>   
 
     <div>
-        <!-- Make sure to change this to 'header-login.php' for pages that user is logged in -->
-        <?php include 'header-logout.php';?>
+        <?php 
+            if (empty($_SESSION["user"])) {
+                include 'header-logout.php';
+            } else {
+                include 'header-login.php';
+            }
+        ?>   
     </div>
     
     <div class="content"> 
