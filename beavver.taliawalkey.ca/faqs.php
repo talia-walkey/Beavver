@@ -57,7 +57,7 @@
                     <h1>FREQUENTLY ASKED QUESTIONS</h1>
                     <br/>
                     <p>Can't find what you're looking for?</p>
-                    <button class="btn primaryBtn"><a href="mailto:alynna.alcira@gmail.com">EMAIL US YOUR QUESTION</a></button>
+                    <button class="btn primaryBtn faq-btn"><a href="mailto:alynna.alcira@gmail.com">EMAIL US YOUR QUESTION</a></button>
                     <br/><br/>
                     <span class="glyphicon glyphicon-chevron-down"></span>
                 </div>
@@ -70,22 +70,25 @@
             <div class="col-md-1"></div>
             
             <div class="col-md-3 faq-control">
+                <p class="sub-header"><b>CATEGORIES</b></p>
                 <ul class="nav nav-tabs nav-stacked">
-                  <li class="active"><a data-toggle="tab" href="#general-section">General Questions</a></li>
-                  <li><a data-toggle="tab" href="#beavver-section">About Beavver</a></li>
-                  <li><a data-toggle="tab" href="#ats-section">Applicant Tracking Systems</a></li>
+                  <li class="active"><a data-toggle="tab" href="#general-section">General Questions<span class="glyphicon glyphicon-chevron-right arrows"></span></a></li>
+                  <li><a data-toggle="tab" href="#beavver-section">About Beavver<span class="glyphicon glyphicon-chevron-right arrows"></span></a></li>
+                  <li><a data-toggle="tab" href="#ats-section">Applicant Tracking Systems<span class="glyphicon glyphicon-chevron-right arrows"></span></a></li>
                 </ul>
             </div>
             
             <div class="col-md-7">
+                <p class="sub-header"><b>QUESTIONS</b></p>
+                <p>Please click a question and the answer will show below.</p>
                 <div class="tab-content">
                 <div id="general-section" class="tab-pane fade in active">
                     <!-- General Questions -->
                     <div id="accordion gq-accordion" role="tablist">
                       <div class="card">
-                        <div class="card-header" role="tab" id="gq-1">
+                        <div class="card-header" role="tab" id="gq-1"  data-toggle="collapse" href="#ga-1" aria-expanded="false" aria-controls="ga-1">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#ga-1" aria-expanded="false" aria-controls="ga-1">
+                            <a class="collapsed">
                                 <span class="question"> Is my resume shared with recruiters?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
@@ -99,9 +102,9 @@
                       </div>                    
 
                       <div class="card">
-                        <div class="card-header" role="tab" id="gq-2">
+                        <div class="card-header" role="tab" id="gq-2" data-toggle="collapse" href="#ga-2" aria-expanded="false" aria-controls="ga-2">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#ga-2" aria-expanded="false" aria-controls="ga-2">
+                            <a class="collapsed">
                                 <span class="questions">Do I have to pay?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
@@ -115,9 +118,9 @@
                       </div>
 
                       <div class="card">
-                        <div class="card-header" role="tab" id="gq-3">
+                        <div class="card-header" role="tab" id="gq-3" data-toggle="collapse" href="#ga-3" aria-expanded="false" aria-controls="ga-3">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#ga-3" aria-expanded="false" aria-controls="ga-3">
+                            <a class="collapsed">
                                 <span class="question">Are the resume templates free to use?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
@@ -131,9 +134,9 @@
                       </div>
 
                       <div class="card">
-                        <div class="card-header" role="tab" id="gq-4">
+                        <div class="card-header" role="tab" id="gq-4" data-toggle="collapse" href="#ga-4" aria-expanded="false" aria-controls="ga-4">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#ga-4" aria-expanded="false" aria-controls="ga-4">
+                            <a class="collapsed">
                                 <span class="question">How do I create an account?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
@@ -151,9 +154,9 @@
                     <!-- About Beavver -->
                     <div id="accordion b-accordion" role="tablist">
                       <div class="card">
-                        <div class="card-header" role="tab" id="bq-1">
+                        <div class="card-header" role="tab" id="bq-1" data-toggle="collapse" href="#ba-1" aria-expanded="false" aria-controls="ba-1">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#ba-1" aria-expanded="false" aria-controls="ba-1">
+                            <a class="collapsed">
                                 <span class="question">What is Beavver?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
@@ -167,9 +170,9 @@
                       </div>                    
 
                       <div class="card">
-                        <div class="card-header" role="tab" id="bq-2">
+                        <div class="card-header" role="tab" id="bq-2" data-toggle="collapse" href="#ba-2" aria-expanded="false" aria-controls="ba-2">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#ba-2" aria-expanded="false" aria-controls="ba-2">
+                            <a class="collapsed">
                                 <span class="questions">How does Beavver work?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
@@ -183,9 +186,9 @@
                       </div>
 
                       <div class="card">
-                        <div class="card-header" role="tab" id="bq-3">
+                        <div class="card-header" role="tab" id="bq-3" data-toggle="collapse" href="#ba-3" aria-expanded="false" aria-controls="ba-3">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#ba-3" aria-expanded="false" aria-controls="ba-3">
+                            <a class="collapsed">
                                 <span class="question">Is Beavver’s algorithm based off of real Applicant Tracking Systems?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
@@ -199,9 +202,9 @@
                       </div>
 
                       <div class="card">
-                        <div class="card-header" role="tab" id="bq-4">
+                        <div class="card-header" role="tab" id="bq-4" data-toggle="collapse" href="#ba-4" aria-expanded="false" aria-controls="ba-4">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#ba-4" aria-expanded="false" aria-controls="ba-4">
+                            <a class="collapsed">
                                 <span class="question">How do I improve my resume?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
@@ -215,10 +218,10 @@
                       </div>  
 
                       <div class="card">
-                        <div class="card-header" role="tab" id="bq-5">
+                        <div class="card-header" role="tab" id="bq-5" data-toggle="collapse" href="#ba-5" aria-expanded="false" aria-controls="ba-5">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#ba-5" aria-expanded="false" aria-controls="ba-5">
-                                <span class="question">What happens if I have more keywords in my resume than the job description? And vice versa?</span>
+                            <a class="collapsed">
+                                <span class="question">What happens if I have more keywords in my resume than the job description?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
                           </h5>
@@ -235,9 +238,9 @@
                     <!-- ATS -->
                     <div id="accordion ats-accordion" role="tablist">
                       <div class="card">
-                        <div class="card-header" role="tab" id="atsq-1">
+                        <div class="card-header" role="tab" id="atsq-1" data-toggle="collapse" href="#atsa-1" aria-expanded="false" aria-controls="atsa-1">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#atsa-1" aria-expanded="false" aria-controls="atsa-1">
+                            <a class="collapsed">
                                 <span class="question">What are Applicant Tracking Systems?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
@@ -251,9 +254,9 @@
                       </div>                    
 
                       <div class="card">
-                        <div class="card-header" role="tab" id="atsq-2">
+                        <div class="card-header" role="tab" id="atsq-2" data-toggle="collapse" href="#atsa-2" aria-expanded="false" aria-controls="atsa-2">
                           <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#atsa-2" aria-expanded="false" aria-controls="atsa-2">
+                            <a class="collapsed">
                                 <span class="questions">Does layout matter in the ATS?</span>
                                 <span class="glyphicon glyphicon-chevron-down arrows"></span>
                             </a>
@@ -280,15 +283,15 @@
     </div>  
     
     <script>
-//    $(document).ready(function() {    
-//        $('#ga-1').on('shown.bs.collapse'), function() {
-//            $(".arrows").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
-//          }
-//
-//        $('#ga-1').on('hidden.bs.collapse'), function() {
-//            $(".arrows").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
-//          }      
-//    };
+    $(document).ready(function() {    
+        //Toggle chevrons
+        $('.collapse').on('shown.bs.collapse', function(){
+        $(this).parent().find(".glyphicon-chevron-down").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+        }).on('hidden.bs.collapse', function(){
+        $(this).parent().find(".glyphicon-chevron-up").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+        });
+
+    });
         
     </script>
       
