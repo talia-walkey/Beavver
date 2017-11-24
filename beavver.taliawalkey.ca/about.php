@@ -37,6 +37,8 @@
         <?php 
             if (empty($_SESSION["user"])) {
                 include 'header-logout.php';
+                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
+                die();
             } else {
                 include 'header-login.php';
             }
