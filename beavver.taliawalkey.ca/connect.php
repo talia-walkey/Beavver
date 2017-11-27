@@ -5,7 +5,7 @@
     $password = "D3Beavver!";
     $dbname = "talia185_cc";
     
-   //var_dump($_POST);
+    //var_dump($_POST);
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dblogin, $password);
@@ -28,29 +28,12 @@
              $conn->exec($sql);
                 //echo 'register button is clicked';
         }else if($type == "log"){
-            $sql = "SELECT ('first_name', 'last_name', 'email', 'password', 'confirm_password') FROM login WHERE $email";
+            $sql = "SELECT (first_name, last_name, email, password, confirm_password) FROM login WHERE '$email'";
+            echo $sql;
+            console.log('login');
             $conn->exec($sql);
             
         }
-    
-        
-        //declare whether you want to login or signup
-     
-       /*
-        
-        if($sql){
-            $arr = array(
-                "status"=>1,
-                "msg"=>"inserted properly"
-            );
-            echo json_encode($arr);
-        } else {
-            $arr = array(
-                "status"=>0,
-                "msg"=>"something went wrong"
-            );
-            echo json_encode($arr);
-        }*/
              
     } catch(PDOException $e) {
         $error = $e->getMessage();

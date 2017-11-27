@@ -1,9 +1,23 @@
 <?php
-require('connect.php');
+session_start();
+require_once('connect.php');
+//var_dump($_SESSION);
+console.log($_SESSION);
+//phpinfo();
+
+$sql = "SELECT ('first_name') FROM login WHERE $email";
+//echo $first_name;
+//$conn->exec($sql);
 
 ?>
 
-
+<?php 
+            if (empty($_SESSION["user"])) {
+                include 'header-logout.php';
+                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
+                die();
+            }
+            ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,7 +60,7 @@ require('connect.php');
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="landingLogin.php">
             <img src="img/logo-text.png" id="logo" alt="logo"></a>
         </div>
 
@@ -63,11 +77,25 @@ require('connect.php');
           <ul class="nav navbar-nav navbar-right">
             <li><span class="glyphicon glyphicon-search" id="nav-search"></span></li>
               
+             
             <!-- LOGIN -->  
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <button class="secondaryBtn">
-                      <span id="after-login-span">Hello <span id="firstname"></span>!</span>
+                      <span id="after-login-span">Hello 
+                      <span id="firstname">
+                           <div>
+                                 <?php
+                                 /*
+                                     $sql = "SELECT ('first_name') FROM login WHERE $email";
+                                      echo 'first_name'.value;
+                                     console.log('login');
+                                     $conn->exec($sql);
+                                     */
+                                     ?>
+                            </div>
+                      </span>!
+                      </span>
                       <span class="caret"></span>
                 </button>
             
@@ -79,7 +107,7 @@ require('connect.php');
                     <li><a href="myCareer.php">My Career</a></li>
                     <li><a href="myprofile.php" id="myProfile">My Profile</a></li>
                     <li role="separator" class="divider"></li>
-                    <a href="#" onclick="document.location.href = 'https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://beavver.taliawalkey.ca';">Sign Out</a>
+                    <a href="logout.php" onclick="document.location.href = 'https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://beavver.taliawalkey.ca';"> Sign Out</a>
                   
                 </div>
                     
@@ -90,6 +118,8 @@ require('connect.php');
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
 </nav>
+
+
 
     <!-- SEARCH BAR -->  
     <div id="search-box" class="form-row align-items-center">

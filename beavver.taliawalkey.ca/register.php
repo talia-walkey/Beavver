@@ -48,13 +48,13 @@ require_once('register-db.php');
                   <p id="imgcenter"><img id="beavver" alt='beavverLogo' src="img/Asset%201@4x.png"/></p>
                   
 <!-- IMPORTANT TO HAVE THIS ON EVERY FORM TO SEND TO DATABASE -->
-            <form id="registerForm" action='register-db.php' method='POST'>
+            <form id="registerForm" method='POST'>
                   <div class="form-group">
                       <p class="regititle">New to us? <br/>Sign up now</p>
             </div>
                     
             <div class="form-group">
-                  <input class="regiinput form-control" type="text"  placeholder="First Name" id='first_name' name='first_name' required>
+                  <input class="regiinput form-control" type="text" placeholder="First Name" id='first_name' name='first_name' required>
                   <hr class="dashline">
             </div>
                           
@@ -71,19 +71,19 @@ require_once('register-db.php');
                   <hr class="dashline">
             </div>
            <div class="form-group">
-                  <input type="password" class="regiinput form-control" placeholder="Password" name="password">
+                  <input type="password" class="regiinput form-control" placeholder="Password" name="password" id="pass1">
                   <hr class="dashline" required>
            </div>
            <div class="form-group">
-                  <input  type="password" class="regiinput form-control" placeholder="Confirm Password" name="confirm_password">
-                  <hr class="dashline" required>
+                  <input  type="password" class="regiinput form-control" placeholder="Confirm Password" name="confirm_password" id="pass2" required>
+                  <hr class="dashline">
            </div>
-                    
-
-
+ <!-- Register Submit Button -->                  
                       <br/>
-                      <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' >Submit</button>
+                      <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' onClick=validationFunc()>Submit</button>
                       <br/>
+                      
+                      
 <!--Google SignIn -->
                 <div class="g-signin2 msubmit btn btn-primary" data-onsuccess="onSignIn" id="GoogleLogin"></div>     
            
@@ -122,7 +122,7 @@ require_once('register-db.php');
                     console.log(obj);
                     if(obj.status == 1){
 //go to the next page
-                    window.location.href="myprofile.php";
+                    //window.location.href="myprofile.php";
                         }
                     }
                 )
@@ -136,12 +136,34 @@ require_once('register-db.php');
              console.log('Name: ' + profile.getName());
              console.log('Image URL: ' + profile.getImageUrl());
              console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+             
+             
 }
 //get Gmail Register Information
     </script>
     
 <!-- Google SignIn SCRIPT -->
       <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+      
+<!-- Password Validation -->
+      <script>
+                function validationFunc() {
+                    console.log("login is clicked");
+                    var pass1 = document.getElementById("pass1").value;
+                    var pass2 = document.getElementById("pass2").value;
+                    
+                    if (pass1 == pass2 && pass2 !="" && pass1 !="") {
+                                
+                                 window.location.href="profileInfo.php";
+                                 
+                    }
+                    else {
+                        alert("Passwords Do not match");
+                        document.getElementById("pass1").style.color = "#E34234";
+                        document.getElementById("pass2").style.color = "#E34234";
+                    }
+    }
+            </script>
       
   </body>
 </html>

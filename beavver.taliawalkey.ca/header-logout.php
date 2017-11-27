@@ -29,6 +29,7 @@
     <![endif]-->
   </head>
   <body>
+      
     <!-- NAV BAR -->
     <nav class="navbar navbar-fixed-top navbar-default">
       <div class="container-fluid">
@@ -82,7 +83,7 @@
                   <hr class="dashline" required>
            </div>
                     
-            <button type="submit" class="msubmit btn btn-primary" id='submitBut' id="signin-button" name='submitBut'>Login</button>   
+            <a type="submit" class="msubmit btn btn-primary" id='submitBut' id="signin-button" name='submitBut' type='log'>Login</a>   
             <br/>
           
 <!--Google SignIn -->
@@ -92,7 +93,7 @@
  
               <script type="text/javascript">
                  document.getElementById("submitBut").onclick = function () {
-                //location.href = "landingLogin.php";
+                location.href = "landingLogin.php";
                  var fd = new FormData();
                  fd.append("email", document.getElementById("exampleInputEmail1").value);
                  fd.append("type", "log");
@@ -103,8 +104,24 @@
                         method:"POST",
                         body:fd
                     }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
-                    
+
+                    <?php 
+                    /*
+                        if (empty($_SESSION["user"])) {
+                            ?>
+                            location.href = "http://beavver.taliawalkey.ca";
+                            //header("location:http://beavver.taliawalkey.ca");
+                            //die();
+                            <?php
+                        } else {
+                            ?>
+                            location.href = "http://beavver.taliawalkey.ca/landingLogin.php";
+                            //header("location:http://beavver.taliawalkey.ca/landingLogin.php");
+                            <?php
+                        }*/
+                    ?>  
                  };
+                  
               </script>       
               
 <!--                    </form>-->
@@ -178,6 +195,7 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
 </nav>
+
 
     <!-- SEARCH BAR -->  
     <div id="search-box" class="form-row align-items-center">
