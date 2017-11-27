@@ -53,10 +53,10 @@ require_once('connect.php');
                 </a> 
                 </div>    
                 <div class="how-it-works-btn">
-                <a href="#how-it-works" id="how-it-works-link">
-                    <img src="img/play-button.svg" class="playBtn">
-                    <span class="how-it-works-span">HOW IT WORKS</span>
-                </a>
+                    <a href="#how-it-works" id="how-it-works-link">
+                        <img src="img/play-button.svg" class="playBtn">
+                        <span class="how-it-works-span">HOW IT WORKS</span>
+                    </a>
                 </div>    
             </div>    
             
