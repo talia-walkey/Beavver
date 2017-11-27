@@ -85,9 +85,29 @@
                     
             <a type="submit" class="msubmit btn btn-primary" id='submitBut' id="signin-button" name='submitBut' type='log'>Login</a>   
             <br/>
-          
+            <br/>
 <!--Google SignIn -->
-           <div class="g-signin2 msubmit btn btn-primary" data-onsuccess="onSignIn" id="GoogleLogin"></div>     
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="gray-line"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="sign-in-text">OR</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gray-line"></div>
+                    </div>
+                </div>  
+                <br/>
+                    
+                <div class="row">
+                    <div class="col-md-1"></div>    
+                    <div class="col-md-10">
+                        <div class="g-signin2 gSignIn" data-onsuccess="onSignIn" id="GoogleLogin"></div> 
+                    </div>    
+                    <div class="col-md-1"></div>    
+                </div>    
+                    <br/>
            
 <!--end Google SignIn -->
  

@@ -70,7 +70,7 @@ $sql = "SELECT ('first_name') FROM login WHERE $email";
             <li><a href="matching.php">SCAN</a></li>
             <li><a href="resume-templates.php">RESOURCES</a></li>
             <li><a href="about.php">ABOUT</a></li>
-            <li><a href="loginfaqs.php">FAQ</a></li>
+            <li><a href="faqs.php">FAQ</a></li>
           </ul>
 
         <!-- SEARCH -->    

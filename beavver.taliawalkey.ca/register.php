@@ -81,11 +81,28 @@ require_once('register-db.php');
  <!-- Register Submit Button -->                  
                       <br/>
                       <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' onClick=validationFunc()>Submit</button>
-                      <br/>
+                      <br/><br/><br/>
                       
-                      
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="gray-line"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="or">Sign in with Google:</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gray-line"></div>
+                    </div>
+                </div>  
+                <br/>
 <!--Google SignIn -->
-                <div class="g-signin2 msubmit btn btn-primary" data-onsuccess="onSignIn" id="GoogleLogin"></div>     
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="g-signin2" data-onsuccess="onSignIn" id="GoogleLogin"></div> 
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>    
            
 <!--end Google SignIn -->
                       

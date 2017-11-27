@@ -731,3 +731,33 @@ hr {
     color: #66cccc;
     background-color: white;
 }
+
+.g-singin2 {
+    margin: auto;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+}
+
+.gray-line{
+    border-bottom: 1px solid #ccc;
+    width: auto;
+}
+
+.or{
+    text-align: center;
+    margin-top:-20px;
+    color: #8e8e8e;
+}
+
+.sign-in-text{
+    color:#eee;
+    text-align: center;
+    margin-top:-15px;
+
+}
+
+.gSignIn {
+    margin-left: 50px;
+}
