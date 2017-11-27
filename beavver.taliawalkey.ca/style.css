@@ -111,6 +111,7 @@ html {
 
 body {
     min-height: 100vh;
+    min-width:400px;
     position: relative;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -586,6 +587,11 @@ hr {
 
 .footer-nav>li>a {
     color: white !important;
+    margin-right: 50px;
+}
+
+.footer-nav{
+    margin-right: 150px;
 }
 
 .footer-nav>li>a:hover {

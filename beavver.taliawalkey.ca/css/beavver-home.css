@@ -264,8 +264,8 @@ p {
 }
 
 .landing-text, .landing-buttons {
-    margin-bottom: 20px;
-    margin-top: 20px !important;
+    margin-bottom: 30px;
+    margin-top: 30px !important;
 }
 
 #mystart-button {
@@ -274,6 +274,14 @@ p {
 
 #how-it-works-link:hover {
     opacity: 0.5;
+}
+
+.how-it-works-btn, .start-Btn {
+    display: inline;
+}
+
+.start-Btn button{
+    margin:0px !important;
 }
 
 .playBtn {

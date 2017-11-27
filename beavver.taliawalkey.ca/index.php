@@ -47,14 +47,17 @@ require_once('connect.php');
                 <p>Say hello to Beavver, a tool to help you thrive on a high competitive and automated job market.</p>
             </div>
             <div class="landing-buttons">
+                <div class="start-Btn">
                 <a id="mystart-button">
                     <button class="btn ctaBtn" type="submit">START NOW!</button>
                 </a> 
-
+                </div>    
+                <div class="how-it-works-btn">
                 <a href="#how-it-works" id="how-it-works-link">
                     <img src="img/play-button.svg" class="playBtn">
                     <span class="how-it-works-span">HOW IT WORKS</span>
                 </a>
+                </div>    
             </div>    
             
             <img src="img/b-home.svg" alt="Beavver" class="zen-beavver">
