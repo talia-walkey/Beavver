@@ -29,288 +29,230 @@ exit;
       
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />   
-    <link rel="stylesheet" type="text/css" href="css/beavver-home.css?d=<?php echo time(); ?>" />   
-
-   
+    <link rel="stylesheet" type="text/css" href="css/beavver-landinglogin.css?d=<?php echo time(); ?>" />  
+      
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">       
+      
   </head>
   <body>
+        <a name="top"></a>   
+  
     <div>
         <?php 
-            if (empty($_SESSION["user"])) {
-                include 'header-logout.php';
-                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
-                die();
-            } else {
-                include 'header-login.php';
-            }
+//            if (empty($_SESSION["user"])) {
+//                include 'header-logout.php';
+//                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
+//                die();
+//            } else {
+//                include 'header-login.php';
+//            }
         ?>   
     </div>
 
     <div id="content">
-        <!-- Landing Content -->
-        <div id="landing-content" class="container-fluid">
-            <div class="landing-text">
-                <h1>RESUME AND CAREER BOOSTER</h1>
-                <p>Say hello to Beavver, a tool to help you thrive on a high competitive and automated job market.</p>
-            </div>
-            <div class="landing-buttons">
-                <a id="mystart-button">
-                    <button class="btn ctaBtn" type="submit">START NOW!</button>
-                </a> 
-
-                <a href="#how-it-works" id="how-it-works-link">
-                    <img src="img/play-button.svg" class="playBtn">
-                    <span class="how-it-works-span">HOW IT WORKS</span>
-                </a>
-            </div>    
-            
-            <img src="img/b-home.svg" alt="Beavver" class="zen-beavver">
-            <br/><br/>        
-            <div class="myCircle">
-                <a href="#about-beavver"><img src="img/mouse-icon.svg" class="mouse-icon" alt="mouse"></a>
-                <a name="about-beavver"></a> <!-- this is here because smooth scrolling enabled makes the first feature cut off when clicked -->
-            </div>    
-            
-        </div> <!-- End of Landing Content -->       
         
-        <!-- About Beavver -->
-        <div class="about-beavver container-fluid">
-            <div class="row about-title">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <h1>WHAT IS BEAVVER?</h1>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-            
-            <div class="row about-info">
-                <div class="col-md-6">
-                    <img src="img/beavver-matchingpage.png" class="img-responsive img-matching-page">
-                </div>
-                <div class="col-md-5 about-text">
-                        <p>A digital tool built to make the resume customization more comfortable for job seekers who want to stand out on recruitment processes, and also plan their careers. This is the main idea behind Beavver. And it's making the job application process less painful for lots of people from various industries. 
-                        <br/><br/>
-                        You don’t have to spend long hours researching and customizing your resume — <b>Beavver does all the hard work for you!</b>
-                        </p>
-                        <a href="about.php">SEE MORE           <span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-                <div class="col-md-1"></div>
-            </div> 
-            
-            <div class="row about-bottom">
-            </div>
-            
-            <a name="features"></a><!-- this is here so it doesnt get cut off during smooth scrolling -->
-
-        </div> <!-- End of About Beavver -->
-        
-        <!-- Features -->
-        <div class="container-fluid features-section">
-            <div class="row features-title">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <h1>FEATURES</h1>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-            
-            <div class="row how-to-steps">
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-container">
-                            <img src="img/resume-screening.svg" class="img-responsive img-features">
-                        </div>
-                    </div>  
-                    <div class="features-text">        
-                        <h4>RESUME SCREENING</h4>
-                        <p>Compare your resume with the desired job position and get a compatibility matching score based on job keywords.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-container">
-                            <img src="img/writing-tips.svg" class="img-responsive img-features">
-                        </div>
-                    </div>
-                    <div class="features-text">
-                        <h4>WRITING TIPS</h4>
-                        <p>No more writer’s block! Get tips with career specific terms in which all employers are looking for and more.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-container">
-                            <img src="img/courses.svg" class="img-responsive img-features img-courses">
-                        </div>
-                    </div> 
-                    <div class="features-text">
-                        <h4>COURSE RECOMMENDATIONS</h4>
-                        <p>Based on your current resume and your dream job, get a list of short-term courses that will give the skills you need.</p>
-                    </div>    
-                </div>
-            </div>
-            
-            <div class="row how-to-steps">
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-container">
-                            <img src="img/resume-templates.svg" class="img-responsive img-steps">
-                        </div>
-                    </div>  
-                    <div class="features-text">        
-                        <h4>RESUME TEMPLATES</h4>
-                        <p>Save time and build a screening-proof resume based on our templates.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-container">
-                            <img src="img/career-planning.svg" class="img-responsive img-steps">
-                        </div>
-                    </div>
-                    <div class="features-text">
-                        <h4>CAREER PLANNING</h4>
-                        <p>Pick your dream job position and set as a career goal. Beavver will check what’s missing on your resume and provide you a checklist and a timeline to keep you on track.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-container">
-                            <img src="img/free.svg" class="img-responsive img-features">
-                        </div>
-                    </div> 
-                    <div class="features-text">
-                        <h4>FREE FOREVER</h4>
-                        <p>Beavver is free to use, no locked features and no subscriptions. It’s our gift for all applicants.</p>
-                    </div>    
-                </div>
-            </div>            
-            
-        </div> <!-- End of Features -->
-        
-        <!-- Benefits -->
-        <div class="row benefits-section">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <h1>BENEFITS</h1>
-                </div>
-                <div class="col-md-1"></div>
-        </div>
-        <div class="row job-keywords">
-            <div class="col-md-6">
-                <img src="img/beavver-computer.svg" class="img-responsive beavver-images">
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-4 section-text">
-                <div class="circle-num">1</div>
-                <span class="section-title">JOB KEYWORDS</span>
-                <h2>Spend less time customizing resumes!</h2>
-                <p>Beavver makes customizing your resume for your dream job easier with a simple interface that allows you to see what keywords you need to change upon.</p>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
-        
-        <div class="row matching-rate">
-            <div class="col-md-1"></div>
-            <div class="col-md-4 section-text">
-                <div class="circle-num">2</div>
-                <span class="section-title">MATCHING RATE</span>
-                <h2>Get your resume ready for automated softwares.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas ligula a efficitur ultrices.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="img/beavver-print.svg" class="img-responsive beavver-images">
-            </div>
-        </div>
-        
-        <div class="row career-path">
-            <div class="col-md-6">
-                <img src="img/beavver-happy.svg" class="img-responsive beavver-images">
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-4 section-text">
-                <div class="circle-num">3</div>
-                <span class="section-title">CAREER PATH</span>
-                <h2>Pursure your dream job by keeping track of your career.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas ligula a efficitur ultrices.</p>
-            </div>
-            <div class="col-md-1"></div>
-        </div> 
-        <!-- End of Benefits -->
-        
-        <!-- How It Works -->
-        <a name="how-it-works"></a>
-        <div class="how-it-works container-fluid">
+        <!-- CARDS -->
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <h1>HOW IT WORKS</h1>
-                    <p class="how-it-works-text">See how easy it is to customize your resume!</p>
+                <div class="col-md-10 center-text">
+                    <h1>WELCOME!</h1>
                 </div>
                 <div class="col-md-1"></div>
-            </div>
-            
-            <div class="row how-to-steps">
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-steps">1</div>
-                        <div class="circle-container">
-                            <img src="img/step1.svg" class="img-responsive img-steps">
-                        </div>
-                    </div>    
-                    <h4>ADD YOUR INFORMATION</h4>
-                    <p class="steps-text">Select a job description of your dream job.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-steps">2</div>
-                        <div class="circle-container">
-                            <img src="img/step2.svg" class="img-responsive img-steps">
-                        </div>
-                    </div>
-                    <h4>GET A SCORE AND KEYWORDS LIST</h4>
-                    <p class="steps-text">Match with your resume and get to know what you need to get there</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-steps">3</div>
-                        <div class="circle-container">
-                            <img src="img/step3.svg" class="img-responsive img-steps step-3">
-                        </div>
-                    </div>    
-                    <h4>CHANGE YOUR RESUME AND SUBMIT</h4>
-                    <p class="steps-text">Edit your resume and apply to the job position and keep track of it on the My Career Page.</p>
-                </div>
             </div>
             
             <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <img src="img/video-placeholder.png" class="img-responsive howto-video" alt="How It Works Video">
+                <div class="col-md-10 cards">
+                    <h4>Got a new job position to apply for? Get started here.</h4>
+                    <br/>
+                    <a href="matching.php"><button class="btn primaryBtn compareBtn">COMPARE NEW RESUME</button></a>
                 </div>
                 <div class="col-md-1"></div>
             </div>
-        </div> <!-- End of How It Works -->
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5 smallcards">
+                    <h4>Career Planning</h4>
+                    <p>Pick your dream job position and set as a career goal. Beavver shows you a timeline to keep you on track.</p>
+                    <br/>
+                    <a href="myCareer.php"><button class="btn ctaBtn careerBtn">Start Here</button></a>
+                </div>
+                <div class="col-md-5 smallcards">
+                    <h4>Resume Templates</h4>
+                    <p>Save time and build a screening-proof resume based on our ready to customize templates.</p>
+                    <br/>
+                    <a href="resume-templates.php"><button class="btn ctaBtn templatesBtn">Start Here</button></a>                    
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <br/><br/>
+            <div class="row">
+                <div class="col-md-12 pattern">
+                    <img src="img/bottom-pattern.png" alt="pattern">
+                </div>
+            </div>
+        </div> <!-- End of Cards -->
 
+        <!-- How To Section -->
+        <div class="container-fluid how-to-section">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 center-text">
+                    <h2>Not sure how it works?</h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#beavver-section">HOW TO USE BEAVVER</a></li>
+                    <li><a data-toggle="tab" href="#career-section">HOW TO PLAN MY CAREER</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="tab-content">
+                        <!-- Beavver Section -->
+                        <div id="beavver-section" class="tab-pane fade in active">
+                            <br/>
+                            <h3 class="center-text">How to Use Beavver</h3>
+                              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                  <div class="item active">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                        </div>
+                                        <div class="col-md-5 beavver-info">
+                                            <div class="circle-num">1</div>
+                                            <h3>Get your resume ready</h3>
+                                            <br/><br/>
+                                            <p>To start tailoring your resume, the first step is to get your current resume in a text format that you can copy.
+                                            </p>
+                                        </div>
+                                    </div>    
+                                  </div>
+                                  <div class="item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                        </div>
+                                        <div class="col-md-5 beavver-info">
+                                            <div class="circle-num">2</div>
+                                            <h3>Get the description of your dream job</h3>
+                                            <br/><br/>
+                                            <p>The next step is to get the description of the job position you are planning to apply to in a text format that you can copy.
+                                            </p>
+                                        </div>
+                                    </div> 
+                                  </div>
+                                  <div class="item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                        </div>
+                                        <div class="col-md-5 beavver-info">
+                                            <div class="circle-num">3</div>
+                                            <h3>Make a Match</h3>
+                                            <br/><br/>
+                                            <p>Click the big yellow button that says "Compare Your Resume" which will take you to the scan page.
+                                            </p>
+                                        </div>
+                                    </div> 
+                                  </div>
+                                  <div class="item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                        </div>
+                                        <div class="col-md-5 beavver-info">
+                                            <div class="circle-num">4</div>
+                                            <h3>Copy and Paste Your Documents</h3>
+                                            <br/><br/>
+                                            <p>In the scan page, pick a job position from the dropdown. Copy and paste your resume in the box on the left and your job description in the box on the right.<br/>
+                                            Then click the blue button that says "Make a Match" to get your results.
+                                            </p>
+                                        </div>
+                                    </div> 
+                                  </div>
+                                  <div class="item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                        </div>
+                                        <div class="col-md-5 beavver-info">
+                                            <div class="circle-num">5</div>
+                                            <h3>Get Your Results</h3>
+                                            <br/><br/>
+                                            <p>Beavver will magically compare your resume and job description and give you the following results: </p>
+                                                <ul>
+                                                    <li>how many times certain keywords has appeared in both your resume and job description.</li>
+                                                    <li>a list of suggestions to improve your resume</li>
+                                                    <li>a list of BCIT courses to improve your missing skills</li>
+                                                </ul>     
+                                        </div>
+                                    </div>
+                                  </div>
+                                    
+                                  <div class="item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                        </div>
+                                        <div class="col-md-5 beavver-info">
+                                            <div class="circle-num">6</div>
+                                            <h3>You're ready!</h3>
+                                            <br/><br/>
+                                            <a href="matching.php"><button class="btn ctaBtn">Start Now</button></a>
+                                        </div>
+                                    </div>
+                                  </div>                                 
+                                    
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <button class="btn btn-arrow leftLst">
+                                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                    </button>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <button class="btn btn-arrow rightLst">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                                </a>
+                              </div>
+                            
+                        </div> <!-- End of Beavver Section -->
+                        
+                        <!-- My Career Section -->
+                        <div id="career-section" class="tab-pane fade">
+                        <br/>
+                          <h3 class="center-text">How To Plan My Career</h3>
+                      </div> <!-- End of Tab Content -->
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        
+        </div>
+        </div> <!-- End of How To Section -->
         
             <!-- UP ARROW BUTTON -->    
-        <a href="index.php#top" class="btn btn-lg btn-up" id="btn-up">
+        <a href="#top" class="btn btn-lg btn-up" id="btn-up">
           <span class="glyphicon glyphicon-chevron-up"></span>
         </a>
         
     </div>  <!-- End of Content -->
     
-      
-    <!-- Bottom CTA -->
-    <div class="row bottom-cta">
-        <div class="col-md-12">
-        <h1>GET STARTED FOR FREE</h1>
-        <p>No hidden fees and no locked features, Beavver is all yours to use. Register to get started!</p>
-        <a href="register.php">
-            <button class="btn ctaBtn" type="submit">START NOW!</button>
-        </a>    
-        </div>    
-    </div>  
     <div class="row bottom-clouds">
         <div class="col-md-12">
             <object type="image/svg+xml" data="img/bottom-clouds.svg">
@@ -326,20 +268,92 @@ exit;
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+      
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>      
+      
+      
+    <script>
+        $(document).ready(function() {
+
+            $(".carousel").swipe({
+
+              swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+                if (direction == 'left') $(this).carousel('next');
+                if (direction == 'right') $(this).carousel('prev');
+
+              },
+              allowPageScroll:"vertical"
+
+            }); 
+            
+            // show the up button when templates-list is passed
+            $("#btn-up").hide(); //hide button initially
+            var topOfOthDiv = $("#beavver-section").offset().top;
+            $(window).scroll(function() {
+                if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
+                    $("#btn-up").show(200); //reached the desired point -- show div
+                }
+            });
+
+            // hide the up button when clicked
+            $("#btn-up").click(function(){
+                $("#btn-up").hide();
+            });
+
+            //hide the up button when at the top
+            $(window).on("scroll", function() {
+                var scrollPos = $(window).scrollTop();
+                if (scrollPos <= 80) {
+                    $("#btn-up").fadeOut();
+                } else {
+                    $("#btn-up").fadeIn();
+                }
+            });        
+
+            //Smooth Scrolling
+            // Select all links with hashes
+            $('a[href*="#"]')
+              // Remove links that don't actually link to anything
+              .not('[href="#"]')
+              .not('[href="#0"]')
+              .not('[href="#carousel-example-generic"]')
+              .click(function(event) {
+                // On-page links
+                if (
+                  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+                  && 
+                  location.hostname == this.hostname
+                ) {
+                  // Figure out element to scroll to
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  // Does a scroll target exist?
+                  if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                      scrollTop: target.offset().top
+                    }, 2000, function() {
+                      // Callback after animation
+                      // Must change focus!
+                      var $target = $(target);
+                      $target.focus();
+                      if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                      } else {
+                        $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                      };
+                    });
+                  }
+                }
+              });        
+
+        });    
+    </script>     
   </body>
 </html>
-
-
-<script>
-    
-                    var startBut = document.getElementById('mystart-button');
-                    
-                     startBut.addEventListener("click", function(){
-                         console.log("clicked");
-                         window.location.href = "scan.php";
-                     });
-    
-    
-    
-</script>

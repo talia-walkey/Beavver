@@ -1,0 +1,134 @@
+/* Up Button */
+#btn-up {
+    border-radius: 30px;
+    background-color: #ffb13b;
+    color: white !important;
+    transition: opacity 0.3s ease-in-out;  
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1;
+}
+
+.btn-up:hover {
+    opacity: 0.5;
+    color: white;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.cards, .smallcards {
+    background-color: #eee;
+    text-align: center;
+    padding: 40px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 30px;
+}
+
+.compareBtn {
+    width: auto !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+a {
+    color: black !important;
+}
+
+.pattern {
+    margin-top: 30px;
+}
+
+.pattern img {
+    width: 100vw;
+    height: auto;
+    margin-top: 50px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.how-to-section{
+    margin-top: 50px;
+}
+
+.nav-tabs {
+    border-bottom:2px solid #eee !important;
+    margin-left: 2px;
+    margin-right:2px;
+    margin-top: 30px;
+}
+
+.nav-tabs>li{
+    width:40vw;
+    text-align: center;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    border-bottom: 3px solid #ffb13b !important;
+    border-top: 2px solid #fff !important;
+    border-left: 2px solid #fff !important;
+    border-right: 2px solid #fff !important;
+    width: 40vw;
+    text-align: center;
+}
+
+.carousel {
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 400px;
+}
+
+.btn-arrow {
+    color: #ffb13b !important;
+    background-color: #fff;
+    border: solid 2px #ffb13b !important;
+    z-index: 2;
+    border-radius: 50px!important;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none !important;
+}
+
+
+.carousel-img {
+    width: 400px;
+    margin-top: 30px;
+}
+
+.circle-num {
+    color: white;
+    background-color: #ffc80a;
+    width: 30px;
+    height: 30px;
+    font-size: 14pt;
+    border-radius: 50%;
+    margin-top: 30px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 3px;
+}
+
+.beavver-info h3 {
+    display: inline;
+}
+
+.beavver-info {
+    margin-left: 10px;
+}
+
+.carousel-inner {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.beavver-info ul {
+    font-family: 'Roboto', sans-serif;
+}
