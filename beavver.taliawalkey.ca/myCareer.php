@@ -48,6 +48,7 @@ console.log($_SESSION);
             }
         ?> 
     </div>
+  
     
     <!-- BREADCRUMBS -->
     <nav aria-label="breadcrumb" role="navigation">
@@ -85,7 +86,7 @@ console.log($_SESSION);
         <label class="mycategory" for="slide-2-trigger">MY RESUME</label><br/><br/><br/>
         <label class="mycategory" for="slide-3-trigger">MY JOB BANK</label><br/><br/><br/>
         <label class="mycategory" for="slide-4-trigger">SAVED COURSES</label><br/><br/><br/>
-        <label class="mycategory" for="slide-5-trigger">CAREER GOAL</label>
+        
     </div>
 
     <input id="slide-1-trigger" type="radio" name="slides" checked>
@@ -118,7 +119,7 @@ console.log($_SESSION);
         <br/>
         <div id="gray-bg2">
             <p class="ctitle">CONNECT</p>
-            <button id="revokeAllScopes" id="google-api">
+            <button id="google-api" id="revokeAllScopes">
                 <img class="btnImg" src="img/google-logo-w.svg"/>
                 DISCONNECT GOOGLE
             </button>
@@ -228,43 +229,7 @@ console.log($_SESSION);
         </div>
     </section>
     
-    <input id="slide-5-trigger" type="radio" name="slides">
-    <section class="slide slide-five">
-        <div id="gray-bg">
-            <br/><br/>
-            <p class="ctitle">Keep track of your career, choose what would you like to do and we will show you the path.</p>
-            </div>
-            <div id="stepwrap">
-                
-                        <div id="stepimg1"></div>
-                    
-<!--
-                <div>
-                        <span>STEP1</span><br/>
-                        <span>Select a job description of your dream job</span>
-                    </div>
--->
-                        <div id="stepimg2"></div>
-                    
-<!--
-                <div>
-                        <span>STEP2</span><br/>
-                        <span>Match with your resume and get to know what you need to get there</span>
-                    </div>
--->
-                        <div id="stepimg3"></div>
-<!--
-                <div>
-                        <span>STEP3</span><br/>
-                        <span>Save it, add a timelie and start to work on your career. Beavver will send you monthly email to remind you</span>
-                    </div>
--->
-                <br/><br/><br/>
-                
-                <button id="bggray" class="msubmit" type="button" disabled>COMING SOON</button>
-            </div>
-            
-    </section>
+
 </div>
     <br/>
 <!--
