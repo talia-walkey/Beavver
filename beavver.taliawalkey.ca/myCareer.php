@@ -1,3 +1,11 @@
+<?php
+session_start();
+require_once('connect.php');
+var_dump($_SESSION);
+console.log($_SESSION);
+//phpinfo();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,12 +41,12 @@
         <?php 
             if (empty($_SESSION["user"])) {
                 include 'header-logout.php';
-                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
-                die();
+                include 'login-warning.php';
+                exit();
             } else {
                 include 'header-login.php';
             }
-        ?>   
+        ?> 
     </div>
     
     <!-- BREADCRUMBS -->
@@ -110,10 +118,23 @@
         <br/>
         <div id="gray-bg2">
             <p class="ctitle">CONNECT</p>
-            <button id="google-api">
+            <button id="revokeAllScopes" id="google-api">
                 <img class="btnImg" src="img/google-logo-w.svg"/>
                 DISCONNECT GOOGLE
             </button>
+            
+<!--disconnect gmail user -->           
+            <script type="text/javascript">
+                 document.getElementById("revokeAllScopes").addEventListener("click", function(){
+                        var revokeAllScopes = function() {
+                            auth2.disconnect();
+                            }
+                            console.log('removed the user');
+                            location.href = "index.php";
+                 });
+              </script>       
+<!--end disconnect gmail user -->                
+            
             <button id="linkedin-api">
                 <img class="btnImg" src="img/linkedin-logo-w.svg"/>
                 Connect with LinkedIn
@@ -215,7 +236,6 @@
             </div>
             <div id="stepwrap">
                 
-                    
                         <div id="stepimg1"></div>
                     
 <!--
@@ -224,7 +244,6 @@
                         <span>Select a job description of your dream job</span>
                     </div>
 -->
-              
                         <div id="stepimg2"></div>
                     
 <!--
@@ -233,9 +252,7 @@
                         <span>Match with your resume and get to know what you need to get there</span>
                     </div>
 -->
-                
                         <div id="stepimg3"></div>
-                    
 <!--
                 <div>
                         <span>STEP3</span><br/>
@@ -244,21 +261,12 @@
 -->
                 <br/><br/><br/>
                 
-            
-                
                 <button id="bggray" class="msubmit" type="button" disabled>COMING SOON</button>
             </div>
             
-        
-            
-        
-        
     </section>
-
 </div>
-        
     <br/>
-        
 <!--
     <div>
         <?php include 'footer.php';?>

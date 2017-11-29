@@ -1,6 +1,13 @@
 <?php
 require_once('connect.php');
 require_once('register-db.php');
+
+session_start();
+require_once('connect.php');
+console.log($_SESSION);
+//phpinfo();
+//exit;
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +35,15 @@ require_once('register-db.php');
 
   </head>
   <body>
-
+    <?php 
+            if (empty($_SESSION["user"])) {
+                include 'header-logout.php';
+                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
+                //die();
+            } else {
+                include 'header-login.php';
+            }
+    ?>   
  <div>
         <?php include 'header-logout.php';?>
     </div>
@@ -78,7 +93,7 @@ require_once('register-db.php');
                   <input  type="password" class="regiinput form-control" placeholder="Confirm Password" name="confirm_password" id="pass2" required>
                   <hr class="dashline">
            </div>
- <!-- Register Submit Button -->                  
+<!-- Register Submit Button -->                  
                       <br/>
                       <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' onClick=validationFunc()>Submit</button>
                       <br/><br/><br/>
@@ -171,7 +186,7 @@ require_once('register-db.php');
                     
                     if (pass1 == pass2 && pass2 !="" && pass1 !="") {
                                 
-                                 window.location.href="profileInfo.php";
+                                 window.location.href="landingLogin.php";
                                  
                     }
                     else {

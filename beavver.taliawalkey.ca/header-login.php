@@ -5,7 +5,7 @@ require_once('connect.php');
 console.log($_SESSION);
 //phpinfo();
 
-$sql = "SELECT ('first_name') FROM login WHERE $email";
+//$sql = "SELECT ('first_name') FROM login WHERE $email";
 //echo $first_name;
 //$conn->exec($sql);
 
@@ -14,8 +14,8 @@ $sql = "SELECT ('first_name') FROM login WHERE $email";
 <?php 
             if (empty($_SESSION["user"])) {
                 include 'header-logout.php';
-                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
-                die();
+                include 'login-warning.php';
+                exit();
             }
             ?>
 <!DOCTYPE html>
@@ -107,7 +107,7 @@ $sql = "SELECT ('first_name') FROM login WHERE $email";
                     <li><a href="myCareer.php">My Career</a></li>
                     <li><a href="myprofile.php" id="myProfile">My Profile</a></li>
                     <li role="separator" class="divider"></li>
-                    <a href="logout.php" onclick="document.location.href = 'https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://beavver.taliawalkey.ca';"> Sign Out</a>
+                    <a href="logout.php" onclick="signOut();"> Sign Out</a>
                   
                 </div>
                     
@@ -145,11 +145,20 @@ $sql = "SELECT ('first_name') FROM login WHERE $email";
                          window.location.href = "register.php";
                      });
                      */
-                var signOut = document.getElementById('signOut');
+                /*var signOut = document.getElementById('signOut');
                      signOut.addEventListener("click", function(){
                          console.log("clicked");
                          window.location.href = "index.php";
-                     });
+                     });*/
+                     
+//sign out gmail
+                      function signOut() {
+                        var auth2 = gapi.auth2.getAuthInstance();
+                        auth2.signOut().then(function () {
+                          console.log('User signed out.');
+                        });
+                      }
+//end sign out gmail
                      
                 var myProfile = document.getElementById('myProfile');
                      myProfile.addEventListener("click", function(){

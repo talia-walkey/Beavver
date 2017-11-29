@@ -1,3 +1,12 @@
+<?php
+session_start();
+require_once('connect.php');
+//var_dump($_SESSION);
+console.log($_SESSION);
+//phpinfo();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,7 +39,17 @@
 
     <div>
         <!-- Make sure to change this to 'header-login.php' for pages that user is logged in -->
-        <?php include 'header-login.php';?>
+        <?php 
+            if (empty($_SESSION["user"])) {
+                include 'header-logout.php';
+                include 'login-warning.php';
+                exit();
+            } else {
+                include 'header-login.php';
+            }
+            
+            
+        ?>
     </div>
     
     <!-- BREADCRUMBS -->

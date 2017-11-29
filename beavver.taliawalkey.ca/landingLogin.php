@@ -1,11 +1,10 @@
 <?php
 session_start();
 require_once('connect.php');
-var_dump($_SESSION);
+//var_dump($_SESSION);
 console.log($_SESSION);
-
 //phpinfo();
-exit;
+
 ?>
 
 <!DOCTYPE html>
@@ -40,13 +39,13 @@ exit;
   
     <div>
         <?php 
-//            if (empty($_SESSION["user"])) {
-//                include 'header-logout.php';
-//                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
-//                die();
-//            } else {
-//                include 'header-login.php';
-//            }
+            if (empty($_SESSION["user"])) {
+               include 'header-logout.php';
+               include 'login-warning.php';
+               exit();
+            } else {
+                include 'header-login.php';
+            }
         ?>   
     </div>
 
@@ -57,7 +56,7 @@ exit;
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10 center-text">
-                    <h1>WELCOME!</h1>
+                    <h1 class="welcome">WELCOME!</h1>
                 </div>
                 <div class="col-md-1"></div>
             </div>

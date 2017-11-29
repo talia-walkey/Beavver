@@ -1,3 +1,11 @@
+<?php
+session_start();
+require_once('connect.php');
+//var_dump($_SESSION);
+console.log($_SESSION);
+//phpinfo();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,8 +40,8 @@
         <?php 
             if (empty($_SESSION["user"])) {
                 include 'header-logout.php';
-                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
-                die();
+                include 'login-warning.php';
+                exit();
             } else {
                 include 'header-login.php';
             }

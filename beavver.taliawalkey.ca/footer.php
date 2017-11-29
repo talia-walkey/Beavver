@@ -50,8 +50,8 @@
         
         <hr/>
         
-        <!-- FOOTER LINKS --> 
-        <nav class="navbar navbar-default fixed-bottom">
+        <!-- FOOTER LINKS -->
+        <nav class="navbar navbar-default">
           <div class="container-fluid">
                 <div class="navbar-header">
                   <a class="navbar-brand" href="index.php">
@@ -66,21 +66,18 @@
                     <li><a href="faqs.php">FAQ</a></li>
                   </ul> 
                 </div>
-              
-              
-                <div class="collapse navbar-collapse"></div>
             </div>  
             
         </nav>
         
         <div class="container">
           <div class="row">
-            <div class="col-md-1">
+            <div class="col-lg-4">
             </div>
-            <div class="col-md-10 center-text">
+            <div class="col-lg-8">
                 <p class="copyright-msg">© 2017 Beavver. All rights reserved.</p> 
             </div>
-            <div class="col-md-1">
+            <div class="col-lg-4">
             </div>
           </div>
         </div>
