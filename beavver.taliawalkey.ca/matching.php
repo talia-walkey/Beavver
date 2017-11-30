@@ -80,38 +80,6 @@ require_once('connect.php');
     
     <div id="root"></div>
 
-<!--    <section class="rsection">
-         </br></br></br>
-        <div id="mhidden" class="container">
-            <div id="percentage">
-                <div class="progress" id="progress"></div>
-            </div>
-            </br></br>
-            <div class="resultcontainer">
-              <div class="resultbox">
-                  <p class="rtitle">Comparison</p>
-                  <table id="mTable">
-                      <tr>
-                        <th style="color:#292929">Keywords</th>
-                        <th style="color:#292929">Resume</th>
-                        <th style="color:#292929">Job Description</th>
-                      </tr>
-                  </table>
-              </div>
-
-              <div class="resultbox">
-                  <p class="rtitle">Suggestion</p>
-              </div>
-
-
-              <div class="resultbox">
-                  <p class="rtitle">Course Recommandation</p>
-                  <div id="courseRec"></div>
-              </div>
-
-          </div>
-        </div>
-    </section>-->
     <br/>
     
     <div>
@@ -131,7 +99,7 @@ require_once('connect.php');
     <script src="js/progressbar/progressbar.js"></script>
     
     <!--scroll down jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
              $(function() {
              $('.msubmit').click (function() {
@@ -139,9 +107,9 @@ require_once('connect.php');
               return false;
             });
           });
-    </script>
+    </script>-->
 
-    <link href="/build/static/css/main.ce5236df.css" rel="stylesheet">
-<script type="text/javascript" src="/build/static/js/main.56a43ecf.js"></script>
+    <link href="/build/static/css/main.eeefae2a.css" rel="stylesheet">
+<script type="text/javascript" src="/build/static/js/main.da334d1e.js"></script>
   </body>
 </html>
