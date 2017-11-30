@@ -2,9 +2,9 @@
 session_start();
 require_once('connect.php');
 //var_dump($_SESSION);
-console.log($_SESSION);
+//console.log($_SESSION);
 //phpinfo();
-
+//exit;
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +40,7 @@ console.log($_SESSION);
     <div>
         <!-- Make sure to change this to 'header-login.php' for pages that user is logged in -->
         <?php 
+        var_dump($_SESSION);
             if (empty($_SESSION["user"])) {
                 include 'header-logout.php';
                 include 'login-warning.php';

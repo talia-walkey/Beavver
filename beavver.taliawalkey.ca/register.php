@@ -3,8 +3,7 @@ require_once('connect.php');
 require_once('register-db.php');
 
 session_start();
-require_once('connect.php');
-console.log($_SESSION);
+//console.log($_SESSION);
 //phpinfo();
 //exit;
 
@@ -45,7 +44,7 @@ console.log($_SESSION);
             }
     ?>   
  <div>
-        <?php include 'header-logout.php';?>
+      
     </div>
 
 <div class="content">
@@ -95,7 +94,7 @@ console.log($_SESSION);
            </div>
 <!-- Register Submit Button -->                  
                       <br/>
-                      <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' onClick=validationFunc()>Submit</button>
+                      <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' onclick=validationFunc() type='log'>Submit</button>
                       <br/><br/><br/>
                       
                 <div class="row">
@@ -160,17 +159,45 @@ console.log($_SESSION);
                 )
             });
         });
-        
-//get Gmail Register Information        
+
+
+<!--start SESSION --> 
+              <script type="text/javascript">
+                 document.getElementById("submitBut").onclick = function () {
+                    location.href = "landingLogin.php";
+                 var fd = new FormData();
+                    fd.append("email", document.getElementById("exampleInputEmail1").value);
+                    fd.append("type", "log");
+                    fd.append("password", document.getElementById("mpass").value);
+                
+                    fetch("register-db.php",{
+                        credentials: 'same-origin',
+                        method:"POST",
+                        body:fd,
+                        credentials:'same-origin'
+                    }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
+                 };
+                //get Gmail Register Information        
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
             console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
              console.log('Name: ' + profile.getName());
              console.log('Image URL: ' + profile.getImageUrl());
              console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-             
-             
+              var fd = new FormData();
+                            fd.append("email", profile.getEmail());
+                            fd.append("name", profile.getName());
+                            fd.append("type", "log");
+                            fetch("googleSession.php",{
+                                method:"POST",
+                                body:fd,
+                                credentials:'same-origin'
+                        })
 }
+            </script>    
+<!-- end SESSION -->      
+
+
 //get Gmail Register Information
     </script>
     
@@ -185,9 +212,7 @@ console.log($_SESSION);
                     var pass2 = document.getElementById("pass2").value;
                     
                     if (pass1 == pass2 && pass2 !="" && pass1 !="") {
-                                
-                                 window.location.href="landingLogin.php";
-                                 
+                        window.location.href="index.php";
                     }
                     else {
                         alert("Passwords Do not match");

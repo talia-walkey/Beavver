@@ -84,16 +84,7 @@ console.log($_SESSION);
                   <button class="secondaryBtn">
                       <span id="after-login-span">Hello 
                       <span id="firstname">
-                           <div>
-                                 <?php
-                                 /*
-                                     $sql = "SELECT ('first_name') FROM login WHERE $email";
-                                      echo 'first_name'.value;
-                                     console.log('login');
-                                     $conn->exec($sql);
-                                     */
-                                     ?>
-                            </div>
+                                 <?php echo $_SESSION['user']['first_name'];?>
                       </span>!
                       </span>
                       <span class="caret"></span>
