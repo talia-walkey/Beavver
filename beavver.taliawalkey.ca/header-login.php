@@ -104,8 +104,12 @@ $sql = "SELECT ('first_name') FROM login WHERE $email";
 
                 <!-- AFTER LOGIN -->  
                 <div id="after-login">
-                    <li><a href="myCareer.php">My Career</a></li>
                     <li><a href="myprofile.php" id="myProfile">My Profile</a></li>
+                    <li><a href="myCareer.php">My Career</a></li>
+                    <li><a href="myCareer.php">My Career</a></li>
+                    <li><a href="myCareer.php">My Resume</a></li>
+                    <li><a href="myCareer.php">My Job Bank</a></li>
+                    <li><a href="myCareer.php">Saved Courses</a></li>
                     <li role="separator" class="divider"></li>
                     <a href="logout.php" onclick="document.location.href = 'https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://beavver.taliawalkey.ca';"> Sign Out</a>
                   

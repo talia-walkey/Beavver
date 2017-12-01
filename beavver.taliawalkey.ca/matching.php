@@ -28,10 +28,19 @@
   <body>        
     <a name="top"></a>   
 
-    <div>
-        <!-- Make sure to change this to 'header-login.php' for pages that user is logged in -->
-        <?php include 'header-login.php';?>
-    </div>
+        <?php 
+            if (empty($_SESSION["user"])) {
+                include 'header-logout.php';
+                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
+                die();
+            } else {
+                include 'header-login.php';
+            }
+        ?>   
+      
+    <div class="content">
+        <img src="img/pattern.jpg" class="pattern">
+    <br/><br/>
     
     <!-- BREADCRUMBS -->
     <nav aria-label="breadcrumb" role="navigation">
@@ -40,17 +49,12 @@
         <li class="breadcrumb-item active" aria-current="page">Current Page</li>
       </ol>
     </nav>        
-        
-    
-    <div class="content"> 
-        
+                
     <!-- PAGE HEADER -->    
     <div class="container-fluid templates-content">
         <div class="row">
             <div class="col-md-1"></div>
     		<div class="col-md-10">
-                <div class="orange-line"></div>
-                <img src="img/gray-circle.png" class="gray-circle"/>
                 <h1 class="page-title">MATCHING</h1>
             </div>
             <div class="col-md-1"></div>
@@ -94,6 +98,11 @@
     </section>-->
     <br/>
     
+        <!-- UP ARROW BUTTON -->    
+        <a href="#top" class="btn btn-lg btn-up" id="btn-up">
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>    
+        
     <div>
         <?php include 'footer.php';?>
     </div>  
@@ -120,6 +129,74 @@
             });
           });
     </script>
+      
+      <script>
+    $(document).ready(function() {
+        
+        // show the up button when templates-list is passed
+        $("#btn-up").hide(); //hide button initially
+        var topOfOthDiv = $("#root").offset().top;
+        $(window).scroll(function() {
+            if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
+                $("#btn-up").show(200); //reached the desired point -- show div
+            }
+        });
+        
+        // hide the up button when clicked
+        $("#btn-up").click(function(){
+            $("#btn-up").hide();
+        });
+        
+        //hide the up button when at the top
+        $(window).on("scroll", function() {
+            var scrollPos = $(window).scrollTop();
+            if (scrollPos <= 0) {
+                $("#btn-up").fadeOut();
+            } else {
+                $("#btn-up").fadeIn();
+            }
+        });
+        
+        //Smooth Scrolling
+        // Select all links with hashes
+        $('a[href*="#"]')
+          // Remove links that don't actually link to anything
+          .not('[href="#"]')
+          .not('[href="#0"]')
+          .click(function(event) {
+            // On-page links
+            if (
+              location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+              && 
+              location.hostname == this.hostname
+            ) {
+              // Figure out element to scroll to
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+              // Does a scroll target exist?
+              if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 2000, function() {
+                  // Callback after animation
+                  // Must change focus!
+                  var $target = $(target);
+                  $target.focus();
+                  if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                  } else {
+                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                  };
+                });
+              }
+            }
+          });  
+        
+    });
+    </script>  
 
     <link href="/build/static/css/main.ce5236df.css" rel="stylesheet">
 <script type="text/javascript" src="/build/static/js/main.56a43ecf.js"></script>

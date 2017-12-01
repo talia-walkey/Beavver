@@ -127,7 +127,7 @@ console.log($_SESSION);
                 <p>Beavver was born as a result of frustration from qualified job applicants and their inability to secure an interview. Companies are using Applicant Tracking Systems that filter resumes from certain keywords. Knowing that we would have to customize each resume for a specific job, Beavver is used to automate this process and increase the chances of getting an interview!</p>
             </div>
             <div class="col-md-5">
-                <img src="http://via.placeholder.com/350x150" alt="About Beavver">
+                <img src="img/Group-Photo.jpg" alt="Group Photo" class="group-photo">
             </div>
             <div class="col-md-1"></div>
             

@@ -1,3 +1,19 @@
+#btn-up {
+    border-radius: 30px;
+    background-color: #ffb13b;
+    color: white;
+    transition: opacity 0.3s ease-in-out;  
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1;
+}
+
+.btn-up:hover {
+    opacity: 0.5;
+    color: white;
+}
+
 .resultcontainer {
     text-align: center;
 }

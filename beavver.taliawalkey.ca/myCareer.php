@@ -40,6 +40,10 @@
             }
         ?>   
     </div>
+      
+    <div class="content">
+        <img src="img/pattern.jpg" class="pattern">
+    <br/><br/>
     
     <!-- BREADCRUMBS -->
     <nav aria-label="breadcrumb" role="navigation">
@@ -49,16 +53,12 @@
       </ol>
     </nav>        
         
-    
-    <div class="content"> 
         
     <!-- PAGE HEADER -->    
     <div class="container-fluid templates-content">
         <div class="row">
             <div class="col-md-1"></div>
     		<div class="col-md-10">
-                <div class="orange-line"></div>
-                <img src="img/gray-circle.png" class="gray-circle"/>
                 <h1 class="page-title">MY CAREER</h1>
             </div>
             <div class="col-md-1"></div>
