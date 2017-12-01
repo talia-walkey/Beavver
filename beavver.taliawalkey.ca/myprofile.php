@@ -3,11 +3,9 @@ session_start();
 require_once('connect.php');
 //var_dump($_SESSION);
 
-$number=explode("|", $_SESSION['user']);
-
 console.log($_SESSION);
 //phpinfo();
-exit;
+//exit;
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +36,16 @@ exit;
     <![endif]-->
   </head>
   <body>        
+  
+        <?php 
+            if (empty($_SESSION["user"])) {
+                include 'header-logout.php';
+                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
+                //die();
+            } else {
+                include 'header-login.php';
+            }
+        ?>   
     <a name="top"></a>   
 
     <div>
@@ -74,13 +82,6 @@ exit;
         
         this is information about the user.
         
-        <?php
-            $sql = "SELECT first_name, last_name, email, password, confirm_password FROM login WHERE $email";
-            console.log('login');
-            $conn->exec($sql);
-            
-           echo ucwords($row['first_name']);
-        ?>
         
     </div>
     

@@ -51,13 +51,13 @@ require_once('connect.php');
                 <a id="mystart-button">
                     <button class="btn ctaBtn" type="submit">START NOW!</button>
                 </a> 
-                </div>    
+                </div>
                 <div class="how-it-works-btn">
-                    <a href="#how-it-works" id="how-it-works-link">
-                        <img src="img/play-button.svg" class="playBtn">
-                        <span class="how-it-works-span">HOW IT WORKS</span>
-                    </a>
-                </div>    
+                <a href="#how-it-works" id="how-it-works-link">
+                    <img src="img/play-button.svg" class="playBtn">
+                    <span class="how-it-works-span">HOW IT WORKS</span>
+                </a>
+                </div>
             </div>    
             
             <img src="img/b-home.svg" alt="Beavver" class="zen-beavver">

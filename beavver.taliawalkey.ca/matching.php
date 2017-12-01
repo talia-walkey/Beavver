@@ -1,3 +1,12 @@
+<?php
+session_start();
+require_once('connect.php');
+//var_dump($_SESSION);
+//console.log($_SESSION);
+//phpinfo();
+//exit;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +19,7 @@
     <!-- Bootstrap -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-grid.css" rel="stylesheet">
-    <link href="css/matching.css" rel="stylesheet">
+    <link href="css/beavver-matching.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -28,6 +37,7 @@
   <body>        
     <a name="top"></a>   
 
+<<<<<<< HEAD
         <?php 
             if (empty($_SESSION["user"])) {
                 include 'header-logout.php';
@@ -41,6 +51,23 @@
     <div class="content">
         <img src="img/pattern.jpg" class="pattern">
     <br/><br/>
+=======
+    <div>
+        <!-- Make sure to change this to 'header-login.php' for pages that user is logged in -->
+        <?php 
+        var_dump($_SESSION);
+            if (empty($_SESSION["user"])) {
+                include 'header-logout.php';
+                include 'login-warning.php';
+                exit();
+            } else {
+                include 'header-login.php';
+            }
+            
+            
+        ?>
+    </div>
+>>>>>>> origin/master
     
     <!-- BREADCRUMBS -->
     <nav aria-label="breadcrumb" role="navigation">
@@ -64,38 +91,6 @@
     
     <div id="root"></div>
 
-<!--    <section class="rsection">
-         </br></br></br>
-        <div id="mhidden" class="container">
-            <div id="percentage">
-                <div class="progress" id="progress"></div>
-            </div>
-            </br></br>
-            <div class="resultcontainer">
-              <div class="resultbox">
-                  <p class="rtitle">Comparison</p>
-                  <table id="mTable">
-                      <tr>
-                        <th style="color:#292929">Keywords</th>
-                        <th style="color:#292929">Resume</th>
-                        <th style="color:#292929">Job Description</th>
-                      </tr>
-                  </table>
-              </div>
-
-              <div class="resultbox">
-                  <p class="rtitle">Suggestion</p>
-              </div>
-
-
-              <div class="resultbox">
-                  <p class="rtitle">Course Recommandation</p>
-                  <div id="courseRec"></div>
-              </div>
-
-          </div>
-        </div>
-    </section>-->
     <br/>
     
         <!-- UP ARROW BUTTON -->    
@@ -120,7 +115,7 @@
     <script src="js/progressbar/progressbar.js"></script>
     
     <!--scroll down jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
              $(function() {
              $('.msubmit').click (function() {
@@ -128,6 +123,7 @@
               return false;
             });
           });
+<<<<<<< HEAD
     </script>
       
       <script>
@@ -197,8 +193,11 @@
         
     });
     </script>  
+=======
+    </script>-->
+>>>>>>> origin/master
 
-    <link href="/build/static/css/main.ce5236df.css" rel="stylesheet">
-<script type="text/javascript" src="/build/static/js/main.56a43ecf.js"></script>
+    <link href="/build/static/css/main.eeefae2a.css" rel="stylesheet">
+<script type="text/javascript" src="/build/static/js/main.da334d1e.js"></script>
   </body>
 </html>

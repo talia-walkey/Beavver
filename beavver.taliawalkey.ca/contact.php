@@ -74,50 +74,22 @@ console.log($_SESSION);
             <div class="col-md-3"></div>
             <div class="col-md-6 contact-fields">
                 <p class="sub-heading">Send us a message</p>
-                
-                <!-- Validation -->
-                <?php 
-                    // Check if name has been entered
-                    if (isset($_POST['submit']) && !isset($_POST['name'])) {
-                        $errName = '<p class="text-danger">Please enter your name</p>';
-                    } else {
-                        $errName = null;
-                    }
-
-                    // Check if email has been entered and is valid
-                    if (isset($_POST['submit']) && !isset($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                        $errEmail = '<p class="text-danger">Please enter a valid email address</p>';
-                    } else {
-                        $errEmail = null;
-                    }
-
-                    //Check if message has been entered
-                    if (isset($_POST['submit']) && !isset($_POST['message'])) {
-                        $errMessage = '<p class="text-danger">Please enter your message</p>';
-                    } else {
-                        $errMessage = null;
-                    }
-                ?>
-                
                 <form method="post" action="contact.php">
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Name</label>
                       <input name="name" type="text" class="form-control" id="name" placeholder="Name">
-                        <?php echo $errName; ?>    
                     </div>
                       
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Email Address</label>
                       <input name="email" type="text" class="form-control" id="email" placeholder="Email Address">
-                        <?php echo $errEmail; ?>
                     </div>
                       
                   </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Your Message</label>
                         <textarea name="message" class="form-control" id="message" rows="3"></textarea>
-                        <?php echo $errMessage; ?>
                   </div>
                     
                 <div class="form-group">  
@@ -138,23 +110,22 @@ console.log($_SESSION);
                         $message = $_POST['message'];
                     }
                     
-                        $from = 'Beavver Contact Form'; 
+                        $from = 'From: Beavver Contact Form'; 
                         $to = 'alynna.alcira@gmail.com'; 
                         $subject = 'Beavver Contact Form';
 
                         $body = "From: $name\n E-Mail: $email\n Message:\n $message";
 
-                        if ($errName == null && $errEmail == null && $errMessage == null && isset($_POST['submit'])) {		
+                        if (isset($_POST['submit'])) {		
                             if (mail ($to, $subject, $body, $from)) { 
                             $result = "Your message has been sent!";
                             echo $result;
-                            }
                         } else { 
                            $result = "Something went wrong. Please try again!"; 
                             echo $result;
                            } 
+                        }
                     ?>
-                    
                 </div>
                 </form>                                
             </div>

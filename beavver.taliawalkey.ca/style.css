@@ -685,6 +685,13 @@ hr {
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 600px) {
+    #mrow {
+    margin-left: 30px;
+    margin-right: 30px;
+    }
+}
+
 .mlabel {
     font-family: 'Montserrat', sans-serif;
 }

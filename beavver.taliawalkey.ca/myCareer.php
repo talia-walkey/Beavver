@@ -1,3 +1,11 @@
+<?php
+session_start();
+require_once('connect.php');
+//var_dump($_SESSION['user']['first_name']);
+
+//phpinfo();
+//die;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,12 +41,12 @@
         <?php 
             if (empty($_SESSION["user"])) {
                 include 'header-logout.php';
-                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
-                die();
+                include 'login-warning.php';
+                exit();
             } else {
                 include 'header-login.php';
             }
-        ?>   
+        ?> 
     </div>
       
     <div class="content">
@@ -76,8 +84,7 @@
         <label class="mycategory" for="slide-1-trigger">MY PROFILE</label><br/><br/><br/>
         <label class="mycategory" for="slide-2-trigger">MY RESUME</label><br/><br/><br/>
         <label class="mycategory" for="slide-3-trigger">MY JOB BANK</label><br/><br/><br/>
-        <label class="mycategory" for="slide-4-trigger">SAVED COURSES</label><br/><br/><br/>
-        <label class="mycategory" for="slide-5-trigger">CAREER GOAL</label>
+        <label class="mycategory" for="slide-4-trigger">SAVED COURSES</label>
     </div>
 
     <input id="slide-1-trigger" type="radio" name="slides" checked>
@@ -87,22 +94,22 @@
             <div class="row">
               <div class="col">
                   <label>Username</label><br/>
-                  <input id="bggray" type="text" class="profile-control" placeholder="Present Username" aria-label="Username" aria-describedby="basic-addon1" disabled>
+                  <input id="bggray" type="text" class="profile-control" placeholder="Present Username" aria-label="Username" aria-describedby="basic-addon1" value="<?php echo $_SESSION['user']['email'];?>" disabled>
                   <br/> 
                   <label>First name</label><br/>
-                  <input type="text" class="profile-control" placeholder="Type first name" aria-label="Username" aria-describedby="basic-addon1"> 
+                  <input type="text" class="profile-control" placeholder="Type first name" aria-label="Username" aria-describedby="basic-addon1" value="<?php echo $_SESSION['user']['first_name'];?>"> 
                   <br/>
                   <label>New password</label><br/>
-                  <input type="text" class="profile-control" placeholder="Type new password" aria-label="Username" aria-describedby="basic-addon1"> <br/> 
+                  <input type="text" class="profile-control" placeholder="Type new password" aria-label="Username" aria-describedby="basic-addon1" > <br/> 
               </div> 
               <div class="col">
                   <label>&nbsp;</label><br/><br/>
                   <br/>
                   <label>Last name</label><br/>
-                  <input type="text" class="profile-control" placeholder="Type last name" aria-label="Username" aria-describedby="basic-addon1">
+                  <input type="text" class="profile-control" placeholder="Type last name" aria-label="Username" aria-describedby="basic-addon1" value="<?php echo $_SESSION['user']['last_name'];?>">
                   <br/>
                   <label>Email</label><br/>
-                  <input type="text" class="profile-control" placeholder="Email address" aria-label="Username" aria-describedby="basic-addon1">
+                  <input type="text" class="profile-control" placeholder="Email address" aria-label="Username" aria-describedby="basic-addon1" value="<?php echo $_SESSION['user']['email'];?>">
               </div>
               
             </div>
@@ -110,10 +117,23 @@
         <br/>
         <div id="gray-bg2">
             <p class="ctitle">CONNECT</p>
-            <button id="google-api">
+            <button id="revokeAllScopes" id="google-api">
                 <img class="btnImg" src="img/google-logo-w.svg"/>
                 DISCONNECT GOOGLE
             </button>
+            
+<!--disconnect gmail user -->           
+            <script type="text/javascript">
+                 document.getElementById("revokeAllScopes").addEventListener("click", function(){
+                        var revokeAllScopes = function() {
+                            auth2.disconnect();
+                            }
+                            console.log('removed the user');
+                            location.href = "index.php";
+                 });
+              </script>       
+<!--end disconnect gmail user -->                
+            
             <button id="linkedin-api">
                 <img class="btnImg" src="img/linkedin-logo-w.svg"/>
                 Connect with LinkedIn
@@ -122,8 +142,10 @@
         <br/>
         <div id="imgcenter">
             <button id="inline" id="cleft" class="msubmit">SAVE CHANGE</button>
-            <button id="inline" class="cancel">X CLOSE MY ACCOUNT</button>
+            <button  id="closeAccount" class="cancel" type='destroy'>X CLOSE MY ACCOUNT</button>
         </div><br/>
+        
+       
         <div class="bluebox">
             <p id="inline" class="ctitle">
                 <b>HAVE QUESTIONS ABOUT YOUR ACCOUNT?</b> See our FAQs.
@@ -206,72 +228,33 @@
             <p class="ctitle"><b>UNDER CONSTRUCTION</b></p>
         </div>
     </section>
-    
-    <input id="slide-5-trigger" type="radio" name="slides">
-    <section class="slide slide-five">
-        <div id="gray-bg">
-            <br/><br/>
-            <p class="ctitle">Keep track of your career, choose what would you like to do and we will show you the path.</p>
-            </div>
-            <div id="stepwrap">
-                
-                    
-                        <div id="stepimg1"></div>
-                    
-<!--
-                <div>
-                        <span>STEP1</span><br/>
-                        <span>Select a job description of your dream job</span>
-                    </div>
--->
-              
-                        <div id="stepimg2"></div>
-                    
-<!--
-                <div>
-                        <span>STEP2</span><br/>
-                        <span>Match with your resume and get to know what you need to get there</span>
-                    </div>
--->
-                
-                        <div id="stepimg3"></div>
-                    
-<!--
-                <div>
-                        <span>STEP3</span><br/>
-                        <span>Save it, add a timelie and start to work on your career. Beavver will send you monthly email to remind you</span>
-                    </div>
--->
-                <br/><br/><br/>
-                
-            
-                
-                <button id="bggray" class="msubmit" type="button" disabled>COMING SOON</button>
-            </div>
-            
-        
-            
-        
-        
-    </section>
-
 </div>
-        
     <br/>
-        
 <!--
     <div>
         <?php include 'footer.php';?>
     </div>  
 -->
-    
     </div>
-      
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/header-footer.js"></script>
+<!-- close Account -->    
+    <script type="text/javascript">
+                 document.getElementById("closeAccount").onclick = function () {
+                    //location.href = "index.php";
+                 var fd = new FormData();
+                    fd.append("type", "destroy");
+                    
+                    console.log("destoy clicked");
+                    fetch("register-db.php",{
+                        credentials: 'same-origin',
+                        method:"POST",
+                        body:fd
+                    }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
+                 };
+            </script> 
+<!-- close Account --> 
+    
   </body>
 </html>

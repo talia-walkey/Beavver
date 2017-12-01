@@ -1,3 +1,11 @@
+<?php
+session_start();
+require_once('connect.php');
+var_dump($_SESSION);
+//console.log($_SESSION);
+//phpinfo();
+//die;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,13 +28,6 @@
     
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body>
       
@@ -85,7 +86,7 @@
                     
             <a type="submit" class="msubmit btn btn-primary" id='submitBut' id="signin-button" name='submitBut' type='log'>Login</a>   
             <br/>
-            <br/>
+          <br/>
 <!--Google SignIn -->
                 <div class="row">
                     <div class="col-md-4">
@@ -110,40 +111,43 @@
                     <br/>
            
 <!--end Google SignIn -->
- 
+<!--start SESSION --> 
               <script type="text/javascript">
                  document.getElementById("submitBut").onclick = function () {
-                location.href = "landingLogin.php";
+                    location.href = "landingLogin.php";
                  var fd = new FormData();
-                 fd.append("email", document.getElementById("exampleInputEmail1").value);
-                 fd.append("type", "log");
-                 fd.append("password", document.getElementById("mpass").value);
+                    fd.append("email", document.getElementById("exampleInputEmail1").value);
+                    fd.append("type", "log");
+                    fd.append("password", document.getElementById("mpass").value);
                 
                     fetch("register-db.php",{
                         credentials: 'same-origin',
                         method:"POST",
                         body:fd
                     }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
-
-                    <?php 
-                    /*
-                        if (empty($_SESSION["user"])) {
-                            ?>
-                            location.href = "http://beavver.taliawalkey.ca";
-                            //header("location:http://beavver.taliawalkey.ca");
-                            //die();
-                            <?php
-                        } else {
-                            ?>
-                            location.href = "http://beavver.taliawalkey.ca/landingLogin.php";
-                            //header("location:http://beavver.taliawalkey.ca/landingLogin.php");
-                            <?php
-                        }*/
-                    ?>  
                  };
-                  
-              </script>       
-              
+                //get Gmail Register Information        
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+             console.log('Name: ' + profile.getName());
+             console.log('Image URL: ' + profile.getImageUrl());
+             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+              var fd = new FormData();
+                            fd.append("email", profile.getEmail());
+                            fd.append("name", profile.getName());
+                            fd.append("type", "log");
+                            fetch("googleSession.php",{
+                                method:"POST",
+                                body:fd,
+                                credentials:'same-origin'
+                        })
+}
+            </script>    
+<!-- end SESSION -->      
+                
+
+
 <!--                    </form>-->
                 </div>
                 </ul>
@@ -154,68 +158,15 @@
                  var butClick = document.getElementById('signup-button');
                      butClick.addEventListener("click", function(){
                         window.location.href = "register.php";
-                     });
-                     
-                 var GoogleLogin = document.getElementById('GoogleLogin');
-                     GoogleLogin.addEventListener("click", function(){
-                        window.location.href = "landingLogin.php";
+                      
                      });
                  
-            /*     //SEARCH BAR ANIMATION
-                $(document).ready(function(){
-                    $("#nav-search").click(function(){
-                        $("#search-box").slideToggle();
-                    });
-                });*/
-                
-                //LOGIN NAVBAR
-/*
-                var beforeLogin = document.getElementById("before-login"),
-                    afterLogin = document.getElementById("after-login"),
-                    signinBtn = document.getElementById("signin-button"),
-                    beforeLoginName = document.getElementById("before-login-span"),
-                    afterLoginName = document.getElementById("after-login-span"),
-                   // signOut = document.getElementById("signOut"),
-                    signupBtn = document.getElementById("signup-button");
-                    
-                if(signinBtn){
-                signinBtn.addEventListener("click", function(){    
-                    // changing the dropdown components
-                    beforeLogin.style.display = "none";
-                    afterLogin.style.display = "block";
-
-                    // changing the name in the login button
-                    beforeLoginName.style.display = "none";
-                    afterLoginName.style.display = "inline-block";
-
-                    signupBtn.style.display = "none";
-                    
-                });
-                }*/
-
-                /*if(signOut){
-                    signOut.addEventListener("click", function(){
-                        loginBool = false;
-    
-                        // changing the dropdown components
-                        beforeLogin.style.display = "block";
-                        afterLogin.style.display = "none";
-    
-                        // changing the name in the login button
-                        beforeLoginName.style.display = "inline-block";
-                        afterLoginName.style.display = "none";
-    
-                        signupBtn.style.display = "block";
-                    });
-                }*/
-                
              </script>
              
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
 </nav>
-
 
     <!-- SEARCH BAR -->  
     <div id="search-box" class="form-row align-items-center">
@@ -236,9 +187,7 @@
         });
     });
                          
-      
     </script>
-      
       
 <!-- Google SignIn SCRIPT -->
       <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>

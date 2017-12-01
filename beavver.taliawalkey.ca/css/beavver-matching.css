@@ -53,13 +53,36 @@
 }
 
 #mTable {
+    width: 80%;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
-    margin: auto
+    margin: auto;
+    border-collapse:collapse;
+    border:0;
+    text-align: left;
 }
 
+@media screen and (max-width: 600px) {
+    .resultbox {
+        width: 100%;
+    }
+}
+
+table, th, td, tr{
+    padding: 8px;
+    border: 0px solid;
+}
+th, td{
+  border-bottom: 1px dashed #9fa3a7;  
+}
+th{
+    color: #9fa3a7;
+}
+caption{
+    font:bold;
+}
 tr:nth-child(odd) {
     color: #66cccc;
     font-family: 'Montserrat', sans-serif;
