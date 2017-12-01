@@ -37,7 +37,6 @@ require_once('connect.php');
   <body>        
     <a name="top"></a>   
 
-<<<<<<< HEAD
         <?php 
             if (empty($_SESSION["user"])) {
                 include 'header-logout.php';
@@ -51,7 +50,7 @@ require_once('connect.php');
     <div class="content">
         <img src="img/pattern.jpg" class="pattern">
     <br/><br/>
-=======
+
     <div>
         <!-- Make sure to change this to 'header-login.php' for pages that user is logged in -->
         <?php 
@@ -67,7 +66,6 @@ require_once('connect.php');
             
         ?>
     </div>
->>>>>>> origin/master
     
     <!-- BREADCRUMBS -->
     <nav aria-label="breadcrumb" role="navigation">
@@ -115,7 +113,7 @@ require_once('connect.php');
     <script src="js/progressbar/progressbar.js"></script>
     
     <!--scroll down jquery-->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
              $(function() {
              $('.msubmit').click (function() {
@@ -123,7 +121,7 @@ require_once('connect.php');
               return false;
             });
           });
-<<<<<<< HEAD
+
     </script>
       
       <script>
@@ -193,9 +191,6 @@ require_once('connect.php');
         
     });
     </script>  
-=======
-    </script>-->
->>>>>>> origin/master
 
     <link href="/build/static/css/main.eeefae2a.css" rel="stylesheet">
 <script type="text/javascript" src="/build/static/js/main.da334d1e.js"></script>
