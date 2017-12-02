@@ -47,6 +47,11 @@ require_once('connect.php');
                 include 'header-login.php';
             }
         ?> 
+        
+            <!-- for local development only -->
+        <?php
+//            include 'header-login.php';
+        ?>  
     </div>
       
     <div class="content">
@@ -85,10 +90,10 @@ require_once('connect.php');
         <label class="mycategory" for="slide-2-trigger">MY RESUME</label><br/><br/><br/>
         <label class="mycategory" for="slide-3-trigger">MY JOB BANK</label><br/><br/><br/>
         <label class="mycategory" for="slide-4-trigger">SAVED COURSES</label>
-    </div>
+    </div> 
 
     <input id="slide-1-trigger" type="radio" name="slides" checked>
-    <section class="slide slide-one">
+    <section class="slide slide-one" id="myprofile-section">
         <div id="gray-bg1">
             <p class="ctitle">ACCOUNT INFORMATION</p>
             <div class="row">
@@ -155,7 +160,7 @@ require_once('connect.php');
     </section>
     
     <input id="slide-2-trigger" type="radio" name="slides">
-    <section class="slide slide-two">
+    <section class="slide slide-two" id="myresume-section">
         <div id="gray-bg3">
             <br/><br/>
             <div class="row">
@@ -186,7 +191,7 @@ require_once('connect.php');
     </section>
    
     <input id="slide-3-trigger" type="radio" name="slides">
-    <section class="slide slide-three">
+    <section class="slide slide-three" id="jobbank-section">
         <div id="gray-bg3">
             <br/><br/>
             <div class="row">
@@ -223,7 +228,7 @@ require_once('connect.php');
     </section>
     
     <input id="slide-4-trigger" type="radio" name="slides">
-    <section class="slide slide-four">
+    <section class="slide slide-four" id="savedcourses-section">
         <div id="gray-bg">
             <p class="ctitle"><b>UNDER CONSTRUCTION</b></p>
         </div>
@@ -238,7 +243,6 @@ require_once('connect.php');
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/header-footer.js"></script>
 <!-- close Account -->    
     <script type="text/javascript">
                  document.getElementById("closeAccount").onclick = function () {

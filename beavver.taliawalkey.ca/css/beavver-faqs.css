@@ -1,3 +1,8 @@
+@media (max-width: 767px) { 
+    .right-side { margin-top: 30px; }    
+    .faq-content { margin-left: 10px !important; margin-right: 10px !important;}
+}
+
 /* FAQ CONTROL */
 .sub-header {
     font-family: 'Montserrat', sans-serif !important;

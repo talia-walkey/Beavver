@@ -76,7 +76,7 @@ console.log($_SESSION);
         </div>   
         </div> <!-- END OF HEADER -->
         <br/>
-        <div class="row">
+        <div class="row faq-content">
             <div class="col-md-1"></div>
             
             <div class="col-md-3 faq-control">
@@ -88,7 +88,7 @@ console.log($_SESSION);
                 </ul>
             </div>
             
-            <div class="col-md-7">
+            <div class="col-md-7 right-side">
                 <p class="sub-header"><b>QUESTIONS</b></p>
                 <p>Please click a question and the answer will show below.</p>
                 <div class="tab-content">
@@ -307,7 +307,7 @@ console.log($_SESSION);
       
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>

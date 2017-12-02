@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('connect.php');
-//var_dump($_SESSION);
+////var_dump($_SESSION);
 console.log($_SESSION);
 //phpinfo();
 
@@ -18,6 +18,7 @@ console.log($_SESSION);
                 exit();
             }
             ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -95,14 +96,12 @@ console.log($_SESSION);
 
                 <!-- AFTER LOGIN -->  
                 <div id="after-login">
-                    <li><a href="myprofile.php" id="myProfile">My Profile</a></li>
-                    <li><a href="myCareer.php">My Career</a></li>
-                    <li><a href="myCareer.php">My Career</a></li>
-                    <li><a href="myCareer.php">My Resume</a></li>
-                    <li><a href="myCareer.php">My Job Bank</a></li>
-                    <li><a href="myCareer.php">Saved Courses</a></li>
+                    <li><a href="myCareer.php#slide-1-trigger" id="myProfile">My Profile</a></li>
+                    <li><a href="myCareer.php#slide-2-trigger">My Resume</a></li>
+                    <li><a href="myCareer.php#slide-3-trigger">My Job Bank</a></li>
+                    <li><a href="myCareer.php#slide-4-trigger">Saved Courses</a></li>
                     <li role="separator" class="divider"></li>
-                    <a href="logout.php" onclick="signOut();"> Sign Out</a>
+                    <li><a href="logout.php" onclick="signOut();"> Sign Out</a></li>
                   
                 </div>
                     

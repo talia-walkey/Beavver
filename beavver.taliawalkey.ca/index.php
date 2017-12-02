@@ -227,7 +227,7 @@ require_once('connect.php');
             <div class="col-md-4 section-text">
                 <div class="circle-num">3</div>
                 <span class="section-title">CAREER PATH</span>
-                <h2>Pursure your dream job by keeping track of your career.</h2>
+                <h2>Pursue your dream job by keeping track of your career.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas ligula a efficitur ultrices.</p>
             </div>
             <div class="col-md-1"></div>

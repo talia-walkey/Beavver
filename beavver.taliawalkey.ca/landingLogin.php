@@ -47,6 +47,12 @@ console.log($_SESSION);
                 include 'header-login.php';
             }
         ?>   
+        
+    <!-- for local development only -->
+        <?php
+//            include 'header-login.php'
+        ?>        
+
     </div>
 
     <div id="content">

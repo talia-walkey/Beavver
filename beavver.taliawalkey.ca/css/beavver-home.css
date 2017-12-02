@@ -12,6 +12,30 @@
             transform-origin: bottom;
         }*/
 
+/* MEDIA QUERIES */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) { 
+
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) { 
+
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991px) { 
+    .how-it-works-btn { display: inline-block !important; margin-top: 15px; }
+}
+
+/* Nav button */
+#before-login>a.ctaBtn{
+    padding: 15px;
+    margin-bottom:  15px;
+}
+
 /* Up Button */
 #btn-up {
     border-radius: 30px;
@@ -35,7 +59,7 @@
     text-align: center;
 }
 
-.ctaBtn {
+.bottom-cta>a>button.ctaBtn {
     color: white !important;
     margin: 30px;
 }

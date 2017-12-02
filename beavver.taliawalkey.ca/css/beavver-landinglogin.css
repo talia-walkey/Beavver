@@ -34,10 +34,6 @@
     padding-right: 30px !important;
 }
 
-a {
-    color: black !important;
-}
-
 .pattern {
     margin-top: 30px;
 }
@@ -135,4 +131,8 @@ h2 {
 
 .beavver-info ul {
     font-family: 'Roboto', sans-serif;
+}
+
+a > button {
+    color: black !important;
 }

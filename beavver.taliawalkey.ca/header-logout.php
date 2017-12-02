@@ -44,7 +44,7 @@ var_dump($_SESSION);
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.php">
-            <img src="img/logo-text.png" id="logo" alt="logo"></a>
+            <img src="img/logo-text.png" id="logo" alt="logo" class="img-responsive"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -85,7 +85,7 @@ var_dump($_SESSION);
                   <hr class="dashline" required>
            </div>
                     
-            <a type="submit" class="msubmit btn btn-primary" id='submitBut' id="signin-button" name='submitBut' type='log'>Login</a>   
+            <a type="submit" class="ctaBtn btn" id='submitBut' id="signin-button" name='submitBut' type='log'>LOGIN</a>   
             <br/>
           <br/>
 <!--Google SignIn -->
@@ -179,7 +179,7 @@ var_dump($_SESSION);
     </div>  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
         

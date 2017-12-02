@@ -111,7 +111,6 @@ html {
 
 body {
     min-height: 100vh;
-    min-width:400px;
     position: relative;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -328,6 +327,41 @@ body {
 
 .navbar-right {
     margin-left: 15px;
+    background-color: white;
+}
+
+/* MEDIA QUERIES */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) { 
+    .navbar { height: auto !important; }
+    #nav-search { display: none; }
+    #logo { height: 40px !important; width: auto !important; margin: 5px !important; padding-bottom: 20px !important;}
+    .gray-line { display: none; }
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) { 
+    .navbar { height: auto !important; }
+    #nav-search { display: none; }
+    #logo { height: 50px !important; width: auto !important; margin: 5px !important; padding-bottom: 30px !important;}
+    .navbar-right { float: none !important; left: 0; bottom: 0; top: 0; right: 0; margin: auto !important; padding-left: 50px;}
+    .navbar .navbar-nav { display: inline !important; float: none; }    
+    .dropdown-menu { background-color: #333333 !important;}
+    .gray-line { display: none; }
+    #signup-button { margin-top: 10px !important;}
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991px) { 
+    .navbar { height: auto !important; }
+    #nav-search { display: none; }
+    .navbar-right { float: none !important; margin-left: 250px; }
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+    max-height: none;
 }
 
 /* SEARCH BOX */
@@ -443,6 +477,11 @@ body {
     width:50px;
     height:50px;
 }
+/* Nav button */
+#before-login>a.ctaBtn{
+    padding: 15px;
+    margin-bottom:  15px;
+}
 
 .primaryBtn {
   width: 120px;
@@ -453,6 +492,7 @@ body {
   transition: 0.3s;
   font-size: 10pt;
   font-family: 'Montserrat', sans-serif;
+    color: #000;
 }
 
 .secondaryBtn {
@@ -477,10 +517,11 @@ body {
   transition: 0.3s;
   font-size: 10pt;
   font-family: 'Montserrat', sans-serif;
+    color:white;
 }
 
 .primaryBtn:hover, .ctaBtn:hover{
-  color: white;
+  color: white !important;
     cursor: pointer;
   opacity: 0.5;
 }

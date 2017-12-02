@@ -3,6 +3,9 @@
     height:auto;
 }
 
+@media (max-width: 767px) { 
+    .group-photo { width: 300px; }   
+}
 .content { 
     margin-top: 90px !important;
 }

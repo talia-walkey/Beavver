@@ -48,7 +48,7 @@ session_start();
     </div>
 
 <div class="content">
-    
+    <br/><br/>
     <!-- BREADCRUMBS -->
     <nav aria-label="breadcrumb" role="navigation">
       <ol class="breadcrumb">
