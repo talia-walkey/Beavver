@@ -1,0 +1,54 @@
+.resultcontainer {
+    text-align: center;
+}
+.resultbox {
+    width: 60%;
+    height: auto;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    border-color: #9fa3a7;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+#percentage {
+    text-align: center;
+}
+.progress {
+    height: 300px;
+    background-color: white;
+}
+.progress > svg {
+    height: 100%;
+    display: block;
+}
+.rtitle {
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #9fa3a7
+}
+
+#mhidden {
+    visibility: hidden;
+}
+
+#mTable {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto
+}
+
+tr:nth-child(odd) {
+    color: #66cccc;
+    font-family: 'Montserrat', sans-serif;
+}
+tr:nth-child(even) {
+    color: #ffb13b;
+    font-family: 'Montserrat', sans-serif;
+}

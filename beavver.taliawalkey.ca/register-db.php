@@ -33,10 +33,17 @@ session_start();
             $result=$conn->query($sql);
             $user=$result->fetchAll(PDO::FETCH_ASSOC);
             $_SESSION["user"]=$user[0];
-            var_dump($_SESSION);
+            //var_dump($_SESSION);
             echo json_encode($user);
             exit;
-            
+        }else if($type=="destroy"){
+            $sql = "DELETE * FROM login WHERE email = '$email'";
+            $result=$conn->query($sql);
+            $user=$result->fetchAll(PDO::FETCH_ASSOC);
+            $_SESSION["user"]=$user[0];
+            //var_dump($_SESSION);
+            echo json_encode($user);
+            exit;
         }
     
         

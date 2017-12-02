@@ -1,8 +1,8 @@
 <?php
 require_once('connect.php');
-
+session_start();
         //this will be the name declared on the btn. if you have more stuff to push in add it here. 
-        $user = $_POST['user'];
+        $user = $_SESSION['user']['id'];
         $course = $_POST['course'];
 
         

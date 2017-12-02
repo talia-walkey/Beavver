@@ -32,8 +32,8 @@
             echo $sql;
             console.log('login');
             $conn->exec($sql);
-            
         }
+             
              
     } catch(PDOException $e) {
         $error = $e->getMessage();

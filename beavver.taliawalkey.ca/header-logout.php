@@ -31,6 +31,7 @@ var_dump($_SESSION);
   </head>
   <body>
       
+    
     <!-- NAV BAR -->
     <nav class="navbar navbar-fixed-top navbar-default">
       <div class="container-fluid">
@@ -76,7 +77,7 @@ var_dump($_SESSION);
                 <div id="before-login" class="form-group">
                         
             <div class="form-group">
-                  <input  type="email" class="regiinput form-control" id="exampleInputEmail1" placeholder="Enter email" name='email' value='taliawalkey@gmail.com' required>
+                  <input  type="email" class="regiinput form-control" id="exampleInputEmail1" placeholder="Enter email" name='email' required>
                   <hr class="dashline">
             </div>
            <div class="form-group">
@@ -126,22 +127,25 @@ var_dump($_SESSION);
                         body:fd
                     }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
                  };
-                //get Gmail Register Information        
-        function onSignIn(googleUser) {
+                 
+                 
+                  function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
             console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-             console.log('Name: ' + profile.getName());
-             console.log('Image URL: ' + profile.getImageUrl());
+             console.log('Given Name: ' + profile.getGivenName());
+             console.log('Family Name: ' + profile.getFamilyName());
              console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
               var fd = new FormData();
                             fd.append("email", profile.getEmail());
-                            fd.append("name", profile.getName());
+                            fd.append("first_name", profile.getGivenName());
+                            fd.append("last_name", profile.getFamilyName());
                             fd.append("type", "log");
                             fetch("googleSession.php",{
                                 method:"POST",
                                 body:fd,
                                 credentials:'same-origin'
                         })
+              
 }
             </script>    
 <!-- end SESSION -->      
