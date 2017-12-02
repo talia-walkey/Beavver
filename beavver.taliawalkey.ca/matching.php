@@ -54,7 +54,7 @@ require_once('connect.php');
     <div>
         <!-- Make sure to change this to 'header-login.php' for pages that user is logged in -->
         <?php 
-        var_dump($_SESSION);
+        //var_dump($_SESSION);
             if (empty($_SESSION["user"])) {
                 include 'header-logout.php';
                 include 'login-warning.php';
@@ -192,7 +192,7 @@ require_once('connect.php');
     });
     </script>  
 
-    <link href="/build/static/css/main.eeefae2a.css" rel="stylesheet">
-<script type="text/javascript" src="/build/static/js/main.da334d1e.js"></script>
+    <link href="/build/static/css/main.d93e1e39.css" rel="stylesheet">
+<script type="text/javascript" src="/build/static/js/main.a98f756d.js"></script>
   </body>
 </html>
