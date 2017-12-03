@@ -137,15 +137,15 @@ console.log($_SESSION);
             <div class="col-md-3 templates-gallery"> 
                 <figure class="figure">
                     <a href="download.php?download_file=template-02.docx">
-                      <img src="templates/template-02.jpg" class="figure-img img-fluid rounded" alt="Template One">
+                      <img src="templates/template-02.jpg" class="figure-img img-fluid rounded" alt="Template Two">
                       <figcaption class="figure-caption text-center">Template Two</figcaption>
                     </a>
                 </figure>
             </div>	
             <div class="col-md-3 templates-gallery">
                 <figure class="figure">
-                    <a href="download.php?download_file=test.docx">
-                      <img src="http://via.placeholder.com/350x500" class="figure-img img-fluid rounded" alt="Template One">
+                    <a href="download.php?download_file=template-03.docx">
+                      <img src="templates/template-03.jpg" class="figure-img img-fluid rounded" alt="Template One">
                       <figcaption class="figure-caption text-center">Template Three</figcaption>
                     </a>
                 </figure>
@@ -174,25 +174,25 @@ console.log($_SESSION);
             <div class="col-md-1"></div>
             <div class="col-md-3 templates-gallery">
                 <figure class="figure">
-                    <a href="download.php?download_file=test.docx">
-                      <img src="http://via.placeholder.com/350x500" class="figure-img img-fluid rounded" alt="Template One">
-                      <figcaption class="figure-caption text-center">Template One</figcaption>
+                    <a href="download.php?download_file=template-04.docx">
+                     <img src="templates/template-02.jpg" class="figure-img img-fluid rounded" alt="Template Four">
+                      <figcaption class="figure-caption text-center">Template Four</figcaption>
                     </a>
                 </figure>
             </div>
             <div class="col-md-3 templates-gallery"> 
                 <figure class="figure">
-                    <a href="download.php?download_file=test.docx">
-                      <img src="http://via.placeholder.com/350x500" class="figure-img img-fluid rounded" alt="Template One">
-                      <figcaption class="figure-caption text-center">Template Two</figcaption>
+                    <a href="download.php?download_file=template-05.docx">
+                      <img src="templates/template-05.jpg" class="figure-img img-fluid rounded" alt="Template One">
+                      <figcaption class="figure-caption text-center">Template Five</figcaption>
                     </a>
                 </figure>
             </div>	
             <div class="col-md-3 templates-gallery">
                 <figure class="figure">
-                    <a href="download.php?download_file=test.docx">
-                      <img src="http://via.placeholder.com/350x500" class="figure-img img-fluid rounded" alt="Template One">
-                      <figcaption class="figure-caption text-center">Template Three</figcaption>
+                    <a href="download.php?download_file=template-06.docx">
+                        <img src="templates/template-06.jpg" class="figure-img img-fluid rounded" alt="Template One">
+                      <figcaption class="figure-caption text-center">Template Six</figcaption>
                     </a>
                 </figure>
             </div>
