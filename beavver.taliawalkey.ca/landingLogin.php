@@ -290,9 +290,7 @@ console.log($_SESSION);
     
     <div class="row bottom-clouds">
         <div class="col-md-12">
-            <object type="image/svg+xml" data="img/bottom-clouds.svg">
-                <img src="img/bottom-clouds.svg" alt="clouds" class="img-responsive">
-            </object>
+
         </div>
     </div> <!-- End of Clouds --> 
 

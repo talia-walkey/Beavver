@@ -1,3 +1,10 @@
+.bottom-clouds {
+    background-image: url("../img/bottom-clouds.svg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 200px;
+}
+
 /* Up Button */
 #btn-up {
     border-radius: 30px;
