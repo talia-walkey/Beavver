@@ -102,6 +102,23 @@ h2 {
     margin-top: 30px;
 }
 
+/* MEDIA QUERIES */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) { 
+
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) { 
+    .carousel-img { width: 50vw; }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991px) { 
+    .carousel-img { width: 300px; }
+}
+
 .circle-num {
     color: white;
     background-color: #ffc80a;

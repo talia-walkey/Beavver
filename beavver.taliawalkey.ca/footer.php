@@ -25,6 +25,27 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+      <style>
+        /* MEDIA QUERIES */
+        /* Extra small devices (portrait phones, less than 576px) */
+        @media (max-width: 575px) { 
+            .newsletter, .footer-nav { display: none; }
+        }
+
+        /* Small devices (landscape phones, less than 768px) */
+        @media (max-width: 767px) { 
+            .newsletter, .footer-nav { display: none; }
+            .copyright-msg { margin-left: 50px !important;}
+            #footer { height: auto; }
+        }
+
+        /* Medium devices (tablets, less than 992px) */
+        @media (max-width: 991px) { 
+            .newsletter { display: none; }
+            .copyright-msg { margin-left: 200px;}
+        }
+      </style>
+      
   </head>
   <body>
   
@@ -32,7 +53,7 @@
     <div id="footer">
         
         <!-- NEWLETTER -->
-        <div class="container">
+        <div class="container newsletter">
           <div class="row newsletter-row">
             <div class="col-6 col-sm-6">
               <p>SUBSCRIBE TO NEWSLETTER</p>
