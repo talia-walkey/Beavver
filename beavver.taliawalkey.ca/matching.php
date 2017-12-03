@@ -193,6 +193,6 @@ require_once('connect.php');
     </script>  
 
     <link href="/build/static/css/main.d93e1e39.css" rel="stylesheet">
-<script type="text/javascript" src="/build/static/js/main.a98f756d.js"></script>
+<script type="text/javascript" src="/build/static/js/main.24773431.js"></script>
   </body>
 </html>
