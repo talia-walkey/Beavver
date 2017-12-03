@@ -1,16 +1,9 @@
-/* Clouds Animation */
-/*        @keyframes cloudsAnim {
-            0% { transform: translateX(0px); }
-            30% { transform: translateX(100px); }
-            90% { transform: translateX (-100px); }
-            100% { transform: translateX(0px); }
-        }
-        
-        #FarLeft {
-            animation: cloudsAnim 4s ease-in-out;
-            animation-iteration-count: infinite;
-            transform-origin: bottom;
-        }*/
+.bottom-clouds {
+    background-image: url("../img/bottom-clouds.svg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 200px;
+}
 
 /* MEDIA QUERIES */
 /* Extra small devices (portrait phones, less than 576px) */

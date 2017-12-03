@@ -5,9 +5,54 @@
 	 viewBox="0 0 1280 216" style="enable-background:new 0 0 1280 216;" xml:space="preserve">
     
 <style type="text/css">
-    <![CDATA[
-
-    ]]>
+       @keyframes cloudsAnim {
+            0% { transform: translate(0px, 0px); }
+            50% { transform: translate(100px, 0px); }
+            100% { transform: translate(0px, 0px); }
+        }
+    
+       @keyframes cloudsAnim1 {
+            0% { transform: translate(300px, 150px); }
+            50% { transform: translate(200px, 150px); }
+            100% { transform: translate(300px, 150px); }
+        } 
+    
+       @keyframes cloudsAnim2 {
+            0% { transform: translate(600px, 70px); }
+            50% { transform: translate(700px, 70px); }
+            100% { transform: translate(600px, 70px); }
+        }
+    
+       @keyframes cloudsAnim3 {
+            0% { transform: translate(1000px, 150px); }
+            50% { transform: translate(900px, 150px); }
+            100% { transform: translate(1000px, 150px); }
+        }       
+        
+        #Left {
+            animation: cloudsAnim 7s ease-in-out;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+    
+        #FarLeft {
+            animation: cloudsAnim1 5s ease-in-out;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+    
+        #Right {
+            animation: cloudsAnim2 7s ease-in-out;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+    
+        #FarRight {
+            animation: cloudsAnim3 8s ease-in-out;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }    
+    
 </style>    
     
 <image style="overflow:visible;" width="100" height="43" id="FarLeft" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAArCAQAAAAk5eVmAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
