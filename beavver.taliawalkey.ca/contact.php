@@ -77,18 +77,18 @@ console.log($_SESSION);
                 <form method="post" action="contact.php">
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="inputEmail4">Name</label>
+                      <label for="name">Name</label>
                       <input name="name" type="text" class="form-control" id="name" placeholder="Name">
                     </div>
                       
                     <div class="form-group col-md-6">
-                      <label for="inputPassword4">Email Address</label>
+                      <label for="email">Email Address</label>
                       <input name="email" type="text" class="form-control" id="email" placeholder="Email Address">
                     </div>
                       
                   </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Your Message</label>
+                        <label for="message">Your Message</label>
                         <textarea name="message" class="form-control" id="message" rows="3"></textarea>
                   </div>
                     
@@ -98,33 +98,74 @@ console.log($_SESSION);
                 <div class="form-group">
                     <!-- To make the contact form functional -->
                     <?php
-                    if (isset($_POST['name'])) {
-                        $name = $_POST['name'];
-                    }
-
-                    if (isset($_POST['email'])) {
-                        $email = $_POST['email'];
-                    }
-
-                    if (isset($_POST['message'])) {
-                        $message = $_POST['message'];
-                    }
+//                    if (isset($_POST['name'])) {
+//                        $name = $_POST['name'];
+//                    }
+//
+//                    if (isset($_POST['email'])) {
+//                        $email = $_POST['email'];
+//                    }
+//
+//                    if (isset($_POST['message'])) {
+//                        $message = $_POST['message'];
+//                    }
+//                    
+//                        $from = 'From: Beavver Contact Form'; 
+//                        $to = 'alynna.alcira@gmail.com'; 
+//                        $subject = 'Beavver Contact Form';
+//
+//                        $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+//
+//                        if (isset($_POST['submit']) && ) {		
+//                            if (mail ($to, $subject, $body, $from)) { 
+//                            $result = "Your message has been sent!";
+//                            echo $result;
+//                        } else { 
+//                           $result = "Something went wrong. Please try again!"; 
+//                            echo $result;
+//                           } 
+//                        }
                     
-                        $from = 'From: Beavver Contact Form'; 
-                        $to = 'alynna.alcira@gmail.com'; 
-                        $subject = 'Beavver Contact Form';
+                        if (isset($_POST["submit"])) {
+                            $name = $_POST['name'];
+                            $email = $_POST['email'];
+                            $message = $_POST['message'];
+                            $from = 'Beavver Contact Form'; 
+                            $to = 'alynna.alcira@gmail.com'; 
+                            $subject = 'Message from Beavver ';
 
-                        $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+                            $body = "From: $name\n E-Mail: $email\n Message:\n $message";
 
-                        if (isset($_POST['submit'])) {		
-                            if (mail ($to, $subject, $body, $from)) { 
-                            $result = "Your message has been sent!";
+                            // Check if name has been entered
+                            if (!$_POST['name']) {
+                                $errName = 'Please enter your name';
+                                echo "<p class='text-danger'>$errName</p>";           
+                            }
+
+                            // Check if email has been entered and is valid
+                            if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                                $errEmail = 'Please enter a valid email address';
+                                echo "<p class='text-danger'>$errEmail</p>";
+                            }
+
+                            //Check if message has been entered
+                            if (!$_POST['message']) {
+                                $errMessage = 'Please enter your message';
+                                echo "<p class='text-danger'>$errMessage</p>";
+                            }
+
+                    // If there are no errors, send the email
+                    if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
+                        if (mail ($to, $subject, $body, $from)) {
+                            $result='<div class="alert alert-success">Thank You! Your message has been sent.</div>';
                             echo $result;
-                        } else { 
-                           $result = "Something went wrong. Please try again!"; 
+                        } else {
+                            $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
                             echo $result;
-                           } 
                         }
+                    }
+                        }     
+                    
                     ?>
                 </div>
                 </form>                                
