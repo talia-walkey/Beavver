@@ -3,8 +3,8 @@ session_start();
 require_once('connect.php');
 //var_dump($_SESSION['user']['first_name']);
 
-//phpinfo();
-//die;
+////phpinfo();
+////die;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,13 +18,15 @@ require_once('connect.php');
     <!-- Bootstrap -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-grid.css" rel="stylesheet">
-    <link href="css/beavver_mycareer.css" rel="stylesheet">
+    <link href="css/beavver-mycareer.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat:700" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />
+      
+    <link href="/beavver.taliawalkey.ca/jbbuild/static/css/main.19104512.css" rel="stylesheet">
       
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -122,7 +124,7 @@ require_once('connect.php');
         <br/>
         <div id="gray-bg2">
             <p class="ctitle">CONNECT</p>
-            <button id="revokeAllScopes" id="google-api">
+            <button id="google-api" id="revokeAllScopes">
                 <img class="btnImg" src="img/google-logo-w.svg"/>
                 DISCONNECT GOOGLE
             </button>
@@ -146,7 +148,7 @@ require_once('connect.php');
         </div>
         <br/>
         <div id="imgcenter">
-            <button id="inline" id="cleft" class="msubmit">SAVE CHANGE</button>
+            <button class="msubmit">SAVE CHANGE</button>
             <button  id="closeAccount" class="cancel" type='destroy'>X CLOSE MY ACCOUNT</button>
         </div><br/>
         
@@ -192,6 +194,8 @@ require_once('connect.php');
    
     <input id="slide-3-trigger" type="radio" name="slides">
     <section class="slide slide-three" id="jobbank-section">
+        <div id="root"></div>
+<!--
         <div id="gray-bg3">
             <br/><br/>
             <div class="row">
@@ -218,7 +222,9 @@ require_once('connect.php');
 
                 </div>
             
-        </div><br/>
+        </div>
+-->
+        <br/>
         <div class="bluebox">
             <p id="inline" class="ctitle">
                 <b>ADDING A JOB IS SIMPLE:</b> Click on "Add new" and fill up with details or click on "Save job" while matching with your resume.
@@ -230,7 +236,11 @@ require_once('connect.php');
     <input id="slide-4-trigger" type="radio" name="slides">
     <section class="slide slide-four" id="savedcourses-section">
         <div id="gray-bg">
-            <p class="ctitle"><b>UNDER CONSTRUCTION</b></p>
+            <div class="row">
+                <div class="col"><span><b>COURSE NUMBER</b></span></div>
+                <div class="col"><span><b>COURSE NAME</b></span></div>
+                <div class="col"><span><b>COURSE URL</b></span></div>
+            </div>
         </div>
     </section>
 </div>
@@ -258,6 +268,8 @@ require_once('connect.php');
                     }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
                  };
             </script> 
+      
+    <script type="text/javascript" src="/beavver.taliawalkey.ca/jbbuild/static/js/main.ab8817d5.js"></script>
 <!-- close Account --> 
     
   </body>
