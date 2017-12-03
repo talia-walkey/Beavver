@@ -160,12 +160,12 @@ console.log($_SESSION);
                          window.location.href = "registeredProfile.php";
                      });
                  
-                 //SEARCH BAR ANIMATION
+               /*  //SEARCH BAR ANIMATION
                 $(document).ready(function(){
                     $("#nav-search").click(function(){
                         $("#search-box").slideToggle();
                     });
-                });
+                });*/
                  
              </script>
 

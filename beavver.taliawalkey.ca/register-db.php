@@ -20,14 +20,17 @@ session_start();
         $email = $_POST['email'];
         $password = $_POST['password'];
         $confirm_password= $_POST['confirm_password'];
-        
-        
+   
+        $gmailfirst_name = $_SESSION['user']['first_name'];
+        $gmaillast_name = $_SESSION['user']['last_name'];
+        $gmailemail = $_SESSION['user']['email'];
+      
         $type = $_POST['type'];
     
         if($type == "reg"){ 
              $sql = "INSERT INTO login (first_name, last_name, email, password, confirm_password) VALUES ('$first_name', '$last_name', '$email', '$password', '$confirm_password')";
              $conn->exec($sql);
-                //echo 'register button is clicked';
+             //echo 'register button is clicked';
         }else if($type == "log"){
             $sql = "SELECT id, first_name, last_name, email FROM login WHERE email='$email' AND password='$password'";
             $result=$conn->query($sql);
@@ -44,6 +47,10 @@ session_start();
             //var_dump($_SESSION);
             echo json_encode($user);
             exit;
+        }else{ 
+             $sql = "INSERT INTO login (first_name, last_name, email) VALUES ('$gmailfirst_name', '$gmaillast_name', '$gmailemail')";
+             $conn->exec($sql);
+             echo 'gmail button is clicked';
         }
     
         
