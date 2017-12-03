@@ -484,7 +484,7 @@ body {
 }
 
 .primaryBtn {
-  width: 120px;
+  width: 150px;
   height: 37px;
   border-radius: 18.5px;
   background-color: #ffb13b;
@@ -496,7 +496,7 @@ body {
 }
 
 .secondaryBtn {
-  width: 120px;
+  width: 150px;
   height: 37px;
   border-radius: 18.5px;
   background-color: white;

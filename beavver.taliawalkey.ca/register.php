@@ -68,7 +68,7 @@ session_start();
             </div>
                     
             <div class="form-group">
-                  <input class="regiinput form-control" type="text" placeholder="First Name" id='first_name' name='first_name' required>
+                  <input class="regiinput form-control" type="text" placeholder="First Name" id='first_name' name='first_name' maxlength="10" required>
                   <hr class="dashline">
             </div>
                           
@@ -76,7 +76,7 @@ session_start();
                   <input type="hidden" value="reg" name="type" />
                           
             <div class="form-group">
-                  <input type="text" class="regiinput form-control" placeholder="Last Name" id='last_name' name='last_name' required>
+                  <input type="text" class="regiinput form-control" placeholder="Last Name" id='last_name' name='last_name' maxlength="10" required>
                               <hr class="dashline">
             </div>
                           
