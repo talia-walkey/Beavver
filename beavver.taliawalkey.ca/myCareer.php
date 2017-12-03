@@ -18,7 +18,7 @@ require_once('connect.php');
     <!-- Bootstrap -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-grid.css" rel="stylesheet">
-    <link href="css/beavver-mycareer.css" rel="stylesheet">
+    <link href="css/beavver-mycareer.css?d=<?php echo time(); ?>" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -26,7 +26,7 @@ require_once('connect.php');
     
     <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />
       
-    <link href="/beavver.taliawalkey.ca/jbbuild/static/css/main.19104512.css" rel="stylesheet">
+    <link href="/jbbuild/static/css/main.19104512.css" rel="stylesheet">
       
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -269,7 +269,7 @@ require_once('connect.php');
                  };
             </script> 
       
-    <script type="text/javascript" src="/beavver.taliawalkey.ca/jbbuild/static/js/main.ab8817d5.js"></script>
+    <script type="text/javascript" src="/jbbuild/static/js/main.ab8817d5.js"></script>
 <!-- close Account --> 
     
   </body>
