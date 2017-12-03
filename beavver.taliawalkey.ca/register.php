@@ -110,13 +110,17 @@ session_start();
                 </div>  
                 <br/>
 <!--Google SignIn -->
+<!--HIDDEN INPUT TO DECLARE LOGIN OR SIGNUP -->
+                 <input type="hidden" value="gmailReg" name="type" />
+                <form id="gmailForm" method='POST'>
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <div class="g-signin2" data-onsuccess="onSignIn" id="GoogleLogin"></div> 
+                        <div class="g-signin2" data-onsuccess="onSignIn" id="GoogleLogin" type='gmailReg'></div> 
                     </div>
                     <div class="col-md-4"></div>
-                </div>    
+                </div> 
+                </form>
            
 <!--end Google SignIn -->
                       
@@ -138,22 +142,38 @@ session_start();
             </div>  
 
             <div><?php include 'footer.php';?></div>
-        
+            
+<!--send Beavver Login to DB -->        
         <script>
         var obj;
         $(document).ready(function(){
             document.getElementById("registerForm").addEventListener("submit", function(ev){
-//stops form from reloading
                 ev.preventDefault();
-//load the page via javascript instead of going to the page itself
                 $.post("register-db.php",
                     $("#registerForm").serialize(), 
                     function(resp){
                     var obj = JSON.parse(resp);
                     console.log(obj);
                     if(obj.status == 1){
-//go to the next page
-                    //window.location.href="myprofile.php";
+                        }
+                    }
+                    
+                )
+            });
+        });
+        
+//send Gmail Login to DB       
+        var obj;
+        $(document).ready(function(){
+            document.getElementById("GoogleLogin").addEventListener("submit", function(ev){
+                console.log("gmail sent to db");
+                ev.preventDefault();
+                $.post("register-db.php",
+                    $("#gmailForm").serialize(), 
+                    function(resp){
+                    var obj = JSON.parse(resp);
+                    console.log(obj);
+                    if(obj.status == 1){
                         }
                     }
                 )
@@ -164,7 +184,8 @@ session_start();
 <!--start SESSION --> 
               <script>
                  document.getElementById("submitBut").onclick = function () {
-                    location.href = "landingLogin.php";
+                    console.log("CLICKED");
+                    //location.href = "landingLogin.php";
                  var fd = new FormData();
                     fd.append("email", document.getElementById("exampleInputEmail1").value);
                     fd.append("type", "log");
@@ -208,18 +229,27 @@ session_start();
 <!-- Password Validation -->
       <script>
                 function validationFunc() {
-                    console.log("login is clicked");
-                    var pass1 = document.getElementById("pass1").value;
-                    var pass2 = document.getElementById("pass2").value;
                     
+                var pass1 = document.getElementById("pass1").value;
+                var pass2 = document.getElementById("pass2").value;
+                var first_name = document.getElementById("first_name").value;
+                var last_name = document.getElementById("last_name").value;
+                var email = document.getElementById("exampleInputEmail1").value;
+                    
+                    
+                    //window.location.href='landingLogin.php';
                     if (pass1 == pass2 && pass2 !="" && pass1 !="") {
+                        if(first_name != ' ' && email != ' ' && last_name != ' '){
                         window.location.href="index.php";
-                    }
-                    else {
-                        alert("Passwords Do not match");
+                        console.log("register is clicked");
+                   }}
+                   
+                   
+                    /*else {
+                        //alert("Passwords Do not match");
                         document.getElementById("pass1").style.color = "#E34234";
                         document.getElementById("pass2").style.color = "#E34234";
-                    }
+                    }*/
     }
             </script>
       

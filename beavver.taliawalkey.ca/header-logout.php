@@ -63,7 +63,7 @@ var_dump($_SESSION);
             <!-- LOGIN -->  
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <button class="secondaryBtn">
+                  <button class="secondaryBtn" id="headerLogin">
                       <span id="before-login-span">LOGIN</span>
                       <span class="caret"></span>
                 </button>
@@ -128,13 +128,25 @@ var_dump($_SESSION);
                     }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
                  };
                  
+                 document.getElementById("headerLogin").onclick = function () {
+                    //location.href = "landingLogin.php";
+                 var fd = new FormData();
+                    fd.append("type", "log");
+                    
+                    fetch("register-db.php",{
+                        credentials: 'same-origin',
+                        method:"POST",
+                        body:fd
+                    })
+                 };
+                 
                  
                   function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
-            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('ID: ' + profile.getId()); 
              console.log('Given Name: ' + profile.getGivenName());
              console.log('Family Name: ' + profile.getFamilyName());
-             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+             console.log('Email: ' + profile.getEmail()); 
               var fd = new FormData();
                             fd.append("email", profile.getEmail());
                             fd.append("first_name", profile.getGivenName());
@@ -162,7 +174,10 @@ var_dump($_SESSION);
                  var butClick = document.getElementById('signup-button');
                      butClick.addEventListener("click", function(){
                         window.location.href = "register.php";
-                      
+                     });
+                var loginClick = document.getElementById('GoogleLogin');
+                    loginClick.addEventListener("click", function(){
+                        window.location.href = "landingLogin.php";
                      });
                  
              </script>

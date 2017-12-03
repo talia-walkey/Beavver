@@ -48,13 +48,43 @@ console.log($_SESSION);
             }
         ?>   
         
+        <!--<script>
+        window.onload = function () {
+             if (! localStorage.justOnce) {
+             localStorage.setItem("justOnce", "true");
+             window.location.reload();
+            }
+        }
+        </script>-->
+        
+      <script type='text/javascript'>
+
+            (function()
+            {
+              if( window.localStorage )
+              {
+                if( !localStorage.getItem('firstLoad') )
+                {
+                  localStorage['firstLoad'] = true;
+                  window.location.reload();
+                  console.log('page is loaded');
+                }  
+                else
+                  localStorage.removeItem('firstLoad');
+              }
+            })();
+
+</script>
+        
     <!-- for local development only -->
         <?php
 //            include 'header-login.php'
         ?>        
 
     </div>
-
+    
+    
+    
     <div id="content">
         
         <!-- CARDS -->
@@ -278,6 +308,9 @@ console.log($_SESSION);
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>      
+      
+      
+    
       
       
     <script>
