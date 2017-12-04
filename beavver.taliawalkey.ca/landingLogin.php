@@ -40,7 +40,7 @@ console.log($_SESSION);
     <div>
         <?php 
             if (empty($_SESSION["user"])) {
-               include 'header-logout.php';
+               //include 'header-logout.php';
                include 'login-warning.php';
                exit();
             } else {

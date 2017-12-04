@@ -56,10 +56,9 @@ var_dump($_SESSION);
             <li><a href=faqs.php>FAQ</a></li>
           </ul>
 
-        <!-- SEARCH -->    
+  
           <ul class="nav navbar-nav navbar-right">
-            <li><span class="glyphicon glyphicon-search" id="nav-search"></span></li>
-              
+           
             <!-- LOGIN -->  
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -205,9 +204,12 @@ var_dump($_SESSION);
     });
                          
     </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       
 <!-- Google SignIn SCRIPT -->
       <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+      
 
     </body>
 </html>

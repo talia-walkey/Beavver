@@ -68,10 +68,8 @@ console.log($_SESSION);
             <li><a href="faqs.php">FAQ</a></li>
           </ul>
 
-        <!-- SEARCH -->    
           <ul class="nav navbar-nav navbar-right">
-            <li><span class="glyphicon glyphicon-search" id="nav-search"></span></li>
-              
+            
              
             <!-- LOGIN -->  
             <li class="dropdown">

@@ -553,7 +553,7 @@ body {
 #footer {
     background-color: #333;
     color: #FFF;
-    position: relative;
+    position: static;
     margin-top: 10;
     right: 0;
     bottom: 0;

@@ -30,7 +30,7 @@
     <div>
         <?php 
             if (empty($_SESSION["user"])) {
-                include 'header-logout.php';
+                //include 'header-logout.php';
             } else {
                 include 'header-login.php';
             }
@@ -68,6 +68,10 @@
     		<div class="col-md-10 center-text">
                 <br/>
                 <h2>Oops! Please login or register to see this page!</h2>
+                <h3>Make sure you entered the correct email and password.</h3>
+                <button class="primaryBtn" >
+                <a href='index.php'>Go Back</a>
+                </button>
                 <div style="height:40vh;"></div>
             </div>
             <div class="col-md-1"></div>
