@@ -42,12 +42,6 @@ console.log($_SESSION);
     <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />   
      <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body>
     <!-- NAV BAR -->
@@ -113,8 +107,6 @@ console.log($_SESSION);
       </div><!-- /.container-fluid -->
 </nav>
 
-
-
     <!-- SEARCH BAR -->  
     <div id="search-box" class="form-row align-items-center">
         <input type="text" class="form-control" placeholder="Search" id="search-input">  
@@ -134,16 +126,6 @@ console.log($_SESSION);
       
       
       <script>
-                /* var butClick = document.getElementById('signup-button');
-                     butClick.addEventListener("click", function(){
-                         window.location.href = "register.php";
-                     });
-                     */
-                /*var signOut = document.getElementById('signOut');
-                     signOut.addEventListener("click", function(){
-                         console.log("clicked");
-                         window.location.href = "index.php";
-                     });*/
                      
 //sign out gmail
                       function signOut() {
@@ -152,6 +134,7 @@ console.log($_SESSION);
                           console.log('User signed out.');
                         });
                       }
+                      
 //end sign out gmail
                      
                 var myProfile = document.getElementById('myProfile');

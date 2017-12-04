@@ -5,7 +5,7 @@ session_start();
         $user = $_SESSION['user']['id'];
         $course = $_POST['course'];
 
-        
+        var_dump($_SESSION);
         //this inserts into the db. if you added more ^^ then add them here too
              $sql = "INSERT INTO user_courses (user_id, courses_id) VALUES ('$user','$course')";
              $conn->exec($sql);

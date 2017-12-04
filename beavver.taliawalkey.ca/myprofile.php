@@ -1,3 +1,13 @@
+<?php
+session_start();
+require_once('connect.php');
+//var_dump($_SESSION);
+
+console.log($_SESSION);
+//phpinfo();
+//exit;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,6 +26,7 @@
     <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat:700" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />   
+    <link rel="stylesheet" type="text/css" href="css/beavver-mycareer.css?d=<?php echo time(); ?>" />   
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,55 +36,54 @@
     <![endif]-->
   </head>
   <body>        
-    <a name="top"></a>   
-
-    <div>
+  
         <?php 
             if (empty($_SESSION["user"])) {
                 include 'header-logout.php';
+                header("Location: http://beavver.taliawalkey.ca/login-warning.php");
+                //die();
             } else {
                 include 'header-login.php';
             }
         ?>   
+    <a name="top"></a>   
+
+    <div>
+        <!-- Make sure to change this to 'header-login.php' for pages that user is logged in -->
+        <?php include 'header-login.php';?>
     </div>
     
-    <script type='text/javascript'>
-
-            (function()
-            {
-              if( window.localStorage )
-              {
-                if( !localStorage.getItem('firstLoad') )
-                {
-                  localStorage['firstLoad'] = true;
-                  window.location.reload();
-                  console.log('page is loaded');
-                }  
-                else
-                  localStorage.removeItem('firstLoad');
-              }
-            })();
-
-</script>
-    
+    <!-- BREADCRUMBS -->
+    <nav aria-label="breadcrumb" role="navigation">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">My Career</li>
+      </ol>
+    </nav>        
+        
     
     <div class="content"> 
-        <img src="img/pattern.jpg" class="pattern">
-    <br/><br/>    
-                
+        
     <!-- PAGE HEADER -->    
     <div class="container-fluid templates-content">
         <div class="row">
             <div class="col-md-1"></div>
-    		<div class="col-md-10 center-text">
-                <br/>
-                <h2>Oops! Please login or register to see this page!</h2>
-                <div style="height:40vh;"></div>
+    		<div class="col-md-10">
+                <div class="orange-line"></div>
+                <img src="img/gray-circle.png" class="gray-circle"/>
+                <h1 class="page-title">MY PROFILE</h1>
             </div>
             <div class="col-md-1"></div>
         </div>
         
     </div> <!-- END OF CONTENT -->
+    
+    <div>
+        
+        this is information about the user.
+        
+        
+    </div>
     
     </div>
     

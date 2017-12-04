@@ -113,9 +113,10 @@ var_dump($_SESSION);
            
 <!--end Google SignIn -->
 <!--start SESSION --> 
-              <script type="text/javascript">
+              <script>
                  document.getElementById("submitBut").onclick = function () {
-                    location.href = "landingLogin.php";
+                    console.log("CLICKED");
+                    //location.href = "landingLogin.php";
                  var fd = new FormData();
                     fd.append("email", document.getElementById("exampleInputEmail1").value);
                     fd.append("type", "log");
@@ -124,29 +125,17 @@ var_dump($_SESSION);
                     fetch("register-db.php",{
                         credentials: 'same-origin',
                         method:"POST",
-                        body:fd
+                        body:fd,
+                        credentials:'same-origin'
                     }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
                  };
-                 
-                 document.getElementById("headerLogin").onclick = function () {
-                    //location.href = "landingLogin.php";
-                 var fd = new FormData();
-                    fd.append("type", "log");
-                    
-                    fetch("register-db.php",{
-                        credentials: 'same-origin',
-                        method:"POST",
-                        body:fd
-                    })
-                 };
-                 
-                 
-                  function onSignIn(googleUser) {
+                //get Gmail Register Information        
+        function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
-            console.log('ID: ' + profile.getId()); 
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
              console.log('Given Name: ' + profile.getGivenName());
              console.log('Family Name: ' + profile.getFamilyName());
-             console.log('Email: ' + profile.getEmail()); 
+             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
               var fd = new FormData();
                             fd.append("email", profile.getEmail());
                             fd.append("first_name", profile.getGivenName());
@@ -157,12 +146,24 @@ var_dump($_SESSION);
                                 body:fd,
                                 credentials:'same-origin'
                         })
-              
 }
-            </script>    
-<!-- end SESSION -->      
-                
+             
+//end SESSION
 
+ var obj;
+        $(document).ready(function(){
+            document.getElementById("GoogleLogin").addEventListener("submit", function(ev){
+                    $.post( 
+                    function(resp){
+                    var obj = JSON.parse(resp);
+                    console.log(obj);
+                    if(obj.status == 1){
+                        }
+                    }
+                )
+            });
+        });
+</script>
 
 <!--                    </form>-->
                 </div>
@@ -175,11 +176,11 @@ var_dump($_SESSION);
                      butClick.addEventListener("click", function(){
                         window.location.href = "register.php";
                      });
+                     
                 var loginClick = document.getElementById('GoogleLogin');
                     loginClick.addEventListener("click", function(){
                         window.location.href = "landingLogin.php";
                      });
-                 
              </script>
              
           </ul>
@@ -193,9 +194,6 @@ var_dump($_SESSION);
         <a href="#"><span class="glyphicon glyphicon-search" id="search-icon"></span></a>
     </div>  
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
         
     <script>
@@ -213,5 +211,3 @@ var_dump($_SESSION);
 
     </body>
 </html>
-
-
