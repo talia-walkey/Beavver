@@ -116,7 +116,7 @@ var_dump($_SESSION);
               <script>
                  document.getElementById("submitBut").onclick = function () {
                     console.log("CLICKED");
-                    //location.href = "landingLogin.php";
+                    location.href = "landingLogin.php";
                  var fd = new FormData();
                     fd.append("email", document.getElementById("exampleInputEmail1").value);
                     fd.append("type", "log");
