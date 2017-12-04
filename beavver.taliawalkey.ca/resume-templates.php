@@ -73,7 +73,7 @@ console.log($_SESSION);
             </div>
             <div class="col-md-5 col-xs-6">
                 <h2>Free Downloadable Resume Templates</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem.</p>
+                <p>Many companies are now using Applicant Tracking Systems to simplify their hiring process due to the massive volume of applications they receive. If you have that is not optimized for ATS, it is likely that companies will not even see your resume. As a member of Beavver, you have access to these free resume templates that are all ATS-friendly.</p>
             </div>	
             <div class="col-md-5">
                 <img src="img/beavver-print.svg" class="templates-img" alt="graphic">			
@@ -118,7 +118,7 @@ console.log($_SESSION);
             </div>
             <div class="col-md-10 col-xs-10">
                 <h2>Most Popular</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem.</p>
+                <p>These are the most popular resume templates as they can be used within any industry.</p>
             </div>	
             <div class="col-md-1">
             </div>
@@ -164,7 +164,7 @@ console.log($_SESSION);
             </div>
             <div class="col-md-10 col-xs-10">
                 <h2>ATS Optimized</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the lorem.</p>
+                <p>These resumes are formatted to be ATS-proof.</p>
             </div>	
             <div class="col-md-1">
             </div>
@@ -175,7 +175,7 @@ console.log($_SESSION);
             <div class="col-md-3 templates-gallery">
                 <figure class="figure">
                     <a href="download.php?download_file=template-04.docx">
-                     <img src="templates/template-02.jpg" class="figure-img img-fluid rounded" alt="Template Four">
+                     <img src="templates/template-04.jpg" class="figure-img img-fluid rounded" alt="Template Four">
                       <figcaption class="figure-caption text-center">Template Four</figcaption>
                     </a>
                 </figure>
