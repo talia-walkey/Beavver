@@ -39,7 +39,7 @@ session_start();
             //var_dump($_SESSION);
             echo json_encode($user);
             exit;
-        }else if($type=="destroy"){
+        }/*else if($type=="destroy"){
             $sql = "DELETE * FROM login WHERE email = '$email'";
             $result=$conn->query($sql);
             $user=$result->fetchAll(PDO::FETCH_ASSOC);
@@ -47,7 +47,7 @@ session_start();
             //var_dump($_SESSION);
             echo json_encode($user);
             exit;
-        }else{ 
+        }*/else{ 
              $sql = "INSERT INTO login (first_name, last_name, email) VALUES ('$gmailfirst_name', '$gmaillast_name', '$gmailemail')";
              $conn->exec($sql);
              echo 'gmail button is clicked';
