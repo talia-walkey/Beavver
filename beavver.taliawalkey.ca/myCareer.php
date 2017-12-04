@@ -236,11 +236,14 @@ require_once('connect.php');
     <input id="slide-4-trigger" type="radio" name="slides">
     <section class="slide slide-four" id="savedcourses-section">
         <div id="gray-bg">
-            <div class="row">
-                <div class="col"><span><b>COURSE NUMBER</b></span></div>
-                <div class="col"><span><b>COURSE NAME</b></span></div>
-                <div class="col"><span><b>COURSE URL</b></span></div>
-            </div>
+            <table id="cTable">
+              <tr>
+                <th>COURSE NUMBER</th>
+                <th>COURSE NAME</th>
+                <th>COURSE URL</th>
+              </tr>
+            </table>
+            <p id="userwarn"></p>
         </div>
     </section>
 </div>
@@ -255,6 +258,53 @@ require_once('connect.php');
     <script src="js/bootstrap.min.js"></script>
 <!-- close Account -->    
     <script type="text/javascript">
+                
+                var cTable = document.getElementById('cTable');
+                var arr = [];
+                var userwarn = document.getElementById('userwarn');
+                
+                window.onload = getCourses();
+                
+                function getCourses(){
+                    
+                    fetch("http://localhost:8888/beavver.taliawalkey.ca/getcourse.php",{
+                        method:"GET",
+                        credentials:"same-origin"
+                    }).then((resp)=>{
+                        console.log(resp);
+                        return resp.json();
+                    }).then((json)=>{
+                        arr = json;
+                        console.log(arr);
+                        if(arr.length !== 0){
+                           for(var i=0; i<arr.length; i++){
+                            var mTrow = document.createElement('TR');
+                            var mTdata1 = document.createElement('TD');
+                            var mTtext1 = document.createTextNode(arr[i].crse_numb);
+                            var mTdata2 = document.createElement('TD');
+                            var mTtext2 = document.createTextNode(arr[i].crse_name);
+                            var mTdata3 = document.createElement('TD');
+                            var mTtext3 = document.createTextNode(arr[i].crse_url);
+
+                            mTdata1.appendChild(mTtext1);
+                            mTdata2.appendChild(mTtext2);
+                            mTdata3.appendChild(mTtext3);
+                            mTrow.appendChild(mTdata1);
+                            mTrow.appendChild(mTdata2);
+                            mTrow.appendChild(mTdata3);
+                            cTable.appendChild(mTrow); 
+                        }
+                        
+                    }else{
+                        userwarn.innerHTML = "Your have no saved courses now. Go ahead and scan your resume and save some courses to improve your skills."
+                    }
+                        
+                    });
+                    
+                    console.log(arr);
+
+                };            
+        
                  document.getElementById("closeAccount").onclick = function () {
                     //location.href = "index.php";
                  var fd = new FormData();
