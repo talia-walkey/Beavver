@@ -212,7 +212,7 @@ require_once('connect.php');
                 <div class="circle-num">2</div>
                 <span class="section-title">MATCHING RATE</span>
                 <h2>Get your resume ready for automated softwares.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas ligula a efficitur ultrices.</p>
+                <p>Beavver ensures that you pass a company's applicant system and increase your chances in landing an interview.</p>
             </div>
             <div class="col-md-6">
                 <img src="img/beavver-print.svg" class="img-responsive beavver-images">
@@ -228,7 +228,7 @@ require_once('connect.php');
                 <div class="circle-num">3</div>
                 <span class="section-title">CAREER PATH</span>
                 <h2>Pursue your dream job by keeping track of your career.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas ligula a efficitur ultrices.</p>
+                <p>Beavver allows you to save a list of your results, getting you closer to landing your dream job.</p>
             </div>
             <div class="col-md-1"></div>
         </div> 

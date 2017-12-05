@@ -16,6 +16,9 @@ var_dump($_SESSION);
      <meta name="google-signin-client_id" content="651246939702-uhm0eltj2jfa6ipjt9hvtpisr94pqla7.apps.googleusercontent.com">
      
     <title>Beavver</title>
+      
+    <!-- FavIcon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
 
     <!-- Bootstrap -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">

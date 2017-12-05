@@ -31,6 +31,9 @@ console.log($_SESSION);
 
      
     <title>Beavver</title>
+      
+    <!-- FavIcon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>  
 
     <!-- Bootstrap -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">
