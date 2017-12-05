@@ -3,7 +3,7 @@
 }
 
 .cwrap {
-    height: 800px;
+    height: 1000px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -18,7 +18,7 @@
     left: 0;
     z-index: 900;
     width: 25%;
-    height: 300px;
+    height: 1000px;
 }
 
 .mycategory{
@@ -30,9 +30,13 @@
     background-color: #66cccc;
 }
 
+section {
+    height: auto;
+}
+
 .slide {
     float: right;
-    height: 800px;
+    height: 1000px;
     width: 75%;
     position: absolute;
     top: 0;
@@ -69,18 +73,19 @@
     height: auto;
     background-color: #f5f5f5;
     z-index: -1;
+    text-align: center;
 }
 
 #gray-bg1 {
     width: 75%;
-    height: 320px;
+    height: auto;
     background-color: #f5f5f5;
     z-index: -1;
 }
 
 #gray-bg2 {
     width: 75%;
-    height: 150px;
+    height: auto;
     background-color: #f5f5f5;
     z-index: -1;
 }
@@ -227,7 +232,8 @@
 }
 
 #ccenter {
-    transform: translateX(-15%);
+/*    transform: translateX(-15%);*/
+    width: 75%;
 }
 
 #changeWidth {
@@ -245,4 +251,36 @@
     border-color: lightgray;
     border-style: solid;
     border-radius: 10px;
+}
+
+table, tr, td, th {    
+    border: 0px solid #ddd;
+    text-align: left;
+    margin-left: 30px;
+    margin-right:30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 30px;
+}
+
+
+/*media query*/
+
+@media screen and (max-width: 800px) {
+    .ccontrol {
+        width: 18%;
+    }
+    .slide {
+        width: 90%;
+    }
+    
+    .cwrap {
+        height: 1200px;
+    }
 }
