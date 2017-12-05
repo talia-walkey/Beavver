@@ -337,6 +337,7 @@ body {
     #nav-search { display: none; }
     #logo { height: 40px !important; width: auto !important; margin: 5px !important; padding-bottom: 20px !important;}
     .gray-line { display: none; }
+    .newsletter, .footer-nav { display: none; }
 
 }
 
@@ -350,6 +351,9 @@ body {
     .dropdown-menu { background-color: #333333 !important;}
     .gray-line { display: none; }
     #signup-button { margin-top: 10px !important;}
+    .newsletter, .footer-nav { display: none; }
+    .copyright-msg { margin-left: 50px !important;}
+    #footer { height: auto; }
 
 }
 
@@ -358,6 +362,8 @@ body {
     .navbar { height: auto !important; }
     #nav-search { display: none; }
     .navbar-right { float: none !important; margin-left: 250px; }
+    .newsletter { display: none; }
+    .copyright-msg { margin-left: 200px;}
 }
 
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {

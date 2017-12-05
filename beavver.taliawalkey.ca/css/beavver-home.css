@@ -1,13 +1,13 @@
 #landing-content {
     background-image: url("../img/top-clouds.svg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width: 100vw;
     height: auto;
 }
 
 .bottom-clouds {
     background-image: url("../img/bottom-clouds.svg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width: 100vw;
     height: 200px;
 }
@@ -15,7 +15,7 @@
 /* MEDIA QUERIES */
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) { 
-
+/*    #video { width: 300px !important; }*/
 
 }
 
@@ -23,11 +23,15 @@
 @media (max-width: 767px) { 
     #landing-content, .bottom-clouds { background-image: none; }
 
+/*    #video { width: 500px; }*/
+
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991px) { 
     .how-it-works-btn { display: inline-block !important; margin-top: 15px; }
+    
+/*    #video { width: 600px; }*/
 }
 
 /* Nav button */

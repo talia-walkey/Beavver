@@ -91,10 +91,12 @@ console.log($_SESSION);
 
                 <!-- AFTER LOGIN -->  
                 <div id="after-login">
-                    <li><a href="myCareer.php#slide-1-trigger" id="myProfile">My Profile</a></li>
-                    <li><a href="myCareer.php#slide-2-trigger">My Resume</a></li>
-                    <li><a href="myCareer.php#slide-3-trigger">My Job Bank</a></li>
-                    <li><a href="myCareer.php#slide-4-trigger">Saved Courses</a></li>
+                    <li><a href="myCareer.php" id="myProfile">My Profile</a></li>
+<!--
+                    <li><a href="myCareer.php">My Resume</a></li>
+                    <li><a href="myCareer.php">My Job Bank</a></li>
+                    <li><a href="myCareer.php">Saved Courses</a></li>
+-->
                     <li role="separator" class="divider"></li>
                     <li><a href="logout.php" onclick="signOut();"> Sign Out</a></li>
                   

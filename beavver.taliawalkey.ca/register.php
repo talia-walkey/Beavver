@@ -48,6 +48,7 @@ session_start();
     </div>
 
 <div class="content">
+    <img src="img/pattern.jpg" class="pattern">
     <br/><br/>
     <!-- BREADCRUMBS -->
     <nav aria-label="breadcrumb" role="navigation">

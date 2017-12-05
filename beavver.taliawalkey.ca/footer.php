@@ -32,7 +32,7 @@
     <div id="footer">
         
         <!-- NEWLETTER -->
-        <div class="container">
+        <div class="container newsletter">
           <div class="row newsletter-row">
             <div class="col-6 col-sm-6">
               <p>SUBSCRIBE TO NEWSLETTER</p>

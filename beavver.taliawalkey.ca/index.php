@@ -282,7 +282,21 @@ require_once('connect.php');
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <img src="img/video-placeholder.png" class="img-responsive howto-video" alt="How It Works Video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <video id="video" width="800" controls poster="img/video-poster.jpg">
+                        <source src="img/beavver-video.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                      </video>
+                    </div>
+                    
+                    <script>
+                        video = document.getElementById("video");
+                        
+                        video.addEventListener("click", function(){
+                            video.play();
+                        });
+                
+                    </script>
                 </div>
                 <div class="col-md-1"></div>
             </div>
