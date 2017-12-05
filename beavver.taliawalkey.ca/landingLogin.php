@@ -164,7 +164,7 @@ console.log($_SESSION);
                                 <div class="carousel-inner" role="listbox">
                                   <div class="item active">
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-6">
                                             <img src="img/step1.png" alt="Matching Page" class="carousel-img">
                                         </div>
                                         <div class="col-md-5 beavver-info">
