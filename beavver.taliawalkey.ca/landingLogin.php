@@ -158,13 +158,13 @@ console.log($_SESSION);
                         <!-- Beavver Section -->
                         <div id="beavver-section" class="tab-pane fade in active">
                             <br/>
-                            <h3 class="center-text">How to Use Beavver</h3>
+                            <!--h3 class="center-text">How to Use Beavver</h3-->
                               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
                                   <div class="item active">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-8">
                                             <img src="img/step1.png" alt="Matching Page" class="carousel-img">
                                         </div>
                                         <div class="col-md-5 beavver-info">
