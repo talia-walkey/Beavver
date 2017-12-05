@@ -165,13 +165,13 @@ console.log($_SESSION);
                                   <div class="item active">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                            <img src="img/step1.png" alt="Matching Page" class="carousel-img">
                                         </div>
                                         <div class="col-md-5 beavver-info">
                                             <div class="circle-num">1</div>
-                                            <h3>Get your resume ready</h3>
+                                            <h3>Get the job position and your resume ready</h3>
                                             <br/><br/>
-                                            <p>To start tailoring your resume, the first step is to get your current resume in a text format that you can copy.
+                                            <p>Open your current resume, and the job description you want to apply for. They be in a website, MS Word document, or any other tool where you can copy the text.
                                             </p>
                                         </div>
                                     </div>    
@@ -179,13 +179,13 @@ console.log($_SESSION);
                                   <div class="item">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                            <img src="img/step2.png" alt="Matching Page" class="carousel-img">
                                         </div>
                                         <div class="col-md-5 beavver-info">
                                             <div class="circle-num">2</div>
-                                            <h3>Get the description of your dream job</h3>
+                                            <h3>Adding your information into Beavver</h3>
                                             <br/><br/>
-                                            <p>The next step is to get the description of the job position you are planning to apply to in a text format that you can copy.
+                                            <p>On the matching page, start by selecting your profession from the dropdown menu (1), then copy your resume and paste it into the resume field (2). Finally, copy the job posting text and paste it into the job description field(3).
                                             </p>
                                         </div>
                                     </div> 
@@ -193,13 +193,13 @@ console.log($_SESSION);
                                   <div class="item">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                            <img src="img/step3.png" alt="Matching Page" class="carousel-img">
                                         </div>
                                         <div class="col-md-5 beavver-info">
                                             <div class="circle-num">3</div>
-                                            <h3>Make a Match</h3>
+                                            <h3>Know your matching score</h3>
                                             <br/><br/>
-                                            <p>Click the big yellow button that says "Compare Your Resume" which will take you to the scan page.
+                                            <p>Click on “Make a match,” and the system will screen through your resume and find all the keywords used in the job description and not in your resume. And return a score that is calculated based on how many keywords you have in your resume that are relevant for the position, use of keywords and length.
                                             </p>
                                         </div>
                                     </div> 
@@ -207,14 +207,14 @@ console.log($_SESSION);
                                   <div class="item">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                            <img src="img/step4.png" alt="Matching Page" class="carousel-img">
                                         </div>
                                         <div class="col-md-5 beavver-info">
                                             <div class="circle-num">4</div>
                                             <h3>Copy and Paste Your Documents</h3>
                                             <br/><br/>
-                                            <p>In the scan page, pick a job position from the dropdown. Copy and paste your resume in the box on the left and your job description in the box on the right.<br/>
-                                            Then click the blue button that says "Make a Match" to get your results.
+                                            <p>Check the results list to know which keywords you can add to your resume, for example, software names, or even synonims for soft skills.<br/>
+                                            Edit your resume and add as many keywords as you can, but remember that they have to be related to you true experience and knowledge.
                                             </p>
                                         </div>
                                     </div> 
@@ -222,18 +222,19 @@ console.log($_SESSION);
                                   <div class="item">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                            <img src="img/step5.png" alt="Matching Page" class="carousel-img">
                                         </div>
                                         <div class="col-md-5 beavver-info">
                                             <div class="circle-num">5</div>
-                                            <h3>Get Your Results</h3>
+                                            <h3>Improving your skills</h3>
                                             <br/><br/>
-                                            <p>Beavver will magically compare your resume and job description and give you the following results: </p>
-                                                <ul>
+                                            <p>You might not have all the skills required for the job postition you want, so Beavver gives you a list of courses you take to acquire those new skills and be ready for the next opportunity.<br/><br/>
+                                            On the courses list, you can see more informations about them and save your favorites to your profile! </p>
+                                                <!--ul>
                                                     <li>how many times certain keywords has appeared in both your resume and job description.</li>
                                                     <li>a list of suggestions to improve your resume</li>
                                                     <li>a list of BCIT courses to improve your missing skills</li>
-                                                </ul>     
+                                                </ul-->     
                                         </div>
                                     </div>
                                   </div>
@@ -241,12 +242,18 @@ console.log($_SESSION);
                                   <div class="item">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <img src="img/beavver-matchingpage.png" alt="Matching Page" class="carousel-img">
+                                            <img src="img/step6.png" alt="Matching Page" class="carousel-img">
                                         </div>
                                         <div class="col-md-5 beavver-info">
                                             <div class="circle-num">6</div>
-                                            <h3>You're ready!</h3>
+                                            <h3>Run the test on your improved resume and apply with confidence!</h3>
                                             <br/><br/>
+                                            <p>
+                                            Paste your improved resume and click on “make a match” again to see your new score.<br/>
+                                            A good score starts with 80%, so fix and build your resume focusing on this score. <br/>
+                                            <br/>
+                                            Now you are ready to apply, with a resume built to the job your position want!
+                                            </p><br/><br/>
                                             <a href="matching.php"><button class="btn ctaBtn">Start Now</button></a>
                                         </div>
                                     </div>
