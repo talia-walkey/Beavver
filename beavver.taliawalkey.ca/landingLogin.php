@@ -1,8 +1,8 @@
 <?php
-session_start();
-require_once('connect.php');
+//session_start();
+//require_once('connect.php');
 //var_dump($_SESSION);
-console.log($_SESSION);
+//console.log($_SESSION);
 //phpinfo();
 
 ?>
@@ -39,14 +39,17 @@ console.log($_SESSION);
   
     <div>
         <?php 
-            if (empty($_SESSION["user"])) {
-               //include 'header-logout.php';
-               include 'login-warning.php';
-               exit();
-            } else {
-                include 'header-login.php';
-            }
+//            if (empty($_SESSION["user"])) {
+//               //include 'header-logout.php';
+//               include 'login-warning.php';
+//               exit();
+//            } else {
+//                include 'header-login.php';
+//            }
+        
+            include 'header-login.php';
         ?>   
+        
         
         <!--<script>
         window.onload = function () {
@@ -145,7 +148,7 @@ console.log($_SESSION);
                 <div class="col-md-10">
                   <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#beavver-section">HOW TO USE BEAVVER</a></li>
-                    <li><a data-toggle="tab" href="#career-section">HOW TO PLAN MY CAREER</a></li>
+                    <li><a data-toggle="tab" href="#career-section">EXTRA FEATURES</a></li>
                   </ul>
                 </div>
                 <div class="col-md-1"></div>
@@ -279,7 +282,75 @@ console.log($_SESSION);
                         <!-- My Career Section -->
                         <div id="career-section" class="tab-pane fade">
                         <br/>
-                          <h3 class="center-text">How To Plan My Career</h3>
+<!--                          <h3 class="center-text">Extra Features</h3>-->
+                              <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                  <div class="item active">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="img/resume-templates-pic.png" alt="Matching Page" class="carousel-img">
+                                        </div>
+                                        <div class="col-md-5 beavver-info">
+                                            <div class="circle-num">1</div>
+                                            <h3>Resume Templates</h3>
+                                            <br/><br/>
+                                            <p>As a registered user, you will able to download free resume templates that are ATS-friendly.
+                                            Just change the content and you will be ready!
+                                            </p><br/><br/>
+                                            <a href="resume-templates.php"><button class="btn ctaBtn">Start Now</button></a>
+                                        </div>
+                                    </div>    
+                                  </div>
+
+                                  <div class="item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="img/myjobbank.jpg" alt="Matching Page" class="carousel-img">
+                                        </div>
+                                        <div class="col-md-5 beavver-info">
+                                            <div class="circle-num">2</div>
+                                            <h3>My Job Bank</h3>
+                                            <br/><br/>
+                                            <p>Everyone will have a bundle of job positions that they would like to apply for. 
+                                            Beavver makes this easier to organize by allowing users to save a list of job descriptions.</p><br/><br/>
+                                            <a href="myCareer.php"><button class="btn ctaBtn">Start Now</button></a> 
+                                        </div>
+                                    </div>
+                                  </div>
+                                    
+                                  <div class="item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="img/myresume.jpg" alt="Matching Page" class="carousel-img">
+                                        </div>
+                                        <div class="col-md-5 beavver-info">
+                                            <div class="circle-num">3</div>
+                                            <h3>My Resume</h3>
+                                            <br/><br/>
+                                            <p>
+                                            Everyone will have a bundle of job positions that they would like to apply for. 
+                                            Beavver makes this easier to organize by allowing users to save a list of job descriptions.
+                                            </p><br/><br/>
+                                            <a href="myCareer.php"><button class="btn ctaBtn">Start Now</button></a>
+                                        </div>
+                                    </div>
+                                  </div>                                 
+                                    
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
+                                    <button class="btn btn-arrow leftLst">
+                                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                    </button>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
+                                <button class="btn btn-arrow rightLst">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                                </a>
+                              </div>
                       </div> <!-- End of Tab Content -->
                 </div>
                 <div class="col-md-1"></div>
@@ -319,7 +390,13 @@ console.log($_SESSION);
       
       
     <script>
+        
+        
         $(document).ready(function() {
+            
+//            if ($("#beavver-section").hasClass("active")){
+//                $("")
+//            }
 
             $(".carousel").swipe({
 
@@ -364,6 +441,7 @@ console.log($_SESSION);
               .not('[href="#"]')
               .not('[href="#0"]')
               .not('[href="#carousel-example-generic"]')
+              .not('[href="#carousel-example-generic2"]')
               .click(function(event) {
                 // On-page links
                 if (
