@@ -10,6 +10,9 @@ require_once('connect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Beavver</title>
+      
+    <!-- FavIcon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>    
 
     <!-- Bootstrap -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">
