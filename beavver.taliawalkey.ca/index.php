@@ -283,10 +283,14 @@ require_once('connect.php');
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <div class="embed-responsive embed-responsive-16by9">
+<!--
                       <video id="video" width="800" controls poster="img/video-poster.jpg">
                         <source src="img/beavver-video.mp4" type="video/mp4">
                         Your browser does not support HTML5 video.
                       </video>
+-->
+                        
+                    <iframe width="800" height="auto" src="https://www.youtube.com/embed/5PEvm0_LWbs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                     </div>
                     
                     <script>

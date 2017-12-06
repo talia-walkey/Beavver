@@ -127,6 +127,22 @@ session_start();
                       
 <!--formaction="registeredProfile.php"-->
                   </form>
+                  
+    <?php
+        if (isset($_POST["submitBut"])) {
+            $name = $_POST['first_name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $from = 'Beavver <beavver.work@gmail.com>';
+            $to = $email;
+            $subject = 'Beavver Register Verification ';
+            
+            $body = "Hi $name! Thank you for registering with Beavver. These are your information details:\n E-Mail: $email\n Password:\n $password\n";
+            
+            mail($to, $subject, $body, $from);
+        }            
+    ?>
+                  
               </div>
             </div>
         

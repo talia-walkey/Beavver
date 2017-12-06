@@ -131,7 +131,7 @@ console.log($_SESSION);
                             $email = $_POST['email'];
                             $message = $_POST['message'];
                             $from = 'Beavver Contact Form'; 
-                            $to = 'alynna.alcira@gmail.com'; 
+                            $to = 'beavver.work@gmail.com'; 
                             $subject = 'Message from Beavver ';
 
                             $body = "From: $name\n E-Mail: $email\n Message:\n $message";
