@@ -240,7 +240,7 @@ require_once('connect.php');
         <div id="gray-bg">
             <div id="tablemargin">
                 <br/><br/>
-                <table id=“cTable”>
+                <table id='cTable'>
                      <tr>
                        <th>COURSE NUMBER</th>
                        <th>COURSE NAME</th>
@@ -248,7 +248,7 @@ require_once('connect.php');
                      </tr>
                 </table>
                 <br/><br/>
-                <p id=“userwarn”></p>
+                <p id="userwarn"></p>
                 <br/><br/>
             </div>
         </div>
@@ -284,17 +284,16 @@ require_once('connect.php');
 
 <!-- get courses-->
     <script type="text/javascript">
-          var cTable = document.getElementById(‘cTable’);
+          var cTable = document.getElementById('cTable');
                var arr = [];
-               var userwarn = document.getElementById(‘userwarn’);
+               var userwarn = document.getElementById('userwarn');
                
-               window.onload = getCourses();
-               
+               window.onload = getCourses;
                function getCourses(){
                    
-                   fetch(“http://localhost:8888/beavver.taliawalkey.ca/getcourse.php“,{
-                       method:“GET”,
-                       credentials:“same-origin”
+                   fetch("http://beavver.taliawalkey.ca/getcourse.php",{
+                       method:"GET",
+                       credentials:"same-origin"
                    }).then((resp)=>{
                        console.log(resp);
                        return resp.json();
@@ -303,12 +302,12 @@ require_once('connect.php');
                        console.log(arr);
                        if(arr.length !== 0){
                           for(var i=0; i<arr.length; i++){
-                           var mTrow = document.createElement(‘TR’);
-                           var mTdata1 = document.createElement(‘TD’);
+                           var mTrow = document.createElement('tr');
+                           var mTdata1 = document.createElement('td');
                            var mTtext1 = document.createTextNode(arr[i].crse_numb);
-                           var mTdata2 = document.createElement(‘TD’);
+                           var mTdata2 = document.createElement('td');
                            var mTtext2 = document.createTextNode(arr[i].crse_name);
-                           var mTdata3 = document.createElement(‘TD’);
+                           var mTdata3 = document.createElement('td');
                            var mTtext3 = document.createTextNode(arr[i].crse_url);
 
                            mTdata1.appendChild(mTtext1);
@@ -321,7 +320,7 @@ require_once('connect.php');
                        }
                        
                    }else{
-                       userwarn.innerHTML = “Your have no saved courses now. Go ahead and scan your resume and save some courses to improve your skills.”
+                       userwarn.innerHTML = "Your have no saved courses now. Go ahead and scan your resume and save some courses to improve your skills."
                    }
                        
                    });
