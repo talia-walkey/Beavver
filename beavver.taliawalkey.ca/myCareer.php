@@ -125,10 +125,7 @@ require_once('connect.php');
         <br/>
         <div id="gray-bg2">
             <p class="ctitle">CONNECT</p>
-            <button id="google-api" id="revokeAllScopes">
-                <img class="btnImg" src="img/google-logo-w.svg"/>
-                DISCONNECT GOOGLE
-            </button>
+             <button  id="google-api" type='destroy'>X CLOSE MY ACCOUNT</button>
             
 <!--disconnect gmail user -->           
             <script type="text/javascript">
@@ -151,7 +148,7 @@ require_once('connect.php');
         <br/>
         <div id="imgcenter">
             <button class="msubmit">SAVE CHANGE</button>
-            <button  id="closeAccount" class="cancel" type='destroy'>X CLOSE MY ACCOUNT</button>
+           
         </div><br/>
         
        
@@ -264,11 +261,12 @@ require_once('connect.php');
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
 <!-- close Account -->    
     <script type="text/javascript">
                  document.getElementById("closeAccount").onclick = function () {
-                    //location.href = "index.php";
-                 var fd = new FormData();
+                   
+                    var fd = new FormData();
                     fd.append("type", "destroy");
                     
                     console.log("destoy clicked");
@@ -276,10 +274,13 @@ require_once('connect.php');
                         credentials: 'same-origin',
                         method:"POST",
                         body:fd
-                    }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
+                    }).then((resp)=>{return resp.text()}).then((json)=>{
+                        console.log(json)});
+                         window.location.href = "index.php";
                  };
     </script> 
-<!-- close Account -->       
+<!-- close Account -->      
+
     <script type="text/javascript" src="/jbbuild/static/js/main.0b606f0f.js"></script>
 
 <!-- get courses-->

@@ -1,9 +1,6 @@
 <?php
-require_once('connect.php');
-require_once('register-db.php');
-
 session_start();
-//console.log($_SESSION);
+var_dump($_SESSION);
 //phpinfo();
 //exit;
 
@@ -17,7 +14,7 @@ session_start();
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="google-signin-client_id" content="865984037107-0laeq4id47er4dn2s10kf547j5ebp5f1.apps.googleusercontent.com">
-     <meta name="google-signin-client_id" content="651246939702-uhm0eltj2jfa6ipjt9hvtpisr94pqla7.apps.googleusercontent.com">
+     <meta name="google-signin-client_id" content="c651246939702-uhm0eltj2jfa6ipjt9hvtpisr94pqla7.apps.googleusercontent.com">
  
      
     <title>Beavver</title>
@@ -32,6 +29,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />   
        <script src="https://apis.google.com/js/platform.js" async defer></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <?php 
@@ -82,11 +80,11 @@ session_start();
             </div>
                           
             <div class="form-group">
-                  <input  type="email" class="regiinput form-control" id="exampleInputEmail1" placeholder="Enter email" name='email' required>
+                  <input  type="email" class="regiinput form-control" id="email1" placeholder="Enter email" name='email' required>
                   <hr class="dashline">
             </div>
            <div class="form-group">
-                  <input type="password" class="regiinput form-control" placeholder="Password" name="password" id="pass1">
+                  <input type="password" class="regiinput form-control" placeholder="Password" name="password" id="pass1b">
                   <hr class="dashline" required>
            </div>
            <div class="form-group">
@@ -95,7 +93,7 @@ session_start();
            </div>
 <!-- Register Submit Button -->                  
                       <br/>
-                      <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' onclick=validationFunc() type='log'>Submit</button>
+                      <button type="submit" class="msubmit btn btn-primary" id='submitBut' name='submitBut' type='log'>Submit</button>
                       <br/><br/><br/>
                       
                 <div class="row">
@@ -112,12 +110,13 @@ session_start();
                 <br/>
 <!--Google SignIn -->
 <!--HIDDEN INPUT TO DECLARE LOGIN OR SIGNUP -->
-                 <input type="hidden" value="gmailReg" name="type" />
+                 <!--<input type="hidden" value="gmailReg" name="type" />-->
+                 
                 <form id="gmailForm" method='POST'>
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <div class="g-signin2" data-onsuccess="onSignIn" id="GoogleLogin" type='gmailReg'></div> 
+                        <div class="primaryBtn btn" id="GoogleLogin2">Gmail Registration</div> 
                     </div>
                     <div class="col-md-4"></div>
                 </div> 
@@ -127,22 +126,9 @@ session_start();
                       
 <!--formaction="registeredProfile.php"-->
                   </form>
-                  
-    <?php
-        if (isset($_POST["submitBut"])) {
-            $name = $_POST['first_name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $from = 'Beavver <beavver.work@gmail.com>';
-            $to = $email;
-            $subject = 'Beavver Register Verification ';
-            
-            $body = "Hi $name! Thank you for registering with Beavver. These are your information details:\n E-Mail: $email\n Password:\n $password\n";
-            
-            mail($to, $subject, $body, $from);
-        }            
-    ?>
-                  
+                    
+   
+                     
               </div>
             </div>
         
@@ -162,113 +148,113 @@ session_start();
             
 <!--send Beavver Login to DB -->        
         <script>
-        var obj;
-        $(document).ready(function(){
-            document.getElementById("registerForm").addEventListener("submit", function(ev){
-                ev.preventDefault();
-                $.post("register-db.php",
-                    $("#registerForm").serialize(), 
-                    function(resp){
-                    var obj = JSON.parse(resp);
-                    console.log(obj);
-                    if(obj.status == 1){
-                        }
-                    }
-                    
-                )
-            });
-        });
         
 //send Gmail Login to DB       
-        var obj;
+        /*var obj;
         $(document).ready(function(){
-            document.getElementById("GoogleLogin").addEventListener("submit", function(ev){
-                console.log("gmail sent to db");
-                ev.preventDefault();
-                $.post("register-db.php",
-                    $("#gmailForm").serialize(), 
-                    function(resp){
-                    var obj = JSON.parse(resp);
-                    console.log(obj);
-                    if(obj.status == 1){
-                        }
-                    }
-                )
+            
+        });*/
+        
+        
+        document.getElementById("GoogleLogin2").addEventListener("click", function(){
+            console.log("test");
+            console.log(gapi.auth2)
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signIn().then((resp)=>{
+                onSignIn2(auth2.currentUser.get());
             });
         });
 
-
-<!--start SESSION --> 
-              <script>
-                 document.getElementById("submitBut").onclick = function () {
+//start SESSION --> 
+    
+                 document.getElementById("registerForm").onsubmit = function (ev) {
+                     ev.preventDefault();
+                if (document.getElementById("pass1b").value == document.getElementById("pass2").value){
                     console.log("CLICKED");
-                    //location.href = "landingLogin.php";
+                    //window.location.href = "landingLogin.php";
                  var fd = new FormData();
-                    fd.append("email", document.getElementById("exampleInputEmail1").value);
-                    fd.append("type", "log");
-                    fd.append("password", document.getElementById("mpass").value);
+                    fd.append("first_name", document.getElementById("first_name").value);
+                    fd.append("last_name", document.getElementById("last_name").value);
+                    fd.append("email", document.getElementById("email1").value);
+                    fd.append("type", "reg");
+                    fd.append("password", document.getElementById("pass1b").value);
+                    fd.append("confirm_password", document.getElementById("pass2").value);
                 
                     fetch("register-db.php",{
                         credentials: 'same-origin',
                         method:"POST",
-                        body:fd,
-                        credentials:'same-origin'
-                    }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)});
-                 };
+                        body:fd
+                    }).then((resp)=>{return resp.text()}).then((json)=>{console.log(json)
+                        window.location.href = "landingLogin.php";
+                    });
+                        
+                 }else{
+                     alert("Your passwords do not match!");
+                 }};
+                 
+                 
+                   /* if(isset($_SESSION['user'])){
+                        echo json_encode(array(
+                            "hasSession"=>true
+                        ));
+                    } else {
+                        $_SESSION stuff
+                    };
+                    */
                 //get Gmail Register Information        
-        function onSignIn(googleUser) {
+        function onSignIn2(googleUser) {
+            
             var profile = googleUser.getBasicProfile();
+            //window.location.href = "landingLogin.php";
             console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
              console.log('Given Name: ' + profile.getGivenName());
              console.log('Family Name: ' + profile.getFamilyName());
              console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            // window.location.href="landingLogin.php";
               var fd = new FormData();
                             fd.append("email", profile.getEmail());
                             fd.append("first_name", profile.getGivenName());
                             fd.append("last_name", profile.getFamilyName());
-                            fd.append("type", "log");
-                            fetch("googleSession.php",{
+                            fd.append("password", profile.getEmail());
+                            fd.append("type", "reg");
+                            fetch("register-db.php",{
                                 method:"POST",
                                 body:fd,
                                 credentials:'same-origin'
-                        })
+                        }).then((resp)=>{
+                            return resp.json();
+                        }).then((json)=>{
+                            if(json.status){
+                                location.href="landingLogin.php";
+                            }
+                        });
 }
+
+
+document.getElementById("submitBut").onclick = function () {
+    <?php
+    $name = $_POST['first_name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $from = 'Beavver <beavver.work@gmail.com>';
+            $to = $email;
+            $subject = 'Beavver Register Verification ';
+            
+            $body = "Hi $name! Thank you for registering with Beavver. These are your information details:\n E-Mail: $email\n Password:\n $password\n";
+            
+            mail($to, $subject, $body, $from);
+    ?>
+    
+}
+
             </script>    
 <!-- end SESSION -->      
 
 
 //get Gmail Register Information
     </script>
-    
-<!-- Google SignIn SCRIPT -->
-      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-      
+
 <!-- Password Validation -->
-      <script>
-                function validationFunc() {
-                    
-                var pass1 = document.getElementById("pass1").value;
-                var pass2 = document.getElementById("pass2").value;
-                var first_name = document.getElementById("first_name").value;
-                var last_name = document.getElementById("last_name").value;
-                var email = document.getElementById("exampleInputEmail1").value;
-                    
-                    
-                    //window.location.href='landingLogin.php';
-                    if (pass1 == pass2 && pass2 !="" && pass1 !="") {
-                        if(first_name != ' ' && email != ' ' && last_name != ' '){
-                        window.location.href="index.php";
-                        console.log("register is clicked");
-                   }}
-                   
-                   
-                    /*else {
-                        //alert("Passwords Do not match");
-                        document.getElementById("pass1").style.color = "#E34234";
-                        document.getElementById("pass2").style.color = "#E34234";
-                    }*/
-    }
-            </script>
       
   </body>
 </html>
