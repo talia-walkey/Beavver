@@ -4,7 +4,7 @@ session_start();
 
 $user = $_SESSION['user']['id'];
 
-$sql1 = "SELECT job_title, job_date, job_link FROM user_courses WHERE user_courses.user_id = '$user'";
+$sql1 = "SELECT job_title, job_date, job_link FROM user_jobs WHERE user_jobs.user_id = '$user'";
 
 /*
         $statement = $conn->prepare($sql1);
@@ -14,5 +14,6 @@ $sql1 = "SELECT job_title, job_date, job_link FROM user_courses WHERE user_cours
 
 $result = $conn->query($sql1);
 $arr = $result->fetchAll();
+
     echo json_encode($arr);
 ?>
