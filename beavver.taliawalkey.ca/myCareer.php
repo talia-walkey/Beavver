@@ -26,7 +26,7 @@ require_once('connect.php');
     
     <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />
       
-    <link href="/jbbuild/static/css/main.88cfd87c.css" rel="stylesheet">
+    <link href="/jbbuild/static/css/main.bab33d99.css" rel="stylesheet">
       
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -281,7 +281,7 @@ require_once('connect.php');
     </script> 
 <!-- close Account -->      
 
-    <script type="text/javascript" src="/jbbuild/static/js/main.0b606f0f.js"></script>
+    <script type="text/javascript" src="/jbbuild/static/js/main.4025a8a7.js"></script>
 
 <!-- get courses-->
     <script type="text/javascript">
