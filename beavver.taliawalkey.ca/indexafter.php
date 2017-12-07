@@ -33,18 +33,22 @@ require_once('connect.php');
         <?php 
         if (empty($_SESSION["user"])) {
             include 'header-logout.php';
+            //exit;
         } else {
             include 'header-login.php';
         }
         ?>   
+    
     </div>
 
     <div id="content">
         <!-- Landing Content -->
         <div id="landing-content" class="container-fluid">
             <div class="landing-text">
+                <h1> Thanks for Registering! Try Logging in!</h1>
+                <!--
                 <h1>RESUME AND CAREER BOOSTER</h1>
-                <p>Say hello to Beavver, a tool to help you thrive on a high competitive and automated job market.</p>
+                <p>Say hello to Beavver, a tool to help you thrive on a high competitive and automated job market.</p>-->
             </div>
             <div class="landing-buttons">
                 <div class="start-Btn">
@@ -212,7 +216,7 @@ require_once('connect.php');
                 <div class="circle-num">2</div>
                 <span class="section-title">MATCHING RATE</span>
                 <h2>Get your resume ready for automated softwares.</h2>
-                <p>Beavver ensures that you pass a company's applicant system and increase your chances in landing an interview.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas ligula a efficitur ultrices.</p>
             </div>
             <div class="col-md-6">
                 <img src="img/beavver-print.svg" class="img-responsive beavver-images">
@@ -228,7 +232,7 @@ require_once('connect.php');
                 <div class="circle-num">3</div>
                 <span class="section-title">CAREER PATH</span>
                 <h2>Pursue your dream job by keeping track of your career.</h2>
-                <p>Beavver allows you to save a list of your results, getting you closer to landing your dream job.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas ligula a efficitur ultrices.</p>
             </div>
             <div class="col-md-1"></div>
         </div> 
@@ -282,21 +286,7 @@ require_once('connect.php');
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <video id="video" width="800" controls poster="img/video-poster.jpg">
-                        <source src="img/beavver-video.mp4" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                      </video>
-                    </div>
-                    
-                    <script>
-                        video = document.getElementById("video");
-                        
-                        video.addEventListener("click", function(){
-                            video.play();
-                        });
-                
-                    </script>
+                    <img src="img/video-placeholder.png" class="img-responsive howto-video" alt="How It Works Video">
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -400,7 +390,7 @@ require_once('connect.php');
     </script>  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>

@@ -1,8 +1,7 @@
 <?php
-//session_start();
-//require_once('connect.php');
-//var_dump($_SESSION);
-//console.log($_SESSION);
+session_start();
+require_once('connect.php');
+var_dump($_SESSION);
 //phpinfo();
 
 ?>
@@ -24,7 +23,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat:700" rel="stylesheet">
-      
       
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="style.css?d=<?php echo time(); ?>" />   
@@ -60,24 +58,6 @@
         }
         </script>-->
         
-      <script type='text/javascript'>
-
-            (function()
-            {
-              if( window.localStorage )
-              {
-                if( !localStorage.getItem('firstLoad') )
-                {
-                  localStorage['firstLoad'] = true;
-                  window.location.reload();
-                  console.log('page is loaded');
-                }  
-                else
-                  localStorage.removeItem('firstLoad');
-              }
-            })();
-
-</script>
         
     <!-- for local development only -->
         <?php

@@ -274,7 +274,7 @@ console.log($_SESSION);
                         </div>
                         <div id="atsa-2" class="collapse" role="tabpanel" aria-labelledby="atsq-2" data-parent="#accordion">
                           <div class="card-body">
-                              Yes. To boost your chances of passing an ATS, your resume layout must be easy for an ATS to read. We have provided some free ATS-friendly resume templates for registered users.
+                              Yes. To boost your chances of passing an ATS, your resume layout must be easy for an ATS to read. We have provided some free ATS-friendly resume templates that you can find <a href="resume-templates.php">here</a>.
                           </div>
                         </div>
                       </div>                
@@ -307,7 +307,7 @@ console.log($_SESSION);
       
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>

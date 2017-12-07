@@ -1,11 +1,12 @@
 <?php
 require_once('connect.php');
-    session_start();
+session_start();
+    $_SESSION['user'] = array();
     $_SESSION['user']['email'] = $_POST['email'];
     $_SESSION['user']['first_name'] = $_POST['first_name'];
     $_SESSION['user']['last_name'] = $_POST['last_name'];
     
-    $g_email = $_SESSION['user']['email'];
+   $g_email = $_SESSION['user']['email'];
     
     $sql = "SELECT id FROM login WHERE email = '$g_email'";
     $result = $conn->query($sql);

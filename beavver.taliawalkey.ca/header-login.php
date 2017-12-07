@@ -98,7 +98,7 @@ console.log($_SESSION);
                     <li><a href="myCareer.php">Saved Courses</a></li>
 -->
                     <li role="separator" class="divider"></li>
-                    <li><a href="logout.php" onclick="signOut();"> Sign Out</a></li>
+                    <li><a href="logout.php" onclick=""> Sign Out</a></li>
                   
                 </div>
                     
