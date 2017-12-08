@@ -113,7 +113,7 @@ require_once('connect.php');
     
     <!--scroll down jquery-->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
+<!--    <script>
              $(function() {
              $('.msubmit').click (function() {
               $('html, body').animate({scrollTop: $('section.rsection').offset().top }, 'slow');
@@ -121,7 +121,7 @@ require_once('connect.php');
             });
           });
 
-    </script>
+    </script>-->
       
       <script>
     $(document).ready(function() {
@@ -192,6 +192,6 @@ require_once('connect.php');
     </script>  
 
     <link href="/build/static/css/main.78c9dfb0.css" rel="stylesheet">
-<script type="text/javascript" src="/build/static/js/main.0d088fc9.js"></script>
+<script type="text/javascript" src="/build/static/js/main.ebbdf300.js"></script>
   </body>
 </html>
