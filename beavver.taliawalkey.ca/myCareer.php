@@ -146,7 +146,7 @@ require_once('connect.php');
             <br/><br/>
         </div>
         <br/>
-        <div id="imgcenter">
+        <div id="clast">
             <button class="msubmit">SAVE CHANGE</button>
            
         </div><br/>
