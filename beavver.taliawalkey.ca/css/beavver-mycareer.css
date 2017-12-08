@@ -269,6 +269,10 @@ th, td {
     padding: 30px;
 }
 
+#clast {
+    width: 75%;
+    height: auto;
+}
 
 /*media query*/
 
