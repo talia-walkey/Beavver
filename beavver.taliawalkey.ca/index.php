@@ -100,6 +100,76 @@ require_once('connect.php');
 
         </div> <!-- End of About Beavver -->
         
+        <!-- How It Works -->
+        <a name="how-it-works"></a>
+        <div class="how-it-works container-fluid">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h1>HOW IT WORKS</h1>
+                    <p class="how-it-works-text">See how easy it is to customize your resume!</p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            
+            <div class="row how-to-steps">
+                <div class="col-md-4">
+                    <div class="howto-images">
+                        <div class="circle-steps">1</div>
+                        <div class="circle-container">
+                            <img src="img/step1.svg" class="img-responsive img-steps">
+                        </div>
+                    </div>    
+                    <h4>ADD YOUR INFORMATION</h4>
+                    <p class="steps-text">Select a job description of your dream job.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="howto-images">
+                        <div class="circle-steps">2</div>
+                        <div class="circle-container">
+                            <img src="img/step2.svg" class="img-responsive img-steps">
+                        </div>
+                    </div>
+                    <h4>GET A SCORE AND KEYWORDS LIST</h4>
+                    <p class="steps-text">Match with your resume and get to know what you need to get there</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="howto-images">
+                        <div class="circle-steps">3</div>
+                        <div class="circle-container">
+                            <img src="img/step3.svg" class="img-responsive img-steps step-3">
+                        </div>
+                    </div>    
+                    <h4>CHANGE YOUR RESUME AND SUBMIT</h4>
+                    <p class="steps-text">Edit your resume and apply to the job position and keep track of it on the My Career Page.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <video id="video" width="800" controls poster="img/video-poster.jpg">
+                        <source src="img/beavver-video.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                      </video>
+                    </div>
+                    
+                    <script>
+                        video = document.getElementById("video");
+                        
+                        video.addEventListener("click", function(){
+                            video.play();
+                        });
+                
+                    </script>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div> <!-- End of How It Works -->
+        
+      <div class="row blue-divider">
+            </div>
         <!-- Features -->
         <div class="container-fluid features-section">
             <div class="row features-title">
@@ -234,73 +304,7 @@ require_once('connect.php');
         </div> 
         <!-- End of Benefits -->
         
-        <!-- How It Works -->
-        <a name="how-it-works"></a>
-        <div class="how-it-works container-fluid">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <h1>HOW IT WORKS</h1>
-                    <p class="how-it-works-text">See how easy it is to customize your resume!</p>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-            
-            <div class="row how-to-steps">
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-steps">1</div>
-                        <div class="circle-container">
-                            <img src="img/step1.svg" class="img-responsive img-steps">
-                        </div>
-                    </div>    
-                    <h4>ADD YOUR INFORMATION</h4>
-                    <p class="steps-text">Select a job description of your dream job.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-steps">2</div>
-                        <div class="circle-container">
-                            <img src="img/step2.svg" class="img-responsive img-steps">
-                        </div>
-                    </div>
-                    <h4>GET A SCORE AND KEYWORDS LIST</h4>
-                    <p class="steps-text">Match with your resume and get to know what you need to get there</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="howto-images">
-                        <div class="circle-steps">3</div>
-                        <div class="circle-container">
-                            <img src="img/step3.svg" class="img-responsive img-steps step-3">
-                        </div>
-                    </div>    
-                    <h4>CHANGE YOUR RESUME AND SUBMIT</h4>
-                    <p class="steps-text">Edit your resume and apply to the job position and keep track of it on the My Career Page.</p>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <video id="video" width="800" controls poster="img/video-poster.jpg">
-                        <source src="img/beavver-video.mp4" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                      </video>
-                    </div>
-                    
-                    <script>
-                        video = document.getElementById("video");
-                        
-                        video.addEventListener("click", function(){
-                            video.play();
-                        });
-                
-                    </script>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div> <!-- End of How It Works -->
+        
 
         
             <!-- UP ARROW BUTTON -->    
@@ -400,7 +404,7 @@ require_once('connect.php');
     </script>  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
