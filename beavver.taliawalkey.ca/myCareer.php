@@ -281,7 +281,7 @@ require_once('connect.php');
     </script> 
 <!-- close Account -->      
 
-    <script type="text/javascript" src="/jbbuild/static/js/main.4025a8a7.js"></script>
+    <script type="text/javascript" src="/jbbuild/static/js/main.3f2ecd47.js"></script>
 
 <!-- get courses-->
     <script type="text/javascript">
